@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19E5448215632C67E30BE28E /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */; };
+		8B067FC42603984700301F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC32603984700301F81 /* AppDelegate.m */; };
+		8B067FC72603984700301F81 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC62603984700301F81 /* GameViewController.m */; };
+		8B067FCA2603984700301F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FC82603984700301F81 /* Main.storyboard */; };
+		8B067FCD2603984700301F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FCB2603984700301F81 /* LaunchScreen.storyboard */; };
+		8B067FD02603984700301F81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FCF2603984700301F81 /* main.m */; };
+		8B067FF92603984700301F81 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FB62603984300301F81 /* Actions.sks */; };
+		8B067FFC2603984700301F81 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FB72603984300301F81 /* GameScene.sks */; };
+		8B067FFF2603984700301F81 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FB92603984300301F81 /* GameScene.m */; };
+		8B0680022603984700301F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FBA2603984700301F81 /* Assets.xcassets */; };
+		8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680232603A26F00301F81 /* cocos2d.framework */; };
+		8B0680262603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680252603A26F00301F81 /* cocos2d.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08B0AE6A064C0974C14AA00E /* Pods_ApprienObjectiveCExampleApp_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20206821E48F212E3807F3CB /* Pods-ApprienObjectiveCExampleApp macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp macOS.release.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp macOS/Pods-ApprienObjectiveCExampleApp macOS.release.xcconfig"; sourceTree = "<group>"; };
+		6FB08636465B7D49FF84A1DE /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8B067FB62603984300301F81 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		8B067FB72603984300301F81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8B067FB82603984300301F81 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		8B067FB92603984300301F81 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		8B067FBA2603984700301F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B067FBF2603984700301F81 /* ApprienObjectiveCExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApprienObjectiveCExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B067FC22603984700301F81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B067FC32603984700301F81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B067FC52603984700301F81 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		8B067FC62603984700301F81 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		8B067FC92603984700301F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B067FCC2603984700301F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B067FCE2603984700301F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B067FCF2603984700301F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B067FD72603984700301F81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B067FD82603984700301F81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B067FDA2603984700301F81 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		8B067FDB2603984700301F81 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		8B067FDE2603984700301F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B067FE12603984700301F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B067FE32603984700301F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B067FE42603984700301F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B067FEC2603984700301F81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B067FED2603984700301F81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B067FEF2603984700301F81 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		8B067FF02603984700301F81 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		8B067FF32603984700301F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B067FF52603984700301F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B067FF62603984700301F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B067FF82603984700301F81 /* ApprienObjectiveCExampleApp_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApprienObjectiveCExampleApp_macOS.entitlements; sourceTree = "<group>"; };
+		8B0680232603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0680252603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE79D064F5F304E14FF7731 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
+		FCC571146AC7C8DD620E6F5A /* Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp macOS/Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B067FBC2603984700301F81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */,
+				8B0680262603A26F00301F81 /* cocos2d.framework in Frameworks */,
+				19E5448215632C67E30BE28E /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3835F1DC22784117D44AC7B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B0680232603A26F00301F81 /* cocos2d.framework */,
+				8B0680252603A26F00301F81 /* cocos2d.framework */,
+				A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
+				08B0AE6A064C0974C14AA00E /* Pods_ApprienObjectiveCExampleApp_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B067FB02603984300301F81 = {
+			isa = PBXGroup;
+			children = (
+				8B067FB52603984300301F81 /* ApprienObjectiveCExampleApp Shared */,
+				8B067FC12603984700301F81 /* ApprienObjectiveCExampleApp iOS */,
+				8B067FD62603984700301F81 /* ApprienObjectiveCExampleApp tvOS */,
+				8B067FEB2603984700301F81 /* ApprienObjectiveCExampleApp macOS */,
+				8B067FC02603984700301F81 /* Products */,
+				DBC07E00E41368219C9E512B /* Pods */,
+				3835F1DC22784117D44AC7B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B067FB52603984300301F81 /* ApprienObjectiveCExampleApp Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8B067FB62603984300301F81 /* Actions.sks */,
+				8B067FB72603984300301F81 /* GameScene.sks */,
+				8B067FB82603984300301F81 /* GameScene.h */,
+				8B067FB92603984300301F81 /* GameScene.m */,
+				8B067FBA2603984700301F81 /* Assets.xcassets */,
+			);
+			path = "ApprienObjectiveCExampleApp Shared";
+			sourceTree = "<group>";
+		};
+		8B067FC02603984700301F81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B067FBF2603984700301F81 /* ApprienObjectiveCExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B067FC12603984700301F81 /* ApprienObjectiveCExampleApp iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B067FC22603984700301F81 /* AppDelegate.h */,
+				8B067FC32603984700301F81 /* AppDelegate.m */,
+				8B067FC52603984700301F81 /* GameViewController.h */,
+				8B067FC62603984700301F81 /* GameViewController.m */,
+				8B067FC82603984700301F81 /* Main.storyboard */,
+				8B067FCB2603984700301F81 /* LaunchScreen.storyboard */,
+				8B067FCE2603984700301F81 /* Info.plist */,
+				8B067FCF2603984700301F81 /* main.m */,
+			);
+			path = "ApprienObjectiveCExampleApp iOS";
+			sourceTree = "<group>";
+		};
+		8B067FD62603984700301F81 /* ApprienObjectiveCExampleApp tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B067FD72603984700301F81 /* AppDelegate.h */,
+				8B067FD82603984700301F81 /* AppDelegate.m */,
+				8B067FDA2603984700301F81 /* GameViewController.h */,
+				8B067FDB2603984700301F81 /* GameViewController.m */,
+				8B067FDD2603984700301F81 /* Main.storyboard */,
+				8B067FE02603984700301F81 /* LaunchScreen.storyboard */,
+				8B067FE32603984700301F81 /* Info.plist */,
+				8B067FE42603984700301F81 /* main.m */,
+			);
+			path = "ApprienObjectiveCExampleApp tvOS";
+			sourceTree = "<group>";
+		};
+		8B067FEB2603984700301F81 /* ApprienObjectiveCExampleApp macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B067FEC2603984700301F81 /* AppDelegate.h */,
+				8B067FED2603984700301F81 /* AppDelegate.m */,
+				8B067FEF2603984700301F81 /* GameViewController.h */,
+				8B067FF02603984700301F81 /* GameViewController.m */,
+				8B067FF22603984700301F81 /* Main.storyboard */,
+				8B067FF52603984700301F81 /* Info.plist */,
+				8B067FF62603984700301F81 /* main.m */,
+				8B067FF82603984700301F81 /* ApprienObjectiveCExampleApp_macOS.entitlements */,
+			);
+			path = "ApprienObjectiveCExampleApp macOS";
+			sourceTree = "<group>";
+		};
+		DBC07E00E41368219C9E512B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FB08636465B7D49FF84A1DE /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */,
+				BAE79D064F5F304E14FF7731 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */,
+				FCC571146AC7C8DD620E6F5A /* Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig */,
+				20206821E48F212E3807F3CB /* Pods-ApprienObjectiveCExampleApp macOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B067FBE2603984700301F81 /* ApprienObjectiveCExampleApp iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0680072603984700301F81 /* Build configuration list for PBXNativeTarget "ApprienObjectiveCExampleApp iOS" */;
+			buildPhases = (
+				4DDF18F7FDD39F4BE54D0844 /* [CP] Check Pods Manifest.lock */,
+				8B067FBB2603984700301F81 /* Sources */,
+				8B067FBC2603984700301F81 /* Frameworks */,
+				8B067FBD2603984700301F81 /* Resources */,
+				C042C9766B263F22469F8F1B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ApprienObjectiveCExampleApp iOS";
+			productName = "ApprienObjectiveCExampleApp iOS";
+			productReference = 8B067FBF2603984700301F81 /* ApprienObjectiveCExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B067FB12603984300301F81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					8B067FBE2603984700301F81 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 8B067FB42603984300301F81 /* Build configuration list for PBXProject "ApprienObjectiveCExampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B067FB02603984300301F81;
+			productRefGroup = 8B067FC02603984700301F81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B067FBE2603984700301F81 /* ApprienObjectiveCExampleApp iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B067FBD2603984700301F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B067FFC2603984700301F81 /* GameScene.sks in Resources */,
+				8B067FCA2603984700301F81 /* Main.storyboard in Resources */,
+				8B067FF92603984700301F81 /* Actions.sks in Resources */,
+				8B067FCD2603984700301F81 /* LaunchScreen.storyboard in Resources */,
+				8B0680022603984700301F81 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DDF18F7FDD39F4BE54D0844 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApprienObjectiveCExampleApp iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C042C9766B263F22469F8F1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B067FBB2603984700301F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B067FC72603984700301F81 /* GameViewController.m in Sources */,
+				8B067FD02603984700301F81 /* main.m in Sources */,
+				8B067FFF2603984700301F81 /* GameScene.m in Sources */,
+				8B067FC42603984700301F81 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B067FC82603984700301F81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B067FC92603984700301F81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B067FCB2603984700301F81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B067FCC2603984700301F81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8B067FDD2603984700301F81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B067FDE2603984700301F81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B067FE02603984700301F81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B067FE12603984700301F81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8B067FF22603984700301F81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B067FF32603984700301F81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B0680052603984700301F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		8B0680062603984700301F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+			};
+			name = Release;
+		};
+		8B0680082603984700301F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FB08636465B7D49FF84A1DE /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "ApprienObjectiveCExampleApp iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "phz-full-stack.ApprienObjectiveCExampleApp";
+				PRODUCT_NAME = ApprienObjectiveCExampleApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B0680092603984700301F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAE79D064F5F304E14FF7731 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "ApprienObjectiveCExampleApp iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "phz-full-stack.ApprienObjectiveCExampleApp";
+				PRODUCT_NAME = ApprienObjectiveCExampleApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B067FB42603984300301F81 /* Build configuration list for PBXProject "ApprienObjectiveCExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0680052603984700301F81 /* Debug */,
+				8B0680062603984700301F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0680072603984700301F81 /* Build configuration list for PBXNativeTarget "ApprienObjectiveCExampleApp iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0680082603984700301F81 /* Debug */,
+				8B0680092603984700301F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B067FB12603984300301F81 /* Project object */;
+}
