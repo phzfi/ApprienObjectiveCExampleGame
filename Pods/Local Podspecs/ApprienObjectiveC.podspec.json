@@ -1,0 +1,31 @@
+{
+  "name": "ApprienObjectiveC",
+  "version": "0.0.1",
+  "summary": "Apprien pricing engine port to objective-c",
+  "description": "Apprien pricing engine port to Objective-c. More info Apprien.com",
+  "homepage": "http://Apprien.com",
+  "license": {
+    "type": "MIT",
+    "file": "./LICENSE"
+  },
+  "authors": {
+    "MikaelKorpinen": "53366205+MikaelKorpinen@users.noreply.github.com"
+  },
+  "platforms": {
+    "ios": "9.3"
+  },
+  "source": {
+    "git": "https://github.com/phzfi/ApprienObjectiveC.git",
+    "tag": "v0.0.1-alpha.1"
+  },
+  "source_files": [
+    "apprien-objective-c-sdk",
+    "apprien-objective-c-sdk/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "frameworks": "libcurl",
+  "libraries": "curl.tbd",
+  "ios": {
+    "vendored_frameworks": "libcurl.tbd"
+  }
+}

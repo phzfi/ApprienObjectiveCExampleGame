@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19E5448215632C67E30BE28E /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */; };
 		8B067FC42603984700301F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC32603984700301F81 /* AppDelegate.m */; };
 		8B067FC72603984700301F81 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC62603984700301F81 /* GameViewController.m */; };
 		8B067FCA2603984700301F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FC82603984700301F81 /* Main.storyboard */; };
@@ -18,7 +17,12 @@
 		8B067FFF2603984700301F81 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FB92603984300301F81 /* GameScene.m */; };
 		8B0680022603984700301F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FBA2603984700301F81 /* Assets.xcassets */; };
 		8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680232603A26F00301F81 /* cocos2d.framework */; };
-		8B0680262603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680252603A26F00301F81 /* cocos2d.framework */; };
+		8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CC55D260884D100B856AA /* SimplePlayerController.m */; };
+		8B5CCBC4261469A500B856AA /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC3261469A500B856AA /* InputController.m */; };
+		8B5CCBCA2614711000B856AA /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC92614711000B856AA /* GameManager.m */; };
+		8B5CCBD5261474EA00B856AA /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCBD4261474EA00B856AA /* MyScene.sks */; };
+		8B5CCBDF26159B4500B856AA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBDE26159B4500B856AA /* Player.m */; };
+		8B5CCBE32615A09A00B856AA /* IAPSalesCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +61,21 @@
 		8B067FF82603984700301F81 /* ApprienObjectiveCExampleApp_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApprienObjectiveCExampleApp_macOS.entitlements; sourceTree = "<group>"; };
 		8B0680232603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0680252603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5CC55B260882F700B856AA /* SimplePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerController.h; sourceTree = "<group>"; };
+		8B5CC55D260884D100B856AA /* SimplePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerController.m; sourceTree = "<group>"; };
+		8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprienObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5CCBC3261469A500B856AA /* InputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
+		8B5CCBC6261469F300B856AA /* InputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
+		8B5CCBC82614709700B856AA /* GameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		8B5CCBC92614711000B856AA /* GameManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		8B5CCBD4261474EA00B856AA /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
+		8B5CCBD72614A42C00B856AA /* LivingThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivingThing.h; sourceTree = "<group>"; };
+		8B5CCBDC2614B63000B856AA /* IAPManDataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManDataTypes.h; sourceTree = "<group>"; };
+		8B5CCBDE26159B4500B856AA /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPSalesCreature.m; sourceTree = "<group>"; };
+		8B5CCBEF2615ADE700B856AA /* IAPPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPPlayer.h; sourceTree = "<group>"; };
 		BAE79D064F5F304E14FF7731 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E453446C5DD7C27122C99CD0 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC571146AC7C8DD620E6F5A /* Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp macOS/Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,8 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */,
-				8B0680262603A26F00301F81 /* cocos2d.framework in Frameworks */,
-				19E5448215632C67E30BE28E /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +94,11 @@
 		3835F1DC22784117D44AC7B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */,
 				8B0680232603A26F00301F81 /* cocos2d.framework */,
 				8B0680252603A26F00301F81 /* cocos2d.framework */,
-				A624144D0D8E1FDDF5473666 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
 				08B0AE6A064C0974C14AA00E /* Pods_ApprienObjectiveCExampleApp_macOS.framework */,
+				E453446C5DD7C27122C99CD0 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,9 +121,21 @@
 			children = (
 				8B067FB62603984300301F81 /* Actions.sks */,
 				8B067FB72603984300301F81 /* GameScene.sks */,
+				8B5CCBD4261474EA00B856AA /* MyScene.sks */,
 				8B067FB82603984300301F81 /* GameScene.h */,
 				8B067FB92603984300301F81 /* GameScene.m */,
 				8B067FBA2603984700301F81 /* Assets.xcassets */,
+				8B5CC55B260882F700B856AA /* SimplePlayerController.h */,
+				8B5CCBD72614A42C00B856AA /* LivingThing.h */,
+				8B5CCBDC2614B63000B856AA /* IAPManDataTypes.h */,
+				8B5CCBDE26159B4500B856AA /* Player.m */,
+				8B5CCBEF2615ADE700B856AA /* IAPPlayer.h */,
+				8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */,
+				8B5CC55D260884D100B856AA /* SimplePlayerController.m */,
+				8B5CCBC3261469A500B856AA /* InputController.m */,
+				8B5CCBC6261469F300B856AA /* InputController.h */,
+				8B5CCBC82614709700B856AA /* GameManager.h */,
+				8B5CCBC92614711000B856AA /* GameManager.m */,
 			);
 			path = "ApprienObjectiveCExampleApp Shared";
 			sourceTree = "<group>";
@@ -187,7 +215,7 @@
 				8B067FBB2603984700301F81 /* Sources */,
 				8B067FBC2603984700301F81 /* Frameworks */,
 				8B067FBD2603984700301F81 /* Resources */,
-				C042C9766B263F22469F8F1B /* [CP] Embed Pods Frameworks */,
+				4B947A824D1E4B80BA1000C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +266,7 @@
 				8B067FCA2603984700301F81 /* Main.storyboard in Resources */,
 				8B067FF92603984700301F81 /* Actions.sks in Resources */,
 				8B067FCD2603984700301F81 /* LaunchScreen.storyboard in Resources */,
+				8B5CCBD5261474EA00B856AA /* MyScene.sks in Resources */,
 				8B0680022603984700301F81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +274,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B947A824D1E4B80BA1000C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4DDF18F7FDD39F4BE54D0844 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,23 +313,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C042C9766B263F22469F8F1B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -291,9 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5CCBE32615A09A00B856AA /* IAPSalesCreature.m in Sources */,
 				8B067FC72603984700301F81 /* GameViewController.m in Sources */,
 				8B067FD02603984700301F81 /* main.m in Sources */,
+				8B5CCBC4261469A500B856AA /* InputController.m in Sources */,
 				8B067FFF2603984700301F81 /* GameScene.m in Sources */,
+				8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */,
+				8B5CCBCA2614711000B856AA /* GameManager.m in Sources */,
+				8B5CCBDF26159B4500B856AA /* Player.m in Sources */,
 				8B067FC42603984700301F81 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,9 +429,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Debug;
 		};
@@ -446,8 +483,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Release;
 		};

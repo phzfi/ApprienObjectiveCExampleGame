@@ -6,7 +6,9 @@
 //
 
 #import "GameScene.h"
-
+#import <CCLayer.h>
+#import <CCSprite.h>
+#import <CCScene.h>
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
@@ -28,7 +30,7 @@
 
 - (void)setUpScene {
     // Get label node from scene and store it for use later
-    _label = (SKLabelNode *)[self childNodeWithName:@"//WelcomeText"];
+    _label = (SKLabelNode *)[self childNodeWithName:@"//IAPManText"];
     _label.alpha = 0.0;
     [_label runAction:[SKAction fadeInWithDuration:2.0]];
 
@@ -43,7 +45,14 @@
         [SKAction fadeOutWithDuration:0.5],
         [SKAction removeFromParent],
     ]]];
+    SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+    CCSprite *sprite = [[CCSprite alloc] init];
 
+    player.size = CGSizeMake(player.size.width*6, player.size.height*6);
+    player.position = CGPointMake(10,10);
+    [self addChild: player];
+    
+    
 #if TARGET_OS_WATCH
     // For watch we just periodically create one of these and let it spin
     // For other platforms we let user touch/mouse events create these
