@@ -36,6 +36,36 @@
     [self handleKeyEvent:event keyDown:NO];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
+
+    for (UITouch *t in touches) {
+        let touch = t
+        let touchLocation = touch.locationInNode(self)
+        let targetNode = nodeAtPoint(touchLocation) as! SKSpriteNode
+        if(targetNode.name == @""){
+            
+        }
+   }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    for (UITouch *t in touches) {
+        
+ }
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UITouch *t in touches) {
+        
+   }
+}
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UITouch *t in touches) {
+        
+   }
+}
+
+
 - (void)handleKeyEvent:(NSEvent *)event keyDown:(BOOL)downOrUp {
     // First check the arrow keys since they are on the numeric keypad.
     if ([event modifierFlags] & NSNumericPadKeyMask) { // arrow keys have this mask

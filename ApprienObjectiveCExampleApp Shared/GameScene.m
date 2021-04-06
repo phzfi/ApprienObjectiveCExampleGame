@@ -6,9 +6,7 @@
 //
 
 #import "GameScene.h"
-#import <CCLayer.h>
-#import <CCSprite.h>
-#import <CCScene.h>
+#import "GameViewController.h"
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
@@ -28,11 +26,93 @@
     return scene;
 }
 
-- (void)setUpScene {
-    // Get label node from scene and store it for use later
-    _label = (SKLabelNode *)[self childNodeWithName:@"//IAPManText"];
-    _label.alpha = 0.0;
-    [_label runAction:[SKAction fadeInWithDuration:2.0]];
++ (GameScene *)loadGameScene: (NSString *) sceneName{
+    // Load 'GameScene.sks' as an SKScene.
+    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:sceneName];
+    if (!scene) {
+        NSLog(@"Failed to load %@", sceneName);
+        abort();
+    }
+    
+    // Set the scale mode to scale to fit the window
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+
+    return scene;
+}
+
++ (GameScene *)loadGameSceneByIndex: (int) sceneIndex{
+    if(sceneIndex == 0){
+    
+        return  [self newGameScene];
+    }
+    if(sceneIndex == 1){
+       
+        return  [self loadGameScene: @"MyScene"];
+    }
+    else {
+        return nil;
+    }
+}
+
++ (void)setUpScene2: (int) index scene:(GameScene *) scene{
+    SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+
+    player.size = CGSizeMake(player.size.width*6, player.size.height*6);
+    player.position = CGPointMake(20,20);
+    [scene addChild: player];
+}
+
+- (void)setUpScene: (int) index{
+    if(index == 0){
+        // Get label node from scene and store it for use later
+        _label = (SKLabelNode *)[self childNodeWithName:@"//IAPManText"];
+        _label.alpha = 0.0;
+        [_label runAction:[SKAction fadeInWithDuration:2.0]];
+
+        // Create shape node to use during mouse interaction
+        CGFloat w = (self.size.width + self.size.height) * 0.05;
+        _spinnyNode = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(w, w) cornerRadius:w * 0.3];
+
+        _spinnyNode.lineWidth = 4.0;
+        [_spinnyNode runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:M_PI duration:1]]];
+        [_spinnyNode runAction:[SKAction sequence:@[
+            [SKAction waitForDuration:0.5],
+            [SKAction fadeOutWithDuration:0.5],
+            [SKAction removeFromParent],
+        ]]];
+        SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+
+        player.size = CGSizeMake(player.size.width*6, player.size.height*6);
+        player.position = CGPointMake(20,20);
+        [self addChild: player];
+        
+        #if TARGET_OS_WATCH
+            // For watch we just periodically create one of these and let it spin
+            // For other platforms we let user touch/mouse events create these
+            _spinnyNode.position = CGPointMake(0.0, 0.0);
+            _spinnyNode.strokeColor = [SKColor redColor];
+            [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
+                [SKAction waitForDuration:2.0],
+                [SKAction runBlock:^{
+                    [self addChild:[self->_spinnyNode copy]];
+                }]
+            ]]]];
+        #endif
+    }
+    else{
+
+        SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+
+        player.size = CGSizeMake(player.size.width*6, player.size.height*6);
+        player.position = CGPointMake(20,20);
+        [self addChild: player];
+    }
+
+
+}
+
+
+- (void)setUpLevel {
 
     // Create shape node to use during mouse interaction
     CGFloat w = (self.size.width + self.size.height) * 0.05;
@@ -46,7 +126,6 @@
         [SKAction removeFromParent],
     ]]];
     SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
-    CCSprite *sprite = [[CCSprite alloc] init];
 
     player.size = CGSizeMake(player.size.width*6, player.size.height*6);
     player.position = CGPointMake(10,10);
@@ -73,7 +152,7 @@
 }
 #else
 - (void)didMoveToView:(SKView *)view {
-    [self setUpScene];
+    [self setUpScene: _levelIndex];
 }
 #endif
 
@@ -96,6 +175,7 @@
 
     for (UITouch *t in touches) {
         [self makeSpinnyAtPoint:[t locationInNode:self] color:[SKColor greenColor]];
+        
     }
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -122,6 +202,7 @@
     [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
 
     [self makeSpinnyAtPoint:[event locationInNode:self] color:[SKColor greenColor]];
+
 }
 
 - (void)mouseDragged:(NSEvent *)event {

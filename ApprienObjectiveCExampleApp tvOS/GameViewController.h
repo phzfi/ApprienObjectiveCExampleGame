@@ -10,5 +10,5 @@
 #import <GameplayKit/GameplayKit.h>
 
 @interface GameViewController : UIViewController
-
+@property(nonatomic, assign, getter = getNextLevelToLoad) int nextLevelToLoad;
 @end

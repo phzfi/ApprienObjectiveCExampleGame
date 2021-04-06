@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import "LivingThing.h"
 @interface SimplePlayerController : NSObject
-//+ (void)UpdateInput: (LivingThing *) livingThing;
++ (void)UpdateInput: (NSObject<LivingThing> *) livingThing;
 //- (void)keyDown:(NSEvent *)event;
 //- (void)keyUp:(NSEvent *)event;
 @end
