@@ -55,11 +55,7 @@
 }
 
 + (void)setUpScene2: (int) index scene:(GameScene *) scene{
-    SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
-
-    player.size = CGSizeMake(player.size.width*6, player.size.height*6);
-    player.position = CGPointMake(20,20);
-    [scene addChild: player];
+  
 }
 
 - (void)setUpScene: (int) index{
