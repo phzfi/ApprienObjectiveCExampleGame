@@ -21,9 +21,9 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 @property(nonatomic, assign, getter = getGold) int gold;
 @property(nonatomic, assign, getter = getDefaultSprite, setter=setDefaultSprite:) SKSpriteNode *defaultSprite;
 @property(nonatomic, assign, getter = getMoveSideWaysFrames, setter=setMoveSideWaysFrames:) NSMutableArray<SKTexture*> *moveSideWaysFrames;
-@property(nonatomic, assign, getter = getMoveUpWaysFrames, setter=setMoveUpWaysFrames:) NSMutableArray<SKTexture*> *MoveUpWaysFrames;
-@property(nonatomic, assign, getter = getMoveDownWaysFrames, setter=setMoveDownWaysFrames:) NSMutableArray<SKTexture*> *MoveDownWaysFrames;
-@property(nonatomic, assign, getter = getIdleFrames, setter=setIdleFrames:) NSMutableArray<SKTexture*> *IdleFrames;
+@property(nonatomic, assign, getter = getMoveUpWaysFrames, setter=setMoveUpWaysFrames:) NSMutableArray<SKTexture*> *moveUpWaysFrames;
+@property(nonatomic, assign, getter = getMoveDownWaysFrames, setter=setMoveDownWaysFrames:) NSMutableArray<SKTexture*> *moveDownWaysFrames;
+@property(nonatomic, assign, getter = getIdleFrames, setter=setIdleFrames:) NSMutableArray<SKTexture*> *idleFrames;
 
 - (void)moveForward:(CGFloat)speed;
 - (void)lookAt: (simd_float4) direction;
