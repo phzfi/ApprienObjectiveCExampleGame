@@ -115,18 +115,10 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
         float moveSpeedMultiplierX;
         float moveSpeedMultiplierY;
         
-        if (location.x < middlePointX) {
+
             moveSpeedMultiplierX = 1.0f;
-        }
-        if (location.x > middlePointX){
-            moveSpeedMultiplierX = -1.0f;
-        }
-        if (location.y < middlePointY) {
-            moveSpeedMultiplierY = 1.0f;
-        }
-        if (location.y > middlePointY){
-            moveSpeedMultiplierY = -1.0f;
-        }
+        
+
         float yPivoted =location.y-middlePointY;
         //up
         if(fabs(yPivoted) >  fabs(location.x-middlePointX) && yPivoted > 0 ){
@@ -139,12 +131,12 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
             [player moveForward: 1];
         }
         //left
-        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX < middlePointX ){
+        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX < 0 ){
             [player lookAt:(simd_float4) { -1,     0,   0.0f,   0.0f }];
             [player moveForward: moveSpeedMultiplierX];
         
         }
-        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX > middlePointX ){
+        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX > 0 ){
             [player lookAt:(simd_float4) { 1,     0,   0.0f,   0.0f }];
             [player moveForward: moveSpeedMultiplierX];
           
