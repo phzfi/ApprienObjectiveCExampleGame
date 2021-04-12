@@ -11,12 +11,16 @@
 #import "IAPPlayer.h"
 @implementation GameViewController
 GameScene *scene;
+
 NSObject<LivingThing> *player;
 NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
+int currentLevel=0;
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
 
     scene = [GameScene loadGameSceneByIndex: (int)_nextLevelToLoad];
+   
     
     // Present the scene
     SKView *skView = (SKView *)self.view;
@@ -38,22 +42,21 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
     for (UITouch *t in touches) {
-        //[scene setLevelIndex:1];
-        scene = [GameScene loadGameSceneByIndex: (int)1];
-        [GameScene setUpScene2:1 scene: scene];
-
-        
-        
-        // Present the scene
-        SKView *skView = (SKView *)self.view;
-        [skView presentScene:scene];
-        
+        if(currentLevel == 0){
+            scene = [GameScene loadGameSceneByIndex: (int)1];
+            currentLevel = 1;
+            [GameScene setUpScene2:1 scene: scene];
+            
+            // Present the scene
+            SKView *skView = (SKView *)self.view;
+            [skView presentScene:scene];
+        }
         if(player == nil){
             
             player =[self buildPlayer:scene];
+            [scene addChild: [player getDefaultSprite]];
         }
-      
-        [scene addChild: [player getDefaultSprite]];
+
     }
 }
 
@@ -87,7 +90,7 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
   
     SKTexture *firstFrameTexture = walkFrames[0];
     SKSpriteNode *newPlayer = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
-
+  
     newPlayer.size = CGSizeMake(newPlayer.size.width*3, newPlayer.size.height*3);
     newPlayer.position = CGPointMake(20,20);
     [livingThing setDefaultSprite:newPlayer];
@@ -102,6 +105,29 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
     }
 }
 
+- (void) movePlayer:(simd_float4)direction speed:(CGFloat) speed {
+    [player lookAt:direction];
+    [player moveForward: speed];
+}
+
+- (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY moveSpeedMultiplierX:(float)moveSpeedMultiplierX yValueInRelationToCenterScreen:(float)yValueInRelationToCenterScreen {
+    //up
+    if(fabs(yValueInRelationToCenterScreen) >  fabs(location->x-middlePointX) && yValueInRelationToCenterScreen > 0 ){
+        [self movePlayer: (simd_float4) { 0,     1,   0.0f,   0.0f } speed: (CGFloat)1];
+    }
+    //down
+    else if(fabs(yValueInRelationToCenterScreen) > fabs(location->x-middlePointX) && yValueInRelationToCenterScreen < 0 ){
+        [self movePlayer: (simd_float4) { 0,     -1,   0.0f,   0.0f } speed: (CGFloat)1];
+    }
+    //left
+    else if(fabs(location->x-middlePointX) > fabs(location->y-middlePointY)&& location->x-middlePointX < 0 ){
+        [self movePlayer: (simd_float4) { -1,     0,   0.0f,   0.0f } speed: (CGFloat)1];
+    }
+    else if(fabs(location->x-middlePointX) > fabs(location->y-middlePointY)&& location->x-middlePointX > 0 ){
+        [self movePlayer: (simd_float4) { 1,     0,   0.0f,   0.0f } speed: (CGFloat)1];
+    }
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     CGFloat selfHeight=self.view.bounds.size.height;
     CGFloat selfWidth=self.view.bounds.size.width;
@@ -109,40 +135,14 @@ NSMutableArray<SKTexture*> *playerWalkSideWaysFrames;
     int middlePointY =selfHeight/2;
     
     for (UITouch *touch in touches) {
-      
         CGPoint location = [touch locationInView: self.view];;
-        
         float moveSpeedMultiplierX;
         float moveSpeedMultiplierY;
+        moveSpeedMultiplierX = 1.0f;
+        float yValueInRelationToCenterScreen =location.y-middlePointY;
+        [player.defaultSprite removeAllActions];
         
-
-            moveSpeedMultiplierX = 1.0f;
-        
-
-        float yPivoted =location.y-middlePointY;
-        //up
-        if(fabs(yPivoted) >  fabs(location.x-middlePointX) && yPivoted > 0 ){
-            [player lookAt:(simd_float4) { 0,     1,   0.0f,   0.0f }];
-            [player moveForward: 1];
-        }
-        //down
-        else if(fabs(yPivoted) > fabs(location.x-middlePointX) && yPivoted < 0 ){
-            [player lookAt:(simd_float4) { 0,     -1,   0.0f,   0.0f }];
-            [player moveForward: 1];
-        }
-        //left
-        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX < 0 ){
-            [player lookAt:(simd_float4) { -1,     0,   0.0f,   0.0f }];
-            [player moveForward: moveSpeedMultiplierX];
-        
-        }
-        else if(fabs(location.x-middlePointX) > fabs(location.y-middlePointY)&& location.x-middlePointX > 0 ){
-            [player lookAt:(simd_float4) { 1,     0,   0.0f,   0.0f }];
-            [player moveForward: moveSpeedMultiplierX];
-          
-        }
-        
-        
+        [self HandlePlayerMovement:&location middlePointX:middlePointX middlePointY:middlePointY moveSpeedMultiplierX:moveSpeedMultiplierX yValueInRelationToCenterScreen:yValueInRelationToCenterScreen];
     }
 }
 

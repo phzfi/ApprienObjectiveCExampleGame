@@ -7,13 +7,23 @@
 
 #import "GameScene.h"
 #import "GameViewController.h"
+
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
 }
+@synthesize levelIndex;
+int levelIndexTemp;
+- (void)setlevelIndex: (int )levelIndexIn{
+    levelIndexTemp = levelIndexIn;
+    levelIndex = levelIndexIn;
+}
 
+- (int)getlevelIndex{
+    return levelIndex;
+}
 + (GameScene *)newGameScene {
-    // Load 'GameScene.sks' as an SKScene.
+    // Load 'GameScene.sks' as an GameScene.
     GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
     if (!scene) {
         NSLog(@"Failed to load GameScene.sks");
@@ -27,7 +37,7 @@
 }
 
 + (GameScene *)loadGameScene: (NSString *) sceneName{
-    // Load 'GameScene.sks' as an SKScene.
+    // Load 'GameScene.sks' as an GameScene.
     GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:sceneName];
     if (!scene) {
         NSLog(@"Failed to load %@", sceneName);
@@ -42,20 +52,25 @@
 
 + (GameScene *)loadGameSceneByIndex: (int) sceneIndex{
     if(sceneIndex == 0){
-    
         return  [self newGameScene];
     }
     if(sceneIndex == 1){
-       
         return  [self loadGameScene: @"MyScene"];
     }
     else {
         return nil;
     }
 }
-
+//TODO: separate this to its own class away from here
 + (void)setUpScene2: (int) index scene:(GameScene *) scene{
-  
+    SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
+    
+    NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
+    CGSize tileSice;
+    tileSice.width =4;
+    tileSice.height = 4;
+    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:30 rows:10 tileSize:tileSice fillWithTileGroup:levelTiles[0]];
+    [scene addChild:tileNode];
 }
 
 - (void)setUpScene: (int) index{
@@ -96,15 +111,11 @@
         #endif
     }
     else{
-
         SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
-
         player.size = CGSizeMake(player.size.width*6, player.size.height*6);
         player.position = CGPointMake(20,20);
         [self addChild: player];
     }
-
-
 }
 
 
@@ -148,7 +159,7 @@
 }
 #else
 - (void)didMoveToView:(SKView *)view {
-    [self setUpScene: _levelIndex];
+    [self setUpScene: levelIndex];
 }
 #endif
 
