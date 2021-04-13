@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="813e9a80-39d4-4159-a62c-9e3b510c48de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/Actions.sks" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/Actions.sks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/MyScene.sks" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/MyScene.sks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/SimplePlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/SimplePlayerController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/SimplePlayerController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/SimplePlayerController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp tvOS/GameViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp tvOS/GameViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616406237667</updated>
       <workItem from="1616406242422" duration="43000" />
-      <workItem from="1617259821086" duration="2904000" />
+      <workItem from="1617259821086" duration="3324000" />
     </task>
     <servers />
   </component>
