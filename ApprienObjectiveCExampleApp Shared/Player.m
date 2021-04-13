@@ -20,6 +20,7 @@ SKSpriteNode *defSprite;
 @synthesize moveDownWaysFrames;
 @synthesize defaultSprite;
 simd_float4 lookDirection;
+
 - (void)moveForward:(CGFloat)speed{
     
     simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };

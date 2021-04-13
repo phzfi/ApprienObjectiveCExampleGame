@@ -50,29 +50,6 @@ int levelIndexTemp;
     return scene;
 }
 
-+ (GameScene *)loadGameSceneByIndex: (int) sceneIndex{
-    if(sceneIndex == 0){
-        return  [self newGameScene];
-    }
-    if(sceneIndex == 1){
-        return  [self loadGameScene: @"MyScene"];
-    }
-    else {
-        return nil;
-    }
-}
-//TODO: separate this to its own class away from here
-+ (void)setUpScene2: (int) index scene:(GameScene *) scene{
-    SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
-    
-    NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
-    CGSize tileSice;
-    tileSice.width =4;
-    tileSice.height = 4;
-    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:30 rows:10 tileSize:tileSice fillWithTileGroup:levelTiles[0]];
-    [scene addChild:tileNode];
-}
-
 - (void)setUpScene: (int) index{
     if(index == 0){
         // Get label node from scene and store it for use later

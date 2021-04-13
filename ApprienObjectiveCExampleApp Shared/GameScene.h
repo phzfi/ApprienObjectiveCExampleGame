@@ -11,7 +11,5 @@
 @property(nonatomic, assign, getter = getLevelIndex, setter = setLevelIndex:) int levelIndex;
 +(GameScene *)newGameScene;
 + (GameScene *)loadGameScene: (NSString *) sceneName;
-+ (GameScene *)loadGameSceneByIndex: (int) sceneIndex;
 - (void)setUpScene;
-+ (void)setUpScene2: (int) index scene:(GameScene *) scene;
 @end
