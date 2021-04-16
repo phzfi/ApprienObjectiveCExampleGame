@@ -52,19 +52,26 @@
     [scene addChild:tileNodeStones];
     
     player = [self buildPlayer:scene];
+    
     [scene addChild:[player getDefaultSprite]];
     [self generatePickableMoney:scene];
     
+}
+
+- (void)update:(CGPoint)currentTime
+{
+    [player scanItems:0.1 range:1];
 }
 
 - (void)generatePickableMoney:(GameScene *)sceneIn {
     int coinSize = 64;
     NSArray<SKTexture*> *coinAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Coin"] prefix: @"coin_0" endFix:@""];
     SKTexture *firstFrameTexture = coinAnimFrames[0];
+    
     for(int i = 0; i < 10; i++){
         SKSpriteNode *newCoin = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
         newCoin.size = CGSizeMake(coinSize, coinSize);
-        newCoin.position = CGPointMake(0, 5 * 180 +180*i);
+        newCoin.position = CGPointMake(0, 1 * -180 +180*i);
         SKAction *animAction = [SKAction repeatActionForever:
                 [SKAction animateWithTextures:coinAnimFrames
                                  timePerFrame:0.1
@@ -73,7 +80,6 @@
         [newCoin runAction: animAction];
         [sceneIn addChild:newCoin];
     }
-
 }
 
 - (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix {
