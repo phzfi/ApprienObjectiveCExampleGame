@@ -12,12 +12,14 @@
 #import <GameplayKit/GameplayKit.h>
 @interface GameManager : NSObject
 
-
-- (GameScene *)loadGameSceneByIndex: (int) sceneIndex;
-- (void)setUpScene2: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize;
--(void)setView:(SKView *) skView;
--(void)update:(CGPoint) locationInView;
-#endif /* GameManager_h */
+- (SKScene *)loadGameScene;
+- (void)setUpScene: (int) index scene:(SKScene *) scene viewSize:(CGSize) viewSize;
+- (void)setUpTitleScreen:(SKScene *)scene;
+- (void)setView:(SKView *) skView;
+- (void)updatePlayerPosition:(CGPoint) touchLocation;
+- (void)update;
+- (void)cleanUpScene: (SKScene*) scene;
+#endif 
 
 @end
 

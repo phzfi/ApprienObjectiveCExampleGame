@@ -20,7 +20,7 @@
 		8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CC55D260884D100B856AA /* SimplePlayerController.m */; };
 		8B5CCBC4261469A500B856AA /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC3261469A500B856AA /* InputController.m */; };
 		8B5CCBCA2614711000B856AA /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC92614711000B856AA /* GameManager.m */; };
-		8B5CCBD5261474EA00B856AA /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCBD4261474EA00B856AA /* MyScene.sks */; };
+		8B5CCBD5261474EA00B856AA /* GameManager.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCBD4261474EA00B856AA /* GameManager.sks */; };
 		8B5CCBDF26159B4500B856AA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBDE26159B4500B856AA /* Player.m */; };
 		8B5CCBE32615A09A00B856AA /* IAPSalesCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */; };
 		8B5CCBF4261C7B9200B856AA /* Environment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCBF3261C7B9100B856AA /* Environment.sks */; };
@@ -76,7 +76,7 @@
 		8B5CCBC6261469F300B856AA /* InputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
 		8B5CCBC82614709700B856AA /* GameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		8B5CCBC92614711000B856AA /* GameManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
-		8B5CCBD4261474EA00B856AA /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
+		8B5CCBD4261474EA00B856AA /* GameManager.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameManager.sks; sourceTree = "<group>"; };
 		8B5CCBD72614A42C00B856AA /* LivingThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivingThing.h; sourceTree = "<group>"; };
 		8B5CCBDC2614B63000B856AA /* IAPManDataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManDataTypes.h; sourceTree = "<group>"; };
 		8B5CCBDE26159B4500B856AA /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				8B5CCBF6261C92F000B856AA /* Player_Walk_Sideways.atlas */,
 				8B067FB62603984300301F81 /* Actions.sks */,
 				8B067FB72603984300301F81 /* GameScene.sks */,
-				8B5CCBD4261474EA00B856AA /* MyScene.sks */,
+				8B5CCBD4261474EA00B856AA /* GameManager.sks */,
 				8B067FB82603984300301F81 /* GameScene.h */,
 				8B067FB92603984300301F81 /* GameScene.m */,
 				8B067FBA2603984700301F81 /* Assets.xcassets */,
@@ -298,7 +298,7 @@
 				8B5CCC062620561A00B856AA /* MyTileSet.sks in Resources */,
 				8B5CCBFB261F261700B856AA /* Player_Walk_Up.atlas in Resources */,
 				8B5CCBFC261F261700B856AA /* Player_Walk_Down.atlas in Resources */,
-				8B5CCBD5261474EA00B856AA /* MyScene.sks in Resources */,
+				8B5CCBD5261474EA00B856AA /* GameManager.sks in Resources */,
 				8B0680022603984700301F81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

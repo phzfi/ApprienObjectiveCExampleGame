@@ -8,7 +8,7 @@
 #ifndef IAPPlayer_h
 #define IAPPlayer_h
 #import "LivingThing.h"
-@interface IAPPlayer : NSObject<LivingThing>
+@interface IAPPlayer : NSObject<LivingThing, SKSceneDelegate>
 @property(nonatomic, assign, getter = getPosition)  simd_float4 position;
 @property(nonatomic, assign, getter = getDirection)  simd_float4 direction;
 @property(nonatomic, assign, getter = getRotation) CGFloat rotation;

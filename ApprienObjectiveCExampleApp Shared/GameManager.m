@@ -4,39 +4,66 @@
 //
 //  Created by phz on 31.3.2021.
 //
-#import "GameManager.h"
 #import "GameScene.h"
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import <GameplayKit/GameplayKit.h>
+
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
+    SKLabelNode *_labelContinue;
     NSObject <LivingThing> *player;
-    NSMutableArray<SKTexture *> *playerWalkSideWaysFrames;
     SKView *view;
+    NSMutableArray<SKSpriteNode *> *newCoin;
 }
 
 -(void)setView:(SKView *) skView{
     view = skView;
+
 }
 
-- (GameScene *)loadGameSceneByIndex: (int) sceneIndex{
-    if(sceneIndex == 0){
-        return  [GameScene newGameScene];
-    }
-    if(sceneIndex == 1){
-        return  [GameScene loadGameScene: @"MyScene"];
-    }
-    else {
-        return nil;
-    }
+-(void)update{
+    NSLog(@"7777");
 }
 
-//TODO: separate this to its own class away from here
-- (void)setUpScene2: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize{
+
+- (GameScene *)loadGameScene{
+    return  [GameScene newGameScene];
+}
+
+- (void)cleanUpScene: (SKScene*) scene
+{
+    [scene removeAllChildren];
+    [scene removeAllActions];
+}
+
+- (void)setUpTitleScreen:(GameScene *) scene {
+    // Get label node from scene and store it for use later
+    _label = (SKLabelNode *)[SKLabelNode labelNodeWithText:@"IAP man"];
+    _label.fontName =@"Helvetica Neue UltraLight";
+    _label.fontSize = 144;
+    _label.alpha = 1;
+    _label.position = CGPointMake(20, 100);
+   // [_label runAction:[SKAction fadeInWithDuration:2.0]];
+    [scene addChild: _label];
+    _labelContinue = (SKLabelNode *)[SKLabelNode labelNodeWithText:@"Press to continue"];
+    _labelContinue.fontName =@"Helvetica Neue UltraLight";
+    _labelContinue.alpha = 1;
+    _labelContinue.position = CGPointMake(20, 0);
+    [scene addChild: _labelContinue];
+   // [_labelContinue runAction:[SKAction fadeInWithDuration:2.0]];
+    
+    SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+
+    player.size = CGSizeMake(player.size.width*6, player.size.height*6);
+    player.position = CGPointMake(20,20);
+    [scene addChild: player];
+}
+
+- (void)setUpScene: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize{
     SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
     
     NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
@@ -56,11 +83,6 @@
     [scene addChild:[player getDefaultSprite]];
     [self generatePickableMoney:scene];
     
-}
-
-- (void)update:(CGPoint)currentTime
-{
-    [player scanItems:0.1 range:1];
 }
 
 - (void)generatePickableMoney:(GameScene *)sceneIn {
@@ -115,18 +137,17 @@
     return livingThing;
 }
 
-- (void)update: (CGPoint) locationInView {
+- (void)updatePlayerPosition: (CGPoint) touchLocation {
     CGFloat selfHeight = view.bounds.size.height;
     CGFloat selfWidth = view.bounds.size.width;
     int middlePointX = selfWidth / 2;
     int middlePointY = selfHeight / 2;
 
-    float yFromCenter = locationInView.y - middlePointY;
-    float xFromCenter = locationInView.x - middlePointX;
+    float yFromCenter = touchLocation.y - middlePointY;
+    float xFromCenter = touchLocation.x - middlePointX;
     [player.defaultSprite removeAllActions];
 
-    [self HandlePlayerMovement:&locationInView middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yFromCenter xFromCenter:xFromCenter];
-
+    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yFromCenter xFromCenter:xFromCenter];
 }
 
 - (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter

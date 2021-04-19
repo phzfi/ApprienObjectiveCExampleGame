@@ -14,7 +14,7 @@
 GameScene *scene;
 
 NSObject <LivingThing> *player;
-NSMutableArray<SKTexture *> *playerWalkSideWaysFrames;
+
 int currentLevel = 0;
 GameManager *gameManager;
 
@@ -22,18 +22,17 @@ GameManager *gameManager;
     if(gameManager == nil){
         gameManager = [[GameManager alloc]init];
     }
-    [super viewDidLoad];
-    scene = [gameManager loadGameSceneByIndex:(int) _nextLevelToLoad];
 
+    scene = [gameManager loadGameScene];
+    [scene SetGameManager:gameManager];
     // Present the scene
     SKView *skView = (SKView *) self.view;
     [skView presentScene:scene];
-
+    [gameManager setUpTitleScreen:scene];
     skView.ignoresSiblingOrder = YES;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     [gameManager setView:skView];
-    _nextLevelToLoad++;
 }
 
 - (BOOL)shouldAutorotate {
@@ -42,7 +41,6 @@ GameManager *gameManager;
 
 #if TARGET_OS_IOS || TARGET_OS_TV
 // Touch-based event handling
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
     for (UITouch *t in touches) {
@@ -50,25 +48,24 @@ GameManager *gameManager;
     }
 }
 
-
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *t in touches) {
 
     }
 }
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 
     for (UITouch *touch in touches) {
         if (currentLevel == 0) {
-            scene = [gameManager loadGameSceneByIndex:(int) 1];
-            currentLevel = 1;
-            [gameManager setUpScene2:1 scene:scene viewSize: self.view.bounds.size];
-
+            [gameManager cleanUpScene: scene];
+            [gameManager setUpScene:1 scene:scene viewSize: self.view.bounds.size];
             // Present the scene
             SKView *skView = (SKView *) self.view;
             [skView presentScene:scene];
+            currentLevel = 1;
         }
-        [gameManager update:[touch locationInView:self.view]];
+        [gameManager updatePlayerPosition:[touch locationInView:self.view]];
     }
 }
 

@@ -6,10 +6,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-
+#import "GameManager.h"
 @interface GameScene : SKScene
-@property(nonatomic, assign, getter = getLevelIndex, setter = setLevelIndex:) int levelIndex;
-+(GameScene *)newGameScene;
++ (GameScene *)newGameScene;
 + (GameScene *)loadGameScene: (NSString *) sceneName;
-- (void)setUpScene;
+- (void)SetGameManager: (GameManager*)gameManager;
 @end
