@@ -1,14 +1,14 @@
 //
-//  IAPPlayer.h
+//  IAPSalesCreature.h
 //  ApprienObjectiveCExampleApp
 //
-//  Created by phz on 1.4.2021.
+//  Created by phz on 23.4.2021.
 //
 
-#ifndef IAPPlayer_h
-#define IAPPlayer_h
+#ifndef IAPSalesCreature_h
+#define IAPSalesCreature_h
 #import "LivingThing.h"
-@interface IAPPlayer : NSObject<LivingThing>
+@interface IAPSalesCreature : NSObject<LivingThing>
 @property(nonatomic, assign, getter = getPosition)  simd_float4 position;
 @property(nonatomic, assign, getter = getDirection)  simd_float4 direction;
 @property(nonatomic, assign, getter = getRotation) CGFloat rotation;
@@ -29,4 +29,4 @@
 
 @end
 
-#endif /* IAPPlayer_h */
+#endif /* IAPSalesCreature_h */

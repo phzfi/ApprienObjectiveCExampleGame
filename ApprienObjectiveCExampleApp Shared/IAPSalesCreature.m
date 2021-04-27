@@ -7,29 +7,47 @@
 
 #import <Foundation/Foundation.h>
 #import "LivingThing.h"
+#import "IAPSalesCreature.h"
 #import "IAPManDataTypes.h"
 @class IAPSalesCreature;
-@implementation LivingThing : NSObject
+@implementation IAPSalesCreature
 
-+ (void)moveForward:(CGFloat)speed {
+@synthesize defaultSprite;
 
-}
+SKSpriteNode *defSprite2;
 
-+ (void)lookAt:(simd_float4)direction {
 
-}
-
-+ (void)throw:( ItemType)itemType amount:(int)amount {
+- (void)moveForward:(CGFloat)speed {
 
 }
 
-+ (void)receiveItem:( ItemType)itemType amount:(int)amount {
+- (void)lookAt:(simd_float4)direction {
 
 }
 
-+ (void)scanItems:(CGFloat)interval range:(CGFloat)range {
+- (void)throw:( ItemType)itemType amount:(int)amount {
 
 }
 
+- (void)receiveItem:( ItemType)itemType amount:(int)amount {
+
+}
+
+- (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items  {
+    return nil;
+}
+
+- (void)throwItem:(ItemType)itemType amount:(int)amount { 
+    
+}
+
+- (void)setDefaultSprite: (SKSpriteNode *)spriteNode{
+    defaultSprite = spriteNode;
+    defSprite2 = spriteNode;
+}
+
+- (SKSpriteNode *)getDefaultSprite{
+    return defaultSprite;
+}
 
 @end

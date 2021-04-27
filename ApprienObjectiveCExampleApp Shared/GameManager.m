@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LivingThing.h"
 #import "IAPPlayer.h"
+#import "IAPSalesCreature.h"
 #import <GameplayKit/GameplayKit.h>
 
 @implementation GameManager {
@@ -17,7 +18,9 @@
     SKLabelNode *_labelContinue;
     NSObject <LivingThing> *player;
     SKView *view;
-    NSMutableArray<SKSpriteNode *> *newCoin;
+    SKScene *scene;
+    NSMutableArray<SKSpriteNode *> *sceneItems;
+    NSMutableArray<NSObject<LivingThing>*> *shopKeepers;
 }
 
 -(void)setView:(SKView *) skView{
@@ -26,9 +29,19 @@
 }
 
 -(void)update{
-    NSLog(@"7777");
-}
+    NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
+    [self clearFoundItems: foundItems];
 
+}
+- (void)clearFoundItems: (NSMutableArray<SKSpriteNode*> *)foundItems{
+    if([foundItems count] > 0 ){
+        [scene removeChildrenInArray:foundItems];
+        for(SKSpriteNode *item in foundItems){
+            [item removeAllActions];
+            [item removeFromParent];
+        }
+    }
+}
 
 - (GameScene *)loadGameScene{
     return  [GameScene newGameScene];
@@ -36,8 +49,11 @@
 
 - (void)cleanUpScene: (SKScene*) scene
 {
-    [scene removeAllChildren];
-    [scene removeAllActions];
+    @autoreleasepool {
+        [scene removeAllChildren];
+        [scene removeAllActions];
+        sceneItems = nil;
+    }
 }
 
 - (void)setUpTitleScreen:(GameScene *) scene {
@@ -52,18 +68,20 @@
     _labelContinue = (SKLabelNode *)[SKLabelNode labelNodeWithText:@"Press to continue"];
     _labelContinue.fontName =@"Helvetica Neue UltraLight";
     _labelContinue.alpha = 1;
-    _labelContinue.position = CGPointMake(20, 0);
+    _labelContinue.position = CGPointMake(20, -100);
     [scene addChild: _labelContinue];
    // [_labelContinue runAction:[SKAction fadeInWithDuration:2.0]];
     
-    SKSpriteNode *player = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
+    SKSpriteNode *titleImage = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
 
-    player.size = CGSizeMake(player.size.width*6, player.size.height*6);
-    player.position = CGPointMake(20,20);
-    [scene addChild: player];
+    titleImage.size = CGSizeMake(titleImage.size.width*6, titleImage.size.height*6);
+    titleImage.position = CGPointMake(20,20);
+    [scene addChild: titleImage];
 }
 
 - (void)setUpScene: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize{
+    sceneItems = [[NSMutableArray<SKSpriteNode *> alloc]init];
+    shopKeepers = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
     
     NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
@@ -81,8 +99,40 @@
     player = [self buildPlayer:scene];
     
     [scene addChild:[player getDefaultSprite]];
+    [self generateShopKeepers:scene];
     [self generatePickableMoney:scene];
+}
+
+- (void)generateShopKeepers:(GameScene *)sceneIn {
+    int shopKeeperSize = 64;
+    NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize];
+    [shopKeepers addObject:newShopKeeper];
+}
+
+- (NSObject <LivingThing> *)buildShopKeeper:(SKScene *)sceneIn shopKeeperName: (NSString*) shopKeeperName size: (float) shopKeeperSize {
     
+    NSArray<SKTexture*> *shopKeeperAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"ShopKeeper"] prefix: @"IAP_Shop_Keeper_" endFix:shopKeeperName];
+    
+    NSObject <LivingThing> *newShopKeeper = [[IAPSalesCreature alloc] init];
+    SKTexture *firstFrameTexture = shopKeeperAnimFrames[0];
+    SKSpriteNode *newShopKeeperTexture = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+
+
+    [newShopKeeper setDefaultSprite:newShopKeeperTexture];
+    SKAction *animAction = [SKAction repeatActionForever:
+            [SKAction animateWithTextures:shopKeeperAnimFrames
+                             timePerFrame:0.1
+                                   resize:false
+                                  restore:true]];
+    [newShopKeeperTexture runAction: animAction];
+    newShopKeeper.defaultSprite.size= CGSizeMake(shopKeeperSize, shopKeeperSize);
+  
+    [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2);
+    
+     
+     [sceneIn addChild:newShopKeeper.defaultSprite];
+    
+    return newShopKeeper;
 }
 
 - (void)generatePickableMoney:(GameScene *)sceneIn {
@@ -100,26 +150,37 @@
                                        resize:false
                                       restore:true]];
         [newCoin runAction: animAction];
+        [sceneItems addObject:newCoin];
+       
         [sceneIn addChild:newCoin];
+
     }
+}
+
+static bool ContainsTextureName(int i, SKTextureAtlas *playerAnimatedAtlas, NSString *playerTextureName) {
+    return [playerAnimatedAtlas.textureNames[i-1] rangeOfString: playerTextureName].location != NSNotFound;
 }
 
 - (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix {
 
     NSMutableArray<SKTexture *> *animFrames = [[NSMutableArray<SKTexture *> alloc] init];
     int numImages = (int) playerAnimatedAtlas.textureNames.count;
-
-    for (int i = 1; i <= numImages; i++) {
+    int j = 1;
+    for (int i = 1;  i <= numImages; i++) {
         NSString *playerTextureName = [preFix stringByAppendingString:endFix];
-        playerTextureName = [playerTextureName stringByAppendingString:@(i).stringValue];
-        [animFrames addObject:[playerAnimatedAtlas textureNamed:playerTextureName]];
+        
+        if(ContainsTextureName(i, playerAnimatedAtlas, playerTextureName) ){
+            playerTextureName = [playerTextureName stringByAppendingString:@(j).stringValue];
+            [animFrames addObject:[playerAnimatedAtlas textureNamed:playerTextureName]];
+            j+=1;
+        }
     }
     return animFrames;
 }
 
 - (NSObject <LivingThing> *)buildPlayer:(GameScene *)sceneIn {
+    
     NSObject <LivingThing> *livingThing = [[IAPPlayer alloc] init];
-
     [livingThing setMoveUpWaysFrames:[self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Up"] prefix: @"Player_" endFix:@"Up_0"]];
 
     [livingThing setMoveDownWaysFrames:[self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Down"] prefix: @"Player_" endFix:@"Down_0"]];

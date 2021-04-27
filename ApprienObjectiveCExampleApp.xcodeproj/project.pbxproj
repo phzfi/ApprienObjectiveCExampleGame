@@ -69,6 +69,7 @@
 		8B067FF82603984700301F81 /* ApprienObjectiveCExampleApp_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApprienObjectiveCExampleApp_macOS.entitlements; sourceTree = "<group>"; };
 		8B0680232603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0680252603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4CE3B62632D62E0034FCA6 /* IAPSalesCreature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPSalesCreature.h; sourceTree = "<group>"; };
 		8B5CC55B260882F700B856AA /* SimplePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerController.h; sourceTree = "<group>"; };
 		8B5CC55D260884D100B856AA /* SimplePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerController.m; sourceTree = "<group>"; };
 		8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprienObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +155,7 @@
 				8B5CCBDE26159B4500B856AA /* Player.m */,
 				8B5CCBEF2615ADE700B856AA /* IAPPlayer.h */,
 				8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */,
+				8B4CE3B62632D62E0034FCA6 /* IAPSalesCreature.h */,
 				8B5CCBC3261469A500B856AA /* InputController.m */,
 				8B5CCBC6261469F300B856AA /* InputController.h */,
 				8B5CCBC82614709700B856AA /* GameManager.h */,

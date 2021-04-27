@@ -30,7 +30,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 - (void)lookAt: (simd_float4) direction;
 - (void)throwItem: (ItemType) itemType amount: (int) amount;
 - (void)receiveItem: (ItemType)itemType amount: (int) amount;
-- (void)scanItems: (CGFloat) interval range:(CGFloat) range;
+- (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items;
 
 @end
 

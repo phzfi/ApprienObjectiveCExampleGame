@@ -33,7 +33,6 @@
 }
 
 -(void)update:(NSTimeInterval)currentTime{
-    NSLog(@"Failed to load ");
     [_gameManager update];
 }
 

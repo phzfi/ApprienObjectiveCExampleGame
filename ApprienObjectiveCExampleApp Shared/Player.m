@@ -31,6 +31,7 @@ simd_float4 lookDirection;
     
     [defSprite runAction: animAction];
     [defSprite runAction: moveAction];
+    
 }
 
 
@@ -47,8 +48,24 @@ simd_float4 lookDirection;
     
 }
 
-- (void)scanItems:(CGFloat)interval range:(CGFloat)range {
+
+- (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items {
     
+    NSMutableArray<SKSpriteNode *>* newItems = [[NSMutableArray<SKSpriteNode *> alloc] init];
+    for (SKSpriteNode *item in items){
+        if([self distanceBetweenPlayerAndNodesSquared: item] < range){
+            [self setGold:[self getGold] +1];
+            [newItems addObject:item];
+        }
+    }
+    return newItems;
+}
+- (float) distanceBetweenPlayerAndNodesSquared: (SKSpriteNode*) firstNode{
+    return sqrt([self distanceBetweenPlayerAndNodesUnSquared: firstNode]);
+}
+- (float) distanceBetweenPlayerAndNodesUnSquared: (SKSpriteNode*) firstNode{
+    return ((firstNode.position.x - defSprite.position.x) * (firstNode.position.x - defSprite.position.x))
+    + ((firstNode.position.y -  defSprite.position.y) * (firstNode.position.y -  defSprite.position.y));
 }
 
 - (SKAction *) animatePlayer  {
