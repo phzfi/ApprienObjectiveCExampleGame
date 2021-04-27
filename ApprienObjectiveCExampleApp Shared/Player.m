@@ -9,8 +9,11 @@
 #import "IAPPlayer.h"
 #import "IAPManDataTypes.h"
 #import <SpriteKit/SpriteKit.h>
+//#import "IapManUtilities.h"
+
 @class Player;
 @implementation IAPPlayer
+
 NSMutableArray <SKTexture*>*moveFrames;
 NSMutableArray <SKTexture*>*moveUpFrames;
 NSMutableArray <SKTexture*>*moveDownFrames;
@@ -53,20 +56,18 @@ simd_float4 lookDirection;
     
     NSMutableArray<SKSpriteNode *>* newItems = [[NSMutableArray<SKSpriteNode *> alloc] init];
     for (SKSpriteNode *item in items){
-        if([self distanceBetweenPlayerAndNodesSquared: item] < range){
+     //   if([IapManUtilities distanceBetweenPlayerAndNodesSquared: item secondNode: defaultSprite] < range){
             [self setGold:[self getGold] +1];
             [newItems addObject:item];
-        }
+      //  }
     }
     return newItems;
 }
-- (float) distanceBetweenPlayerAndNodesSquared: (SKSpriteNode*) firstNode{
-    return sqrt([self distanceBetweenPlayerAndNodesUnSquared: firstNode]);
+
+- (NSMutableArray<NSObject <LivingThing> *> *)scanLivingThingsInRange:(CGFloat)range livingThingsToScan:(NSMutableArray<NSObject <LivingThing> *> *)livingThingsToScan {
+    return nil;
 }
-- (float) distanceBetweenPlayerAndNodesUnSquared: (SKSpriteNode*) firstNode{
-    return ((firstNode.position.x - defSprite.position.x) * (firstNode.position.x - defSprite.position.x))
-    + ((firstNode.position.y -  defSprite.position.y) * (firstNode.position.y -  defSprite.position.y));
-}
+
 
 - (SKAction *) animatePlayer  {
     

@@ -17,6 +17,7 @@
 		8B067FFF2603984700301F81 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FB92603984300301F81 /* GameScene.m */; };
 		8B0680022603984700301F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FBA2603984700301F81 /* Assets.xcassets */; };
 		8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680232603A26F00301F81 /* cocos2d.framework */; };
+		8B4CE3BD263818690034FCA6 /* IapManUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CE3BC263818690034FCA6 /* IapManUtilities.m */; };
 		8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CC55D260884D100B856AA /* SimplePlayerController.m */; };
 		8B5CCBC4261469A500B856AA /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC3261469A500B856AA /* InputController.m */; };
 		8B5CCBCA2614711000B856AA /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC92614711000B856AA /* GameManager.m */; };
@@ -70,6 +71,8 @@
 		8B0680232603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0680252603A26F00301F81 /* cocos2d.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cocos2d.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4CE3B62632D62E0034FCA6 /* IAPSalesCreature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPSalesCreature.h; sourceTree = "<group>"; };
+		8B4CE3BB263818500034FCA6 /* IapManUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IapManUtilities.h; sourceTree = "<group>"; };
+		8B4CE3BC263818690034FCA6 /* IapManUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IapManUtilities.m; sourceTree = "<group>"; };
 		8B5CC55B260882F700B856AA /* SimplePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerController.h; sourceTree = "<group>"; };
 		8B5CC55D260884D100B856AA /* SimplePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerController.m; sourceTree = "<group>"; };
 		8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprienObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,8 +157,10 @@
 				8B5CCBDC2614B63000B856AA /* IAPManDataTypes.h */,
 				8B5CCBDE26159B4500B856AA /* Player.m */,
 				8B5CCBEF2615ADE700B856AA /* IAPPlayer.h */,
-				8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */,
 				8B4CE3B62632D62E0034FCA6 /* IAPSalesCreature.h */,
+				8B5CCBE22615A09A00B856AA /* IAPSalesCreature.m */,
+				8B4CE3BB263818500034FCA6 /* IapManUtilities.h */,
+				8B4CE3BC263818690034FCA6 /* IapManUtilities.m */,
 				8B5CCBC3261469A500B856AA /* InputController.m */,
 				8B5CCBC6261469F300B856AA /* InputController.h */,
 				8B5CCBC82614709700B856AA /* GameManager.h */,
@@ -360,6 +365,7 @@
 				8B5CCBC4261469A500B856AA /* InputController.m in Sources */,
 				8B067FFF2603984700301F81 /* GameScene.m in Sources */,
 				8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */,
+				8B4CE3BD263818690034FCA6 /* IapManUtilities.m in Sources */,
 				8B5CCBCA2614711000B856AA /* GameManager.m in Sources */,
 				8B5CCBDF26159B4500B856AA /* Player.m in Sources */,
 				8B067FC42603984700301F81 /* AppDelegate.m in Sources */,

@@ -31,7 +31,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 - (void)throwItem: (ItemType) itemType amount: (int) amount;
 - (void)receiveItem: (ItemType)itemType amount: (int) amount;
 - (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items;
-
+- (NSMutableArray<NSObject<LivingThing>*> *)scanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan;
 @end
 
 #endif /* LivingThing_h */
