@@ -9,7 +9,7 @@
 #import "IAPPlayer.h"
 #import "IAPManDataTypes.h"
 #import <SpriteKit/SpriteKit.h>
-//#import "IapManUtilities.h"
+#import "IapManUtilities.h"
 
 @class Player;
 @implementation IAPPlayer
@@ -22,6 +22,14 @@ SKSpriteNode *defSprite;
 @synthesize moveUpWaysFrames;
 @synthesize moveDownWaysFrames;
 @synthesize defaultSprite;
+@synthesize gameManager;
+GameManager *gameManager2;
+
+-(void)setManager: (GameManager *) newGameManager{
+    gameManager2 = newGameManager;
+    gameManager = newGameManager;
+}
+
 simd_float4 lookDirection;
 
 - (void)moveForward:(CGFloat)speed{
@@ -44,7 +52,18 @@ simd_float4 lookDirection;
 }
 
 - (void)throwItem: (ItemType)itemType amount:(int)amount {
-    
+    if(itemType == Gold){
+        SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defaultSprite.position];
+        simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };
+        CGFloat speed = 10;
+       // SKAction *animAction = ;
+        SKAction *moveAction = [SKAction moveBy:CGVectorMake(-speed*10*direction[0], -speed*10*direction[1]) duration:0.1];
+        moveAction = [SKAction repeatActionForever:moveAction];
+        
+        //[defSprite runAction: animAction];
+        [coin runAction: moveAction];
+        [[gameManager getScene] addChild:coin];
+    }
 }
 
 - (void)receiveItem:( ItemType)itemType amount:(int)amount {
@@ -56,10 +75,10 @@ simd_float4 lookDirection;
     
     NSMutableArray<SKSpriteNode *>* newItems = [[NSMutableArray<SKSpriteNode *> alloc] init];
     for (SKSpriteNode *item in items){
-     //   if([IapManUtilities distanceBetweenPlayerAndNodesSquared: item secondNode: defaultSprite] < range){
+        if([IapManUtilities distanceBetweenPlayerAndNodesSquared: item secondNode: defaultSprite] < range){
             [self setGold:[self getGold] +1];
             [newItems addObject:item];
-      //  }
+        }
     }
     return newItems;
 }

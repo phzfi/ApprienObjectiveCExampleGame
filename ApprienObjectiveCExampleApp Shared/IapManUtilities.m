@@ -10,6 +10,7 @@
 #import "IAPPlayer.h"
 #import "IAPManDataTypes.h"
 #import <SpriteKit/SpriteKit.h>
+#import "IapManUtilities.h"
 
 @implementation IapManUtilities : NSObject
 

@@ -14,12 +14,18 @@
 
 @class IAPSalesCreature;
 @implementation IAPSalesCreature{
-    IapManUtilities *iapUtilities;
+    
 }
 
 @synthesize defaultSprite;
 SKSpriteNode *defSprite2;
+@synthesize gameManager;
+GameManager *gameManagerRef;
 
+-(void)setManager: (GameManager *) newGameManager{
+    gameManagerRef = newGameManager;
+    gameManager = newGameManager;
+}
 
 
 - (void)moveForward:(CGFloat)speed {
@@ -49,10 +55,7 @@ SKSpriteNode *defSprite2;
 }
 
 - (void)throwItem:(ItemType)itemType amount:(int)amount { 
-    if(itemType == Gold){
-       // [IapManUtilities ProduceCoinWithSize: 64 position:defaultSprite.position];
-        
-    }
+
 }
 
 - (void)setDefaultSprite: (SKSpriteNode *)spriteNode{
@@ -69,10 +72,10 @@ SKSpriteNode *defSprite2;
     NSMutableArray<NSObject<LivingThing>*> *foundThings = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
 
     for (NSObject<LivingThing> *thing in livingThingsToScan){
-        //if([IapManUtilities distanceBetweenPlayerAndNodesSquared: thing.defaultSprite secondNode: defaultSprite] < range){
+        if([IapManUtilities distanceBetweenPlayerAndNodesSquared: thing.defaultSprite secondNode: defaultSprite] < range){
             [self setGold:[self getGold] +1];
             [foundThings addObject:thing];
-        //}
+        }
     }
     return foundThings;
 }

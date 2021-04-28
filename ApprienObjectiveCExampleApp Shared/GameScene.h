@@ -6,9 +6,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "GameManager.h"
+@class GameManager;
 @interface GameScene : SKScene
 + (GameScene *)newGameScene;
 + (GameScene *)loadGameScene: (NSString *) sceneName;
-- (void)SetGameManager: (GameManager*)gameManager;
+- (void)SetGameManager: (GameManager*) gameManager;
 @end

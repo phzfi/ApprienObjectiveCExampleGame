@@ -4,7 +4,7 @@
 //
 //  Created by phz on 31.3.2021.
 //
-#import "GameScene.h"
+
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "LivingThing.h"
@@ -12,6 +12,7 @@
 #import "IAPSalesCreature.h"
 #import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
+#import "GameScene.h"
 
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
@@ -28,9 +29,15 @@
 -(void)setView:(SKView *) skView{
     view = skView;
 }
+- (SKScene *)getScene
+{
+    return scene;
+}
 
 -(void)update{
-    
+    if(scene == nil){
+        scene =view.scene;
+    }
     for (NSObject<LivingThing>* player in players){
         NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
         [self clearFoundItems: foundItems];
@@ -43,6 +50,7 @@
         [self clearFoundItems: foundItems];
     }
 }
+
 - (void)clearFoundItems: (NSMutableArray<SKSpriteNode*> *)foundItems{
     if([foundItems count] > 0 ){
         [scene removeChildrenInArray:foundItems];
@@ -90,6 +98,7 @@
 }
 
 - (void)setUpScene: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize{
+    players = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     sceneItems = [[NSMutableArray<SKSpriteNode *> alloc]init];
     shopKeepers = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
@@ -126,7 +135,6 @@
     SKTexture *firstFrameTexture = shopKeeperAnimFrames[0];
     SKSpriteNode *newShopKeeperTexture = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
 
-
     [newShopKeeper setDefaultSprite:newShopKeeperTexture];
     SKAction *animAction = [SKAction repeatActionForever:
             [SKAction animateWithTextures:shopKeeperAnimFrames
@@ -137,10 +145,8 @@
     newShopKeeper.defaultSprite.size= CGSizeMake(shopKeeperSize, shopKeeperSize);
   
     [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2);
-    
-     
-     [sceneIn addChild:newShopKeeper.defaultSprite];
-    
+    [sceneIn addChild:newShopKeeper.defaultSprite];
+    [newShopKeeper setManager:self];
     return newShopKeeper;
 }
 
@@ -168,26 +174,27 @@
     [livingThing setMoveSideWaysFrames:walkFrames];
 
     SKTexture *firstFrameTexture = walkFrames[0];
-    SKSpriteNode *newPlayer = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+    SKSpriteNode *newPlayerDefaultSprite = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
 
-    newPlayer.size = CGSizeMake(newPlayer.size.width * 3, newPlayer.size.height * 3);
-    newPlayer.position = CGPointMake(20, 20);
-    [livingThing setDefaultSprite:newPlayer];
-
+    newPlayerDefaultSprite.size = CGSizeMake(newPlayerDefaultSprite.size.width * 3, newPlayerDefaultSprite.size.height * 3);
+    newPlayerDefaultSprite.position = CGPointMake(20, 20);
+    [livingThing setDefaultSprite:newPlayerDefaultSprite];
+    [livingThing setManager:self];
     return livingThing;
 }
 
-- (void)updatePlayerPosition: (CGPoint) touchLocation {
-    CGFloat selfHeight = view.bounds.size.height;
-    CGFloat selfWidth = view.bounds.size.width;
-    int middlePointX = selfWidth / 2;
-    int middlePointY = selfHeight / 2;
+- (void)updatePlayer: (CGPoint) touchLocation {
+    CGFloat viewHeight = view.bounds.size.height;
+    CGFloat viewWidth = view.bounds.size.width;
+    int middlePointX = viewWidth / 2;
+    int middlePointY = viewHeight / 2;
 
-    float yFromCenter = touchLocation.y - middlePointY;
-    float xFromCenter = touchLocation.x - middlePointX;
+    float yTouchFromCenter = touchLocation.y - middlePointY;
+    float xTouchFromCenter = touchLocation.x - middlePointX;
     [players[0].defaultSprite removeAllActions];
 
-    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yFromCenter xFromCenter:xFromCenter];
+    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
+    [self HandlePlayerCoinThrow:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
 }
 
 - (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter
@@ -208,6 +215,14 @@
     //right
     else if (fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter > 0) {
         [self movePlayer:(simd_float4) {1.0f, 0.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
+    }
+}
+
+- (void)HandlePlayerCoinThrow:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yTouchFromCenter
+                 xFromCenter:(float)xTouchFromCenter
+{
+    if (fabs(yTouchFromCenter) < 64 && fabs(xTouchFromCenter) < 64) {
+        [players[0] throwItem:Gold amount:1];
     }
 }
 
