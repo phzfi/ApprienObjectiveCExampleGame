@@ -22,10 +22,5 @@
     "apprien-objective-c-sdk",
     "apprien-objective-c-sdk/**/*.{h,m}"
   ],
-  "exclude_files": "Classes/Exclude",
-  "frameworks": "libcurl",
-  "libraries": "curl.tbd",
-  "ios": {
-    "vendored_frameworks": "libcurl.tbd"
-  }
+  "exclude_files": "Classes/Exclude"
 }

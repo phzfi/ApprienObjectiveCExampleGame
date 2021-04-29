@@ -14,7 +14,8 @@
 		061CE12E7B447DEF86A1E2E0F4F74C74 /* CCParticleSystemQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E45EC288CF364C012A220CBDE2D428 /* CCParticleSystemQuad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		072B4CDF1F4BDC7D25E2A067304FF03D /* cocos2d.m in Sources */ = {isa = PBXBuildFile; fileRef = 649F0ED0EB467003069092BC6E1214E1 /* cocos2d.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09D52950998639EC01FF69836AE90626 /* ccTypes.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 426A4E921ACD7B93A65A9C4611FD75D8 /* ccTypes.h */; };
-		0BB04CE47F515F6C1E3C1F0BAFA2337A /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A8BF4A3E16A163E21F136F027D98D6F /* WebRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C4B461D092F4811962C31E9D855A7F13 /* WebRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AC7B59C8B560217A38B1BC11870182C /* ApprienObjectiveC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC655B919229226558227B068111762E /* ApprienObjectiveC-dummy.m */; };
 		0C5944643BEC3AC2FDF0914148EE8CF7 /* CCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 81698246A37F4BA23CBDFF5D9BA5C5FA /* CCAnimation.h */; };
 		0D93830089ED4BE397C6ACA4C8FC3B8D /* CCESRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C643AB54977E6B9A88F74108EF2310B /* CCESRenderer.h */; };
 		0DBAA728AA6249BBB4485A53BB4442F7 /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = E5279B5E4CB4B62E8B03D737AB84D149 /* aabb.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -63,12 +64,14 @@
 		1E581A46347F077481AEC5878F4068E9 /* CCTileMapAtlas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D654D9C8A7A842FDB68E6778CC588E1 /* CCTileMapAtlas.h */; };
 		1F123A01BF5FEB8C9FCC4F7B5689968E /* ccShader_PositionTexture_uColor_vert.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 4E166E09545017F7DB5B8867E28A9D8A /* ccShader_PositionTexture_uColor_vert.h */; };
 		1FCD5282F6EA703D843188F85D179EAE /* CCTransition.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 3D6D047587DC6CA125B870A171D3343B /* CCTransition.h */; };
+		1FF6BB221C107173BC7BF70353628360 /* sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C5E468ACD44F0EDC035AE9D4F12DC0 /* sha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2032BE80C23002F13EF2F9D00CA431B9 /* CCAction.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 2C2D0711ACFA2F3B3A3DE5BA0B8BD495 /* CCAction.h */; };
 		218145790F6E9D82C8B76D4A07DC026C /* CCDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 571AD0A3A92B22A58CFE77BB64839AB9 /* CCDrawingPrimitives.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		226EBF899EF71024887744F19399EC9F /* CCTMXObjectGroup.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B04C787B57CEC893C4EA0E6B4D644627 /* CCTMXObjectGroup.h */; };
 		23F4351850192DA5A3E60BB9E5C9ACD8 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B5D00E9070C17E636E9F5D30BC28 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		241A91869632275820D5EB36FBDA7B24 /* ccTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 426A4E921ACD7B93A65A9C4611FD75D8 /* ccTypes.h */; };
 		241F168E7AD2C1299AA01CE46DAD632D /* CCArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3240A78FC3A76866E8E62BF975DA29BB /* CCArray.h */; };
+		24DB054BB81DEF3DD08E34A33BCE4F40 /* FormDataSection.h in Headers */ = {isa = PBXBuildFile; fileRef = F225E5B487AB3869ABB7214AC29139C6 /* FormDataSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24ED685B62249739552BA8593727AB4D /* CCMotionStreak.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A04CC00E4B2B7131417985988559658 /* CCMotionStreak.h */; };
 		25D5745FC0CFFFB2E452F2C836EBC99B /* CCActionInterval.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B33918883001A628F863998FCD8251DB /* CCActionInterval.h */; };
 		26E01FBDAA22060C87B39F9C3C3FE06A /* utlist.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7C4037C3142AD312668FF5D3B769DA /* utlist.h */; };
@@ -96,6 +99,7 @@
 		39DE2AEB1FD7BD43B2C50F63139D9567 /* CCActionGrid.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8986C2087A297CCDF715CF688BB39754 /* CCActionGrid.h */; };
 		3A3B7263645A1588D8C8A1D7996876FE /* OpenGL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = BA2EFB60F7B82F2DFB3F3F2F392541D6 /* OpenGL_Internal.h */; };
 		3A4DABDF9A6FFDF122BFF2F384BCCCFF /* utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B76353839EC94BE43F366D4E54C99F /* utility.h */; };
+		3B0A488493FD9D674D0727328C8998B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		3C90BA3CCFCAFEC526E257CB1331A00B /* CCGrid.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 4E51F9D40D266B210FF41B99B389A85C /* CCGrid.h */; };
 		3CBA724969242CA13FBCBD9D8749CEFF /* CCProfiling.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = 0063C3F67151944CD42394DA3DF169F1 /* CCProfiling.h */; };
 		3CF1B92C4A93B5DBF0799E6D5013AF99 /* CCDirector.h in Headers */ = {isa = PBXBuildFile; fileRef = 89ADA17E9CD65E54BD0B7D1684882D5F /* CCDirector.h */; };
@@ -172,7 +176,6 @@
 		62AEB082C638C80C62E3D6DC810D2002 /* CCActionManager.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1F4B051B627D721BD5985386CAE39E94 /* CCActionManager.h */; };
 		62C0DD87DECBCF406327236CC6EEA48B /* CCDrawNode.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0B4709DE13C4C4DEF2E92C8180E9B6C5 /* CCDrawNode.h */; };
 		63585649E13DDA07BF85A80572617494 /* CCEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF1994F800956840FB745228AD3DD8 /* CCEventDispatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		64144B39B08BAE4F6E18A36E75F3E48D /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C850B0430F14D92E637E998D7D9D88 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m */; };
 		64555EB0D17A9B3AEFE8F1DA6D46BB33 /* CCTMXTiledMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6979E66BCC8E842A37B9754778681604 /* CCTMXTiledMap.h */; };
 		65927EBBCA642F7B3B6B87EF5E5D5899 /* ccShader_PositionTextureColorAlphaTest_frag.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 7245CEC0540B82D906EE05C0AD249485 /* ccShader_PositionTextureColorAlphaTest_frag.h */; };
 		66C31B8C27FFE3DA1CB12E2F9FD84491 /* mat4stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC21008FA43AA2DC62E308B3241C42 /* mat4stack.h */; };
@@ -215,6 +218,7 @@
 		7EED9ADD094E9B016446FC4C83605B05 /* CGPointExtension.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = FB268F73490F29C8A3D2A3B1B71040C6 /* CGPointExtension.h */; };
 		80CA20F2262655964DBB64D0E97198A2 /* CCPhysicsDebugNode.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 2766F286AC55DD9D2F8CA802626C3767 /* CCPhysicsDebugNode.h */; };
 		81C5CA377677945803271EE17BF64591 /* CCParallaxNode.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 274454FAAD4D173759A4F3CBA156C64D /* CCParallaxNode.h */; };
+		82854DC54E6940F0B554B40B330C2793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		82979F6C7A96C8E3D5ED7EE696C268D7 /* ccUtils.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = C575732A6C8091FE89B4862B9554601E /* ccUtils.h */; };
 		846B6C9060A39336DBB53F35F4E3D9AE /* CCPhysicsDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D63C311876D7910D7CE07CB66AB8CC34 /* CCPhysicsDebugNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		846BF0061F4FC28D9E49B08E70F77FBC /* CCCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA0E0F3EDA8A439CDD495981D1C7694 /* CCCamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -238,6 +242,8 @@
 		8C6F694EA6B6EC47D22DDC957ABA1A05 /* CCDirectorMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EC3DF055CE6DFEBDEE8965A6BC95F /* CCDirectorMac.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CB397685E3E65401548C3B07CC75DD1 /* CCFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD09A66930CF27C2C928A8F086E49B7 /* CCFileUtils.h */; };
 		8DEB8D4812306502920FCD1CCED02FE6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B8F33432AE7D6D22BE1C87E8D3841D /* AVFoundation.framework */; };
+		8E5A6E5F8243085E784C58E282FE1F83 /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ECF5943222E37CEB5DA3832BD7E220D /* ApprienObjectiveC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D810304979581D7AB9C39C8EC8415C97 /* ApprienObjectiveC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F1C8E6D616B4CE9A0F1C1F6A9038670 /* pngset.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D2703F45DCA28884E0AB330630D9350 /* pngset.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9075F756F1263B5061F81ADE8D014694 /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F72C796FAF16F420341C7DC4D42E /* mat4stack.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		90AFBF7484A471B8A9D0AE46C792FDA5 /* ccGLStateCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E97E40D6B0F00CE5010DA993C809ADC /* ccGLStateCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -245,11 +251,13 @@
 		912EF7E72560487E6AC59A1BFC4A497A /* CCLabelBMFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8555894D38C54D952EC01B49AC84B7 /* CCLabelBMFont.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		91840C99D7AE335F7B4216F5B59816EB /* ccShader_PositionColor_frag.h in Headers */ = {isa = PBXBuildFile; fileRef = AA510077FAD396A63B4434ACCFAE734C /* ccShader_PositionColor_frag.h */; };
 		91E5E2762D76947E5BFC76A2022188AB /* CCGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6876F5B62DF15185BDC43EDDD01A7 /* CCGrid.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		91EC175DF320F2227400F99553CBCC3F /* ApprienSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 1926B406A33C44EE92819F1623AD43FB /* ApprienSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		929144F46FF12C2197862528CDE329E2 /* CCRenderTexture.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8C6BA77B183C45EE2FC34631422288BC /* CCRenderTexture.h */; };
 		92C4DA71A5670945CEF954BC0CFF6932 /* CCShaderCache.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = C329AB5A2D98C458069D9BC616D7B0F7 /* CCShaderCache.h */; };
 		93265A696869CD981E7A64A71A1CE4E1 /* ccShader_PositionColor_vert.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B6A004E3B833F05784E9090E933AEEA /* ccShader_PositionColor_vert.h */; };
 		95DEF5D4BABB93513D8265B0B1796DD9 /* CCActionTween.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F15E87E4E9E2A00B7F811B55C5679BA6 /* CCActionTween.h */; };
 		97460E22025AC683D4E4D16BFF57A312 /* NSThread+performBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DFB540E61701B04B9EAB970105D53DD /* NSThread+performBlock.h */; };
+		97B2E92021B4C6B00D6AEE2BCBCD902B /* ApprienProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = FF35827AF7F4E4B9DC22EF8439EC14E0 /* ApprienProduct.m */; };
 		98793EF95AA7455C73AB22D550087AE3 /* CCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BD98DF9C97BE6691AC6B96098D35F /* CCSprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		994D56E49ED3D1F4D2F0DCD94DCA3538 /* CCParticleBatchNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 21534950E238EF08C54251E085EF4FBF /* CCParticleBatchNode.h */; };
 		998979CB175419F5E0AAE524781DBEC1 /* CCScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA1E9DC9FE687B3B6BEB9AB0BBEDC1B /* CCScene.h */; };
@@ -316,6 +324,7 @@
 		BE27395F8EF5A815DC4ED04921960CA4 /* ccShader_Position_uColor_vert.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1CBA5526E9EE01CA6D64375D60327A7C /* ccShader_Position_uColor_vert.h */; };
 		BEE18580FCA34C06953893F18EF80E9F /* CCParticleSystem.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DF5C69F9720AA8ABA3A9E5FD0400ACA9 /* CCParticleSystem.h */; };
 		BF1CE4ECB2177CF83CB480FFF40471A4 /* CCDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDE24510A58A5730B4D13C9A67A7C6A /* CCDrawNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF7887E95DA09692531D15C1411E8C9E /* Apprien.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EF8193E55BD77F58B6936A3486EEB5 /* Apprien.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF96A5CE90F9C25229CD894B6F0D8639 /* CCTouchDispatcher.h in Copy Platforms/iOS Public Headers */ = {isa = PBXBuildFile; fileRef = B58D18E1850A15C2F2AE6C7F92B2A8D1 /* CCTouchDispatcher.h */; };
 		BFEAF5EEE1FA80BDE4EC8A1D04BFF6E5 /* CCFileUtils.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = AFD09A66930CF27C2C928A8F086E49B7 /* CCFileUtils.h */; };
 		C038185F85E47D41F23CE27A149B1246 /* CCActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE28E0A08B3FEF1875CF2AEF5564BCA /* CCActionManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -363,7 +372,6 @@
 		DADF0249F1893735A9AD376928BC8932 /* CocosDenshion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A336A30BC63D67C324E40322A906A1D /* CocosDenshion.h */; };
 		DB7ABFF469D87CC08E55389BEE04923B /* vec2.h in Copy ../external/kazmath/include/kazmath Public Headers */ = {isa = PBXBuildFile; fileRef = CB71826B0DF25CACCB93277CCF5C5410 /* vec2.h */; };
 		DCBCC1BC3A4C3C5758E668B70684A404 /* CCNode+Debug.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 6AF342741F3AB4FF5C683A9CFA6CD7C0 /* CCNode+Debug.h */; };
-		DCEB2E74460F1853EF52CDCB7DA65B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		DD9A382E2D905CC9FFDD3ACD5BC7FC16 /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D41ECEBBE85914CAC87E537DAD28632 /* neon_matrix_impl.h */; };
 		DE2443F4E8C2CAAADD17680A1E2DC3BD /* CCPhysicsSprite.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FF444F3C876123E55123DFBB05075459 /* CCPhysicsSprite.h */; };
 		DEFCFE4782A05B97237AFA64F7D95B5C /* CDXPropertyModifierAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 970F97E2A1C6389E08A202F54C702681 /* CDXPropertyModifierAction.h */; };
@@ -376,6 +384,7 @@
 		E185C92C1C933F912D711C604B2D1B50 /* pngconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB929DB5AE4476BFFBFC510C4A592EC /* pngconf.h */; };
 		E18C50E8FED71C21B2AEA4D74A0BAE0F /* CCActionPageTurn3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA6B8905992F6A8AD046570A75DF115 /* CCActionPageTurn3D.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A1E1C4C9C49ED89301274B311CA836 /* CCParticleSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = DF5C69F9720AA8ABA3A9E5FD0400ACA9 /* CCParticleSystem.h */; };
+		E1F475B4D0C199DE2616EFD53B3FCC9B /* ApprienSdk.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E3FE4D84C31AB20FACE4E91A1B035 /* ApprienSdk.mm */; };
 		E2562A78930FF98202C8CDF34A670734 /* ccDeprecated.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 895F9430E0A81203BA87297CC4262484 /* ccDeprecated.h */; };
 		E32F1D726C95C6B38B8D3BC8B8D029F3 /* CCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B34820DE3D8B6578E31A86CE4CF52E62 /* CCMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E3DCB787487143604B0EF788C755C772 /* cocos2d-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CAF44D875050B7D8F1B60ADB0ACAB0 /* cocos2d-dummy.m */; };
@@ -383,6 +392,7 @@
 		E51BC9024DDD1E6361000086570E8FD2 /* utlist.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = BB7C4037C3142AD312668FF5D3B769DA /* utlist.h */; };
 		E68E60AFD37BE7CFA76DE81249A26DF8 /* pngget.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1497EADABC1304FB4244B4C2F11F15 /* pngget.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E7296AFD10EBD4A32AF3F7D4A752BDAC /* SimpleAudioEngine.h in Copy ../CocosDenshion Public Headers */ = {isa = PBXBuildFile; fileRef = 3D0675CA462DC3FFB87D0543C3BEF833 /* SimpleAudioEngine.h */; };
+		E7AA509C24009D45609DB82A79B25883 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C850B0430F14D92E637E998D7D9D88 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m */; };
 		E938E8D262E3D07244D0FFD3134287DD /* CCPhysicsSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = FF444F3C876123E55123DFBB05075459 /* CCPhysicsSprite.h */; };
 		EA2D76312726B9BCE81F1EB027AFFD75 /* uthash.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BFAC1B48194E5415E451C54602CB64 /* uthash.h */; };
 		EA7B7721D2A27D788E9273BAE42886E7 /* CCTextureCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D3BAD0165464C8C529FA23F593FE9AB3 /* CCTextureCache.h */; };
@@ -397,6 +407,7 @@
 		EF200BD1D2F6DBF3B47D54462412A286 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 73F98816314FC849A22D730CDE92D27B /* base64.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EF34D2FD87B51D018083F3D12D2A6C10 /* CCParallaxNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 274454FAAD4D173759A4F3CBA156C64D /* CCParallaxNode.h */; };
 		EFC816D5779B95EB7FC73D50C187627F /* CCGrabber.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1F81367145B23C34801DEB638CA0D48A /* CCGrabber.h */; };
+		F0933E220126230149B7F824C55334C7 /* ApprienProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = B04DD0D438EDAC0B51D3BA7FA2295DEA /* ApprienProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0C60C37804950ED1D871F8FE73B56E8 /* CCActionPageTurn3D.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8EFA0F28151970A5808DD91CA424769A /* CCActionPageTurn3D.h */; };
 		F0D528B24F0186343D3983FF6635469D /* CCActionCamera.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0F38B61CDEA99033357670F0A00DD9B2 /* CCActionCamera.h */; };
 		F36A4BB11F159AB9266FE2C02EE4B106 /* CCGL.h in Headers */ = {isa = PBXBuildFile; fileRef = E08DF136A6A26FDFFEDE0755FEFF7A6F /* CCGL.h */; };
@@ -424,7 +435,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		529822146603CF6002AA3D5086997314 /* PBXContainerItemProxy */ = {
+		3A7BCBA67FB2B76D4805386F65A472DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1E561DEE329F33F31687B0E19BAF932;
+			remoteInfo = ApprienObjectiveC;
+		};
+		A556261FCA22A2E5E22C97F98EAE8BDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -666,6 +684,7 @@
 
 /* Begin PBXFileReference section */
 		0063C3F67151944CD42394DA3DF169F1 /* CCProfiling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCProfiling.h; path = cocos2d/Support/CCProfiling.h; sourceTree = "<group>"; };
+		01B87A14E563DF21D7983713D5E8CBC1 /* ApprienObjectiveC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ApprienObjectiveC-Info.plist"; sourceTree = "<group>"; };
 		01CC8602D902D39B96F5B5F41B10552B /* CCProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCProgressTimer.h; path = cocos2d/CCProgressTimer.h; sourceTree = "<group>"; };
 		0205333B2913EAF4F051737B96F62859 /* CCActionCatmullRom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionCatmullRom.h; path = cocos2d/CCActionCatmullRom.h; sourceTree = "<group>"; };
 		022D2662AF249007B4A3BF4EE11A6940 /* vec3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec3.h; path = external/kazmath/include/kazmath/vec3.h; sourceTree = "<group>"; };
@@ -682,6 +701,7 @@
 		0B4709DE13C4C4DEF2E92C8180E9B6C5 /* CCDrawNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCDrawNode.h; path = cocos2d/CCDrawNode.h; sourceTree = "<group>"; };
 		0B72D008F32137115A6EDD4A32126F46 /* CCVertex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCVertex.m; path = cocos2d/Support/CCVertex.m; sourceTree = "<group>"; };
 		0C4598E52A8788C5ABD98DDA9E0D7782 /* CCMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMenu.m; path = cocos2d/CCMenu.m; sourceTree = "<group>"; };
+		0CCAB7432FC35E77DE0C0697B0B61AE9 /* ApprienObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ApprienObjectiveC.release.xcconfig; sourceTree = "<group>"; };
 		0F38B61CDEA99033357670F0A00DD9B2 /* CCActionCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionCamera.h; path = cocos2d/CCActionCamera.h; sourceTree = "<group>"; };
 		12B3FC16AD540B5F053553780B12839F /* ZipUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZipUtils.m; path = cocos2d/Support/ZipUtils.m; sourceTree = "<group>"; };
 		1312C11C70952D51BF2C040108436BC2 /* CCTransitionPageTurn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTransitionPageTurn.m; path = cocos2d/CCTransitionPageTurn.m; sourceTree = "<group>"; };
@@ -689,6 +709,7 @@
 		15B76353839EC94BE43F366D4E54C99F /* utility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utility.h; path = external/kazmath/include/kazmath/utility.h; sourceTree = "<group>"; };
 		1614FDF6C8B99E3F522DA7D708ED12D0 /* ccShader_PositionTexture_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTexture_frag.h; path = cocos2d/ccShader_PositionTexture_frag.h; sourceTree = "<group>"; };
 		17B44859E4FCBFFDA964098173AE5FF8 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ApprienObjectiveCExampleApp_iOS.framework; path = "Pods-ApprienObjectiveCExampleApp iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1926B406A33C44EE92819F1623AD43FB /* ApprienSdk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApprienSdk.h; path = "apprien-objective-c-sdk/ApprienSdk.h"; sourceTree = "<group>"; };
 		199C2F177B83720950936B8B7F144732 /* cocos2d.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = cocos2d.modulemap; sourceTree = "<group>"; };
 		1CBA5526E9EE01CA6D64375D60327A7C /* ccShader_Position_uColor_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_Position_uColor_vert.h; path = cocos2d/ccShader_Position_uColor_vert.h; sourceTree = "<group>"; };
 		1D9B41BC196282F2457CC0433419068E /* CCLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCLayer.h; path = cocos2d/CCLayer.h; sourceTree = "<group>"; };
@@ -755,6 +776,8 @@
 		5030573F00D5758F459B1705076868AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		50E50FC751135B7E374B6C757E9E0471 /* plane.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plane.c; path = external/kazmath/src/plane.c; sourceTree = "<group>"; };
 		514935C6FC3D08738717266E1405ECDA /* CCActionTiledGrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionTiledGrid.h; path = cocos2d/CCActionTiledGrid.h; sourceTree = "<group>"; };
+		52BD7AC300DBFFDDD27687DB499D77F5 /* ApprienObjectiveC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ApprienObjectiveC.modulemap; sourceTree = "<group>"; };
+		54E0CEC3F783A9C82BB1D8D844BABB54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		557D94AF1411616EB095C75289C6EF0E /* CCScene.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCScene.m; path = cocos2d/CCScene.m; sourceTree = "<group>"; };
 		55D66F375BBA00BC96723F5EB7BB2790 /* CCShaderCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCShaderCache.m; path = cocos2d/CCShaderCache.m; sourceTree = "<group>"; };
 		5609CE138BAF81A29137C424297AE6BC /* cocos2d.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = cocos2d.debug.xcconfig; sourceTree = "<group>"; };
@@ -794,6 +817,7 @@
 		6979E66BCC8E842A37B9754778681604 /* CCTMXTiledMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTMXTiledMap.h; path = cocos2d/CCTMXTiledMap.h; sourceTree = "<group>"; };
 		6A048565574AAA389F67CDBA215FF19F /* CDAudioManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDAudioManager.m; path = CocosDenshion/CDAudioManager.m; sourceTree = "<group>"; };
 		6AF342741F3AB4FF5C683A9CFA6CD7C0 /* CCNode+Debug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CCNode+Debug.h"; path = "cocos2d/CCNode+Debug.h"; sourceTree = "<group>"; };
+		6BA63D28D3348F10234EE1651EC1D1DC /* ApprienObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ApprienObjectiveC.debug.xcconfig; sourceTree = "<group>"; };
 		6BEA623A3D7AB32D4C25E4ABE27EBDCD /* ray2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ray2.c; path = external/kazmath/src/ray2.c; sourceTree = "<group>"; };
 		6C32484A97B44042A5DE63B310B3DA53 /* CCNS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCNS.h; path = cocos2d/Platforms/CCNS.h; sourceTree = "<group>"; };
 		6D57040882068797A47E4BFEB8F14068 /* CCParticleSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCParticleSystem.m; path = cocos2d/CCParticleSystem.m; sourceTree = "<group>"; };
@@ -856,6 +880,7 @@
 		9A51A9CC35903F0CC8FDFA55B5BF915C /* vec4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec4.h; path = external/kazmath/include/kazmath/vec4.h; sourceTree = "<group>"; };
 		9B3EC3DF055CE6DFEBDEE8965A6BC95F /* CCDirectorMac.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCDirectorMac.m; path = cocos2d/Platforms/Mac/CCDirectorMac.m; sourceTree = "<group>"; };
 		9B6A004E3B833F05784E9090E933AEEA /* ccShader_PositionColor_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionColor_vert.h; path = cocos2d/ccShader_PositionColor_vert.h; sourceTree = "<group>"; };
+		9C4E3FE4D84C31AB20FACE4E91A1B035 /* ApprienSdk.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ApprienSdk.mm; path = "apprien-objective-c-sdk/ApprienSdk.mm"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E401AE69C4C2FF359444A7DDCA14E35 /* cocos2d-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "cocos2d-Info.plist"; sourceTree = "<group>"; };
 		9E4CB7C6682147A4D9B89EA298F59D62 /* CCTextureCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTextureCache.m; path = cocos2d/CCTextureCache.m; sourceTree = "<group>"; };
@@ -869,6 +894,7 @@
 		A4CE5C4A2D6BC28886A3E3528E378E3C /* pngwrite.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwrite.c; path = external/libpng/pngwrite.c; sourceTree = "<group>"; };
 		A4EBDA560FA737CE34C6BE278F91D761 /* ccUtils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ccUtils.c; path = cocos2d/Support/ccUtils.c; sourceTree = "<group>"; };
 		A4EE2C0027B42943297960B389F6D6D2 /* CCActionEase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionEase.h; path = cocos2d/CCActionEase.h; sourceTree = "<group>"; };
+		A5C70AAA06B11E979880CBFF187801E5 /* ApprienObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ApprienObjectiveC.framework; path = ApprienObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A828BCF782D34C7B8741012401834B58 /* CCActionCatmullRom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionCatmullRom.m; path = cocos2d/CCActionCatmullRom.m; sourceTree = "<group>"; };
 		A88F51B1E6CE365BB33E39C3BD72BC69 /* CCActionGrid3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionGrid3D.h; path = cocos2d/CCActionGrid3D.h; sourceTree = "<group>"; };
 		AA510077FAD396A63B4434ACCFAE734C /* ccShader_PositionColor_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionColor_frag.h; path = cocos2d/ccShader_PositionColor_frag.h; sourceTree = "<group>"; };
@@ -877,6 +903,8 @@
 		ACFA19C5FB6967FC765DD40C08C0B56D /* CCTransitionProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTransitionProgress.h; path = cocos2d/CCTransitionProgress.h; sourceTree = "<group>"; };
 		AFD09A66930CF27C2C928A8F086E49B7 /* CCFileUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCFileUtils.h; path = cocos2d/Support/CCFileUtils.h; sourceTree = "<group>"; };
 		B04C787B57CEC893C4EA0E6B4D644627 /* CCTMXObjectGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTMXObjectGroup.h; path = cocos2d/CCTMXObjectGroup.h; sourceTree = "<group>"; };
+		B04DD0D438EDAC0B51D3BA7FA2295DEA /* ApprienProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApprienProduct.h; path = "apprien-objective-c-sdk/ApprienProduct.h"; sourceTree = "<group>"; };
+		B0EF8193E55BD77F58B6936A3486EEB5 /* Apprien.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Apprien.h; sourceTree = "<group>"; };
 		B1A5D97CEB85FFB4C822E4A09CD0D829 /* Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		B30799CDCD6B19EB39DE9F740FBC01C8 /* CCArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCArray.m; path = cocos2d/Support/CCArray.m; sourceTree = "<group>"; };
 		B311C8E743B93AB49CF53E8606BA5B49 /* CDXMacOSXSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDXMacOSXSupport.h; path = CocosDenshion/CDXMacOSXSupport.h; sourceTree = "<group>"; };
@@ -896,6 +924,7 @@
 		BCDE24510A58A5730B4D13C9A67A7C6A /* CCDrawNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCDrawNode.m; path = cocos2d/CCDrawNode.m; sourceTree = "<group>"; };
 		BCEDC3653513B6569518DBFFFAB24953 /* NSThread+performBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSThread+performBlock.m"; path = "cocos2d/Support/NSThread+performBlock.m"; sourceTree = "<group>"; };
 		BDBEFBE839E580A6630D4661E95727D5 /* CCTMXLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTMXLayer.h; path = cocos2d/CCTMXLayer.h; sourceTree = "<group>"; };
+		BDEB715F5A5CA8217B0985D3FC8657E8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BE848956D80BAA59348A822209D5D2B4 /* png.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = png.h; path = external/libpng/png.h; sourceTree = "<group>"; };
 		BFAEA360931654A4E4BDE732729A0221 /* CCTextureAtlas.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTextureAtlas.m; path = cocos2d/CCTextureAtlas.m; sourceTree = "<group>"; };
 		C190D652D4AFEF25C1663F636C8F75A8 /* CCActionProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionProgressTimer.h; path = cocos2d/CCActionProgressTimer.h; sourceTree = "<group>"; };
@@ -904,12 +933,14 @@
 		C3567949480D08C555900B9B5B8F4C83 /* CCTransitionProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTransitionProgress.m; path = cocos2d/CCTransitionProgress.m; sourceTree = "<group>"; };
 		C40FA7DBC62D90994241694C94A0BCF8 /* CCGrabber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCGrabber.m; path = cocos2d/CCGrabber.m; sourceTree = "<group>"; };
 		C48047A618C1ED7ADED20DFCC251E347 /* CCTouchDelegateProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTouchDelegateProtocol.h; path = cocos2d/Platforms/iOS/CCTouchDelegateProtocol.h; sourceTree = "<group>"; };
+		C4B461D092F4811962C31E9D855A7F13 /* WebRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
 		C575732A6C8091FE89B4862B9554601E /* ccUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccUtils.h; path = cocos2d/Support/ccUtils.h; sourceTree = "<group>"; };
 		C59A18D3B18F3F07CF0C1A0BED94124D /* CCParallaxNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCParallaxNode.m; path = cocos2d/CCParallaxNode.m; sourceTree = "<group>"; };
 		C654576F65E0D96797245FB1BE36231F /* mat4.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mat4.c; path = external/kazmath/src/mat4.c; sourceTree = "<group>"; };
 		CA1497EADABC1304FB4244B4C2F11F15 /* pngget.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngget.c; path = external/libpng/pngget.c; sourceTree = "<group>"; };
 		CA697C77DBEBD48BB1C93B9CF0FD227A /* cocos2d-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cocos2d-prefix.pch"; sourceTree = "<group>"; };
 		CB71826B0DF25CACCB93277CCF5C5410 /* vec2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec2.h; path = external/kazmath/include/kazmath/vec2.h; sourceTree = "<group>"; };
+		CC655B919229226558227B068111762E /* ApprienObjectiveC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ApprienObjectiveC-dummy.m"; sourceTree = "<group>"; };
 		CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF73432175D0AFC60C4E60570051725 /* TGAlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAlib.m; path = cocos2d/Support/TGAlib.m; sourceTree = "<group>"; };
@@ -920,6 +951,7 @@
 		D5B90FFEDC0F441066013E96DC5A41C8 /* pngpread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngpread.c; path = external/libpng/pngpread.c; sourceTree = "<group>"; };
 		D63694F108225D22825E4D118994D309 /* cocos2d.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = cocos2d.release.xcconfig; sourceTree = "<group>"; };
 		D63C311876D7910D7CE07CB66AB8CC34 /* CCPhysicsDebugNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCPhysicsDebugNode.m; path = cocos2d/CCPhysicsDebugNode.m; sourceTree = "<group>"; };
+		D810304979581D7AB9C39C8EC8415C97 /* ApprienObjectiveC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ApprienObjectiveC-umbrella.h"; sourceTree = "<group>"; };
 		D87D70280B0C5F15140BBF31D40077BE /* CCPhysicsSprite.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = CCPhysicsSprite.mm; path = cocos2d/CCPhysicsSprite.mm; sourceTree = "<group>"; };
 		D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ApprienObjectiveCExampleApp iOS-umbrella.h"; sourceTree = "<group>"; };
 		DA49E488E43F1E22657F19DCBF52DCF3 /* CCTMXXMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTMXXMLParser.m; path = cocos2d/CCTMXXMLParser.m; sourceTree = "<group>"; };
@@ -931,6 +963,7 @@
 		DF5C69F9720AA8ABA3A9E5FD0400ACA9 /* CCParticleSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCParticleSystem.h; path = cocos2d/CCParticleSystem.h; sourceTree = "<group>"; };
 		E08C42B5FBCD3CEBAC2ACF233757F1CF /* ccShader_Position_uColor_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_Position_uColor_frag.h; path = cocos2d/ccShader_Position_uColor_frag.h; sourceTree = "<group>"; };
 		E08DF136A6A26FDFFEDE0755FEFF7A6F /* CCGL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCGL.h; path = cocos2d/Platforms/CCGL.h; sourceTree = "<group>"; };
+		E38BF0DEFA084844D5B314B6801D5E34 /* ApprienObjectiveC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ApprienObjectiveC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E51C399FEE136B2C8E1FBB0ADF192E9A /* CCGLView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCGLView.m; path = cocos2d/Platforms/Mac/CCGLView.m; sourceTree = "<group>"; };
 		E5279B5E4CB4B62E8B03D737AB84D149 /* aabb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aabb.c; path = external/kazmath/src/aabb.c; sourceTree = "<group>"; };
 		E66A190C0939F0B529E9F5336D550BC2 /* pngrtran.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngrtran.c; path = external/libpng/pngrtran.c; sourceTree = "<group>"; };
@@ -942,30 +975,26 @@
 		EF4AAC7CBE4C8598F030BBBA31E328B9 /* CCAtlasNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCAtlasNode.m; path = cocos2d/CCAtlasNode.m; sourceTree = "<group>"; };
 		F15E87E4E9E2A00B7F811B55C5679BA6 /* CCActionTween.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionTween.h; path = cocos2d/CCActionTween.h; sourceTree = "<group>"; };
 		F1D5DF0DE7313466EF4E6F1AB1CA877C /* CCVertex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCVertex.h; path = cocos2d/Support/CCVertex.h; sourceTree = "<group>"; };
+		F225E5B487AB3869ABB7214AC29139C6 /* FormDataSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FormDataSection.h; sourceTree = "<group>"; };
+		F515E5E4D4D66D5FCFED57E35D525B70 /* ApprienObjectiveC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ApprienObjectiveC-prefix.pch"; sourceTree = "<group>"; };
 		F5E299F02980419BD5E4C9279B59F758 /* CCNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCNode.h; path = cocos2d/CCNode.h; sourceTree = "<group>"; };
 		F65168177A8E0CB253A79B1FBAAF7A73 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
 		F71D1A6CD311F643203F35368A1CE303 /* neon_matrix_impl.c */ = {isa = PBXFileReference; includeInIndex = 1; name = neon_matrix_impl.c; path = external/kazmath/src/neon_matrix_impl.c; sourceTree = "<group>"; };
 		F806BF38E3F2F5AA5EB25E6135067A5A /* CCLabelAtlas.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCLabelAtlas.m; path = cocos2d/CCLabelAtlas.m; sourceTree = "<group>"; };
+		F9C5E468ACD44F0EDC035AE9D4F12DC0 /* sha256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
 		FA6C9D193A5C161891439803F9D07412 /* CCAtlasNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCAtlasNode.h; path = cocos2d/CCAtlasNode.h; sourceTree = "<group>"; };
 		FB268F73490F29C8A3D2A3B1B71040C6 /* CGPointExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPointExtension.h; path = cocos2d/Support/CGPointExtension.h; sourceTree = "<group>"; };
 		FBBACEE2E99478C8B6F8C82D590AAF8C /* ccShader_PositionColorLengthTexture_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionColorLengthTexture_vert.h; path = cocos2d/ccShader_PositionColorLengthTexture_vert.h; sourceTree = "<group>"; };
 		FBC6BFFD4012FAFD2817D197D7D3CBD6 /* CCTMXObjectGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTMXObjectGroup.m; path = cocos2d/CCTMXObjectGroup.m; sourceTree = "<group>"; };
 		FCA0E0F3EDA8A439CDD495981D1C7694 /* CCCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCCamera.m; path = cocos2d/CCCamera.m; sourceTree = "<group>"; };
 		FCBC737AAA272DDD118EEEB447DE2350 /* base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base64.h; path = cocos2d/Support/base64.h; sourceTree = "<group>"; };
+		FF35827AF7F4E4B9DC22EF8439EC14E0 /* ApprienProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ApprienProduct.m; path = "apprien-objective-c-sdk/ApprienProduct.m"; sourceTree = "<group>"; };
 		FF40C686EEE76C225DE49850810ABA4C /* mat4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mat4.h; path = external/kazmath/include/kazmath/mat4.h; sourceTree = "<group>"; };
 		FF444F3C876123E55123DFBB05075459 /* CCPhysicsSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCPhysicsSprite.h; path = cocos2d/CCPhysicsSprite.h; sourceTree = "<group>"; };
 		FF519F12086BEA0A1AC3562BA621540D /* png.c */ = {isa = PBXFileReference; includeInIndex = 1; name = png.c; path = external/libpng/png.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BC5A103124823059341FD3E4ECC048A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCEB2E74460F1853EF52CDCB7DA65B4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		69F01894C39495023AF29675E58A5E9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -978,6 +1007,22 @@
 				52945562B64EFAF491D9592F60671B04 /* OpenAL.framework in Frameworks */,
 				33917E8715D9092F27DCDD96CC2D5874 /* OpenGLES.framework in Frameworks */,
 				F97018E1A41846A0280506015B91ECF4 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44A3C8554B7B0396EF5E9C794527740 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0A488493FD9D674D0727328C8998B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB3F370BA5011D1BF19E01B91048719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82854DC54E6940F0B554B40B330C2793 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1289,29 @@
 			path = cocos2d;
 			sourceTree = "<group>";
 		};
+		1612B216E9C3AB8E2DF27E72B5D432A4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B927883B11D5D21CB29EBC21C86344DE /* ApprienObjectiveC */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6B5ED8E88CEBADA6B754B04F367463E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52BD7AC300DBFFDDD27687DB499D77F5 /* ApprienObjectiveC.modulemap */,
+				CC655B919229226558227B068111762E /* ApprienObjectiveC-dummy.m */,
+				01B87A14E563DF21D7983713D5E8CBC1 /* ApprienObjectiveC-Info.plist */,
+				F515E5E4D4D66D5FCFED57E35D525B70 /* ApprienObjectiveC-prefix.pch */,
+				D810304979581D7AB9C39C8EC8415C97 /* ApprienObjectiveC-umbrella.h */,
+				6BA63D28D3348F10234EE1651EC1D1DC /* ApprienObjectiveC.debug.xcconfig */,
+				0CCAB7432FC35E77DE0C0697B0B61AE9 /* ApprienObjectiveC.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../ApprienObjectiveCExampleGame/Pods/Target Support Files/ApprienObjectiveC";
+			sourceTree = "<group>";
+		};
 		74E4BB503FE37FCDC8FB8BA223512F5C /* CocosDenshion */ = {
 			isa = PBXGroup;
 			children = (
@@ -1264,6 +1332,18 @@
 			name = CocosDenshion;
 			sourceTree = "<group>";
 		};
+		7F00B07545FAA9D4E4D1535D22BC9EC4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B0EF8193E55BD77F58B6936A3486EEB5 /* Apprien.h */,
+				F225E5B487AB3869ABB7214AC29139C6 /* FormDataSection.h */,
+				F9C5E468ACD44F0EDC035AE9D4F12DC0 /* sha256.h */,
+				C4B461D092F4811962C31E9D855A7F13 /* WebRequest.h */,
+			);
+			name = src;
+			path = "apprien-objective-c-sdk/src";
+			sourceTree = "<group>";
+		};
 		955FF1853AE5AB0763EB1AE39C6E47C7 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1272,9 +1352,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */ = {
+		A622E0D449956EC55ACD784C46C374C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				A5C70AAA06B11E979880CBFF187801E5 /* ApprienObjectiveC.framework */,
 				D3D31880E21E3979D9F7BFAE5CDF682F /* cocos2d.framework */,
 				17B44859E4FCBFFDA964098173AE5FF8 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
 			);
@@ -1296,15 +1377,41 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		B927883B11D5D21CB29EBC21C86344DE /* ApprienObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				B04DD0D438EDAC0B51D3BA7FA2295DEA /* ApprienProduct.h */,
+				FF35827AF7F4E4B9DC22EF8439EC14E0 /* ApprienProduct.m */,
+				1926B406A33C44EE92819F1623AD43FB /* ApprienSdk.h */,
+				9C4E3FE4D84C31AB20FACE4E91A1B035 /* ApprienSdk.mm */,
+				DDB0937B0136D2D7C847D57A4FBD8DE2 /* Pod */,
+				7F00B07545FAA9D4E4D1535D22BC9EC4 /* src */,
+				6B5ED8E88CEBADA6B754B04F367463E1 /* Support Files */,
+			);
+			name = ApprienObjectiveC;
+			path = /Users/phz/workspace/github/ApprienObjectiveC;
+			sourceTree = "<absolute>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1612B216E9C3AB8E2DF27E72B5D432A4 /* Development Pods */,
 				F119B4A0ABE017AECEE69836596133B2 /* Frameworks */,
 				FEC545690CC0339CFF89B1490D82D99B /* Pods */,
-				985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */,
+				A622E0D449956EC55ACD784C46C374C1 /* Products */,
 				955FF1853AE5AB0763EB1AE39C6E47C7 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		DDB0937B0136D2D7C847D57A4FBD8DE2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E38BF0DEFA084844D5B314B6801D5E34 /* ApprienObjectiveC.podspec */,
+				54E0CEC3F783A9C82BB1D8D844BABB54 /* LICENSE */,
+				BDEB715F5A5CA8217B0985D3FC8657E8 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		E85E7919FB351178E057B117D417ACF8 /* Pods-ApprienObjectiveCExampleApp iOS */ = {
@@ -1358,6 +1465,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		376B4CF45EF6E911EE3E2DC04B49819F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5A6E5F8243085E784C58E282FE1F83 /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40348AFB03D48F32ED7F03DF0923F923 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1504,11 +1619,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A4125C50AFEE4AD74BE6E7A1BB7DD6C /* Headers */ = {
+		4D5620A231435C836B36BAC143AA87E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB04CE47F515F6C1E3C1F0BAFA2337A /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */,
+				BF7887E95DA09692531D15C1411E8C9E /* Apprien.h in Headers */,
+				8ECF5943222E37CEB5DA3832BD7E220D /* ApprienObjectiveC-umbrella.h in Headers */,
+				F0933E220126230149B7F824C55334C7 /* ApprienProduct.h in Headers */,
+				91EC175DF320F2227400F99553CBCC3F /* ApprienSdk.h in Headers */,
+				24DB054BB81DEF3DD08E34A33BCE4F40 /* FormDataSection.h in Headers */,
+				1FF6BB221C107173BC7BF70353628360 /* sha256.h in Headers */,
+				0A8BF4A3E16A163E21F136F027D98D6F /* WebRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1517,17 +1638,18 @@
 /* Begin PBXNativeTarget section */
 		08F9C228BB0A15431956555715EE1A0F /* Pods-ApprienObjectiveCExampleApp iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 108417EA75B73CEE43A742CB95EE0107 /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */;
+			buildConfigurationList = F75DBC9DABA9D5A636BE9547DACF7F5E /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */;
 			buildPhases = (
-				5A4125C50AFEE4AD74BE6E7A1BB7DD6C /* Headers */,
-				AB4BD022BE22B7F03563331465047952 /* Sources */,
-				0BC5A103124823059341FD3E4ECC048A /* Frameworks */,
-				FE199828202ADB1E0A4B191F882D7B6D /* Resources */,
+				376B4CF45EF6E911EE3E2DC04B49819F /* Headers */,
+				7EA5EED72646BF5FD156B95028DA766B /* Sources */,
+				C44A3C8554B7B0396EF5E9C794527740 /* Frameworks */,
+				E6DB304BCF6018FF6E4FC0EC6FB73808 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB82F464D78C757303DB38CA2119BD4E /* PBXTargetDependency */,
+				B20E9EBA18A69ED8A6C14EBCB42E460B /* PBXTargetDependency */,
+				12E3BF6E219D3ADDC439D70CF4497FFD /* PBXTargetDependency */,
 			);
 			name = "Pods-ApprienObjectiveCExampleApp iOS";
 			productName = "Pods-ApprienObjectiveCExampleApp iOS";
@@ -1561,6 +1683,24 @@
 			productReference = D3D31880E21E3979D9F7BFAE5CDF682F /* cocos2d.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B1E561DEE329F33F31687B0E19BAF932 /* ApprienObjectiveC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49EB94481A01903BDE6E25CAA1E27551 /* Build configuration list for PBXNativeTarget "ApprienObjectiveC" */;
+			buildPhases = (
+				4D5620A231435C836B36BAC143AA87E4 /* Headers */,
+				39FC380B58F8ED8AADDAEBD81699C773 /* Sources */,
+				DDB3F370BA5011D1BF19E01B91048719 /* Frameworks */,
+				3604BFC9BC7FE28C92942BE4011EC552 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApprienObjectiveC;
+			productName = ApprienObjectiveC;
+			productReference = A5C70AAA06B11E979880CBFF187801E5 /* ApprienObjectiveC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1579,10 +1719,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */;
+			productRefGroup = A622E0D449956EC55ACD784C46C374C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B1E561DEE329F33F31687B0E19BAF932 /* ApprienObjectiveC */,
 				9A53C01FB886628EDB98B692FF6E0B66 /* cocos2d */,
 				08F9C228BB0A15431956555715EE1A0F /* Pods-ApprienObjectiveCExampleApp iOS */,
 			);
@@ -1590,6 +1731,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3604BFC9BC7FE28C92942BE4011EC552 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C14F745ED99D381CEC2E09C1E801DAC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1597,7 +1745,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE199828202ADB1E0A4B191F882D7B6D /* Resources */ = {
+		E6DB304BCF6018FF6E4FC0EC6FB73808 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1607,6 +1755,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		39FC380B58F8ED8AADDAEBD81699C773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC7B59C8B560217A38B1BC11870182C /* ApprienObjectiveC-dummy.m in Sources */,
+				97B2E92021B4C6B00D6AEE2BCBCD902B /* ApprienProduct.m in Sources */,
+				E1F475B4D0C199DE2616EFD53B3FCC9B /* ApprienSdk.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		715DB93486EB3B5570A41ABA2A950189 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1740,22 +1898,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB4BD022BE22B7F03563331465047952 /* Sources */ = {
+		7EA5EED72646BF5FD156B95028DA766B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64144B39B08BAE4F6E18A36E75F3E48D /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */,
+				E7AA509C24009D45609DB82A79B25883 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB82F464D78C757303DB38CA2119BD4E /* PBXTargetDependency */ = {
+		12E3BF6E219D3ADDC439D70CF4497FFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = cocos2d;
 			target = 9A53C01FB886628EDB98B692FF6E0B66 /* cocos2d */;
-			targetProxy = 529822146603CF6002AA3D5086997314 /* PBXContainerItemProxy */;
+			targetProxy = A556261FCA22A2E5E22C97F98EAE8BDF /* PBXContainerItemProxy */;
+		};
+		B20E9EBA18A69ED8A6C14EBCB42E460B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ApprienObjectiveC;
+			target = B1E561DEE329F33F31687B0E19BAF932 /* ApprienObjectiveC */;
+			targetProxy = 3A7BCBA67FB2B76D4805386F65A472DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1826,12 +1990,10 @@
 			};
 			name = Debug;
 		};
-		22BA35BA22F6EF5BC2206BB02AB7D0C3 /* Debug */ = {
+		2EE5D8465CF8E890D56197C0D9EAC43D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */;
+			baseConfigurationReference = 6BA63D28D3348F10234EE1651EC1D1DC /* ApprienObjectiveC.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1840,23 +2002,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC.modulemap";
+				PRODUCT_MODULE_NAME = ApprienObjectiveC;
+				PRODUCT_NAME = ApprienObjectiveC;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1890,44 +2050,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6BD9FD177EA31D97219020B7D151D11D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1997,6 +2119,115 @@
 			};
 			name = Release;
 		};
+		A95071C9E715BF734607364570C4CEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCAB7432FC35E77DE0C0697B0B61AE9 /* ApprienObjectiveC.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ApprienObjectiveC/ApprienObjectiveC.modulemap";
+				PRODUCT_MODULE_NAME = ApprienObjectiveC;
+				PRODUCT_NAME = ApprienObjectiveC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BB1FD94D5B76E8495D6F68851BFAB7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB29083A30984C2D19B566DD02158B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EF836666BCD3C0920D22744036AF5918 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5609CE138BAF81A29137C424297AE6BC /* cocos2d.debug.xcconfig */;
@@ -2033,15 +2264,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		108417EA75B73CEE43A742CB95EE0107 /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22BA35BA22F6EF5BC2206BB02AB7D0C3 /* Debug */,
-				6BD9FD177EA31D97219020B7D151D11D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2051,11 +2273,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		49EB94481A01903BDE6E25CAA1E27551 /* Build configuration list for PBXNativeTarget "ApprienObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE5D8465CF8E890D56197C0D9EAC43D /* Debug */,
+				A95071C9E715BF734607364570C4CEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79EB551BA32F092348E2E291A532CC44 /* Build configuration list for PBXNativeTarget "cocos2d" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF836666BCD3C0920D22744036AF5918 /* Debug */,
 				6500A431900531EF1EFB45DA5F43C188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F75DBC9DABA9D5A636BE9547DACF7F5E /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1FD94D5B76E8495D6F68851BFAB7A1 /* Debug */,
+				EB29083A30984C2D19B566DD02158B70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -24,7 +24,7 @@
 
 - (void)moveForward:(CGFloat)speed;
 - (void)lookAt: (simd_float4) direction;
-- (void)throwItem: (ItemType) itemType amount: (int) amount;
+- (SKSpriteNode *)throwItem: (ItemType) itemType amount: (int) amount;
 - (void)receiveItem: (ItemType)itemType amount: (int) amount;
 - (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items;
 - (NSMutableArray<NSObject<LivingThing>*> *)scanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan;

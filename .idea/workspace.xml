@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813e9a80-39d4-4159-a62c-9e3b510c48de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameScene.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPPlayer.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPPlayer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPSalesCreature.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPSalesCreature.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPSalesCreature.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IAPSalesCreature.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/LivingThing.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/LivingThing.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/Player.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/Player.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp iOS/GameViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Debug-input-files.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Debug-input-files.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Debug-output-files.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Debug-output-files.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Release-input-files.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Release-input-files.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Release-output-files.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks-Release-output-files.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616406237667</updated>
       <workItem from="1616406242422" duration="43000" />
-      <workItem from="1617259821086" duration="5973000" />
+      <workItem from="1617259821086" duration="7008000" />
     </task>
     <servers />
   </component>

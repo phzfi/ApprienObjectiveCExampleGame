@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28509F8829D44452D4BE32B5 /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5068045F2A72F0024B01F71 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */; };
 		8B067FC42603984700301F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC32603984700301F81 /* AppDelegate.m */; };
 		8B067FC72603984700301F81 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC62603984700301F81 /* GameViewController.m */; };
 		8B067FCA2603984700301F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FC82603984700301F81 /* Main.storyboard */; };
@@ -93,7 +94,7 @@
 		8B5CCC042620561A00B856AA /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		8B5CCC052620561A00B856AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE79D064F5F304E14FF7731 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
-		E453446C5DD7C27122C99CD0 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5068045F2A72F0024B01F71 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApprienObjectiveCExampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC571146AC7C8DD620E6F5A /* Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp macOS/Pods-ApprienObjectiveCExampleApp macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */,
+				28509F8829D44452D4BE32B5 /* Pods_ApprienObjectiveCExampleApp_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,10 +118,11 @@
 				8B0680232603A26F00301F81 /* cocos2d.framework */,
 				8B0680252603A26F00301F81 /* cocos2d.framework */,
 				08B0AE6A064C0974C14AA00E /* Pods_ApprienObjectiveCExampleApp_macOS.framework */,
-				E453446C5DD7C27122C99CD0 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
+				D5068045F2A72F0024B01F71 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			path = ../../../../../../../../workspace/github/ApprienObjectiveCExampleGame;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		8B067FB02603984300301F81 = {
 			isa = PBXGroup;
@@ -243,7 +246,7 @@
 				8B067FBB2603984700301F81 /* Sources */,
 				8B067FBC2603984700301F81 /* Frameworks */,
 				8B067FBD2603984700301F81 /* Resources */,
-				4B947A824D1E4B80BA1000C5 /* [CP] Embed Pods Frameworks */,
+				3158B223062381BEB313A133 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +312,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B947A824D1E4B80BA1000C5 /* [CP] Embed Pods Frameworks */ = {
+		3158B223062381BEB313A133 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

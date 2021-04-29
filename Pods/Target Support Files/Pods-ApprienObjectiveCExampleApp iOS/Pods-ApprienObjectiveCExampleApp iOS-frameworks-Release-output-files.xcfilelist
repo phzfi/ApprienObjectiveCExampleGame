@@ -1,1 +1,2 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApprienObjectiveC.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocos2d.framework

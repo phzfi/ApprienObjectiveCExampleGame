@@ -10,6 +10,7 @@
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import "GameManager.h"
+#import <Apprien.h>
 @implementation GameViewController
 GameScene *scene;
 

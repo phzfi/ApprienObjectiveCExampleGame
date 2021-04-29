@@ -51,7 +51,7 @@ simd_float4 lookDirection;
     //TODO: Implement default sprite for direction if needed
 }
 
-- (void)throwItem: (ItemType)itemType amount:(int)amount {
+- (SKSpriteNode *)throwItem: (ItemType)itemType amount:(int)amount {
     if(itemType == Gold){
         SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defaultSprite.position];
         simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };
@@ -63,7 +63,9 @@ simd_float4 lookDirection;
         //[defSprite runAction: animAction];
         [coin runAction: moveAction];
         [[gameManager getScene] addChild:coin];
+        return coin;
     }
+    return nil;
 }
 
 - (void)receiveItem:( ItemType)itemType amount:(int)amount {

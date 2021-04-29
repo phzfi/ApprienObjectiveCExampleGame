@@ -13,7 +13,7 @@
 #import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
 #import "GameScene.h"
-
+#import <Apprien.h>
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
@@ -195,6 +195,7 @@
 
     [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
     [self HandlePlayerCoinThrow:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
+    
 }
 
 - (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter
@@ -222,7 +223,8 @@
                  xFromCenter:(float)xTouchFromCenter
 {
     if (fabs(yTouchFromCenter) < 64 && fabs(xTouchFromCenter) < 64) {
-        [players[0] throwItem:Gold amount:1];
+        SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
+        [sceneItems addObject:thrownItem];
     }
 }
 
