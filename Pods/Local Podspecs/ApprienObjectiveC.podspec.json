@@ -22,5 +22,8 @@
     "apprien-objective-c-sdk",
     "apprien-objective-c-sdk/**/*.{h,m}"
   ],
-  "exclude_files": "Classes/Exclude"
+  "exclude_files": "Classes/Exclude",
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(inherited) \"${PODS_ROOT}\""
+  }
 }

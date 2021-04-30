@@ -11,6 +11,7 @@
 #import "IAPPlayer.h"
 #import "GameManager.h"
 #import <Apprien.h>
+#import <string.h>
 @implementation GameViewController
 GameScene *scene;
 
