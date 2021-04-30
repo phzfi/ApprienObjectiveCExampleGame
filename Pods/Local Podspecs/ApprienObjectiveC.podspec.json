@@ -23,9 +23,7 @@
     "apprien-objective-c-sdk/**/*.{h,m}"
   ],
   "exclude_files": "Classes/Exclude",
-  "frameworks": "libcurl",
-  "libraries": "curl.tbd",
-  "ios": {
-    "vendored_frameworks": "libcurl.tbd"
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(inherited) \"${PODS_ROOT}\""
   }
 }

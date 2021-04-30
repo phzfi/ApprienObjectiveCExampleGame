@@ -11,7 +11,8 @@
 #if TARGET_OS_OSX
 // Mouse-based event handling
 #import <curl/curl.h>
-+ (void)UpdateInput: (LivingThing*) livingThing{
+
++ (void)UpdateInput: (NSObject<LivingThing> *) livingThing{
 
 }
 

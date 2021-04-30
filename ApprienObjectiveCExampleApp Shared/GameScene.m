@@ -5,8 +5,9 @@
 //  Created by phz on 18.3.2021.
 //
 
-#import "GameScene.h"
+
 #import "GameViewController.h"
+#import "GameScene.h"
 
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
@@ -20,7 +21,7 @@
 
 + (GameScene *)newGameScene {
     // Load 'GameScene.sks' as an GameScene.
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+    GameScene *scene = (GameScene*)[SKScene nodeWithFileNamed:@"GameScene"];
     if (!scene) {
         NSLog(@"Failed to load GameScene.sks");
         abort();

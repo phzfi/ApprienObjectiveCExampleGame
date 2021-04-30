@@ -20,13 +20,14 @@
 @property(nonatomic, assign, getter = getMoveUpWaysFrames, setter=setMoveUpWaysFrames:) NSMutableArray<SKTexture*> *moveUpWaysFrames;
 @property(nonatomic, assign, getter = getMoveDownWaysFrames, setter=setMoveDownWaysFrames:) NSMutableArray<SKTexture*> *moveDownWaysFrames;
 @property(nonatomic, assign, getter = getIdleFrames, setter=setIdleFrames:) NSMutableArray<SKTexture*> *idleFrames;
+@property(nonatomic, assign, setter=setManager:) GameManager *gameManager;
 
 - (void)moveForward:(CGFloat)speed;
 - (void)lookAt: (simd_float4) direction;
-- (void)throwItem: (ItemType) itemType amount: (int) amount;
+- (SKSpriteNode *)throwItem: (ItemType) itemType amount: (int) amount;
 - (void)receiveItem: (ItemType)itemType amount: (int) amount;
 - (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items;
-
+- (NSMutableArray<NSObject<LivingThing>*> *)scanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan;
 @end
 
 #endif /* IAPPlayer_h */

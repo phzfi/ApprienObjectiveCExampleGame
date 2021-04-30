@@ -10,6 +10,8 @@
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import "GameManager.h"
+#import <Apprien.h>
+#import <string.h>
 @implementation GameViewController
 GameScene *scene;
 
@@ -33,6 +35,7 @@ GameManager *gameManager;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     [gameManager setView:skView];
+    
 }
 
 - (BOOL)shouldAutorotate {
@@ -65,7 +68,8 @@ GameManager *gameManager;
             [skView presentScene:scene];
             currentLevel = 1;
         }
-        [gameManager updatePlayerPosition:[touch locationInView:self.view]];
+        [gameManager updatePlayer:[touch locationInView:self.view]];
+        
     }
 }
 

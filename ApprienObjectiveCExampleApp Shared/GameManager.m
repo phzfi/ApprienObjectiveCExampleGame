@@ -4,19 +4,22 @@
 //
 //  Created by phz on 31.3.2021.
 //
-#import "GameScene.h"
+
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import "IAPSalesCreature.h"
+#import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
-
+#import "GameScene.h"
+#import <Apprien.h>
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
     SKLabelNode *_labelContinue;
-    NSObject <LivingThing> *player;
+    //Use array to avoid adding addittional functions to interface
+    NSMutableArray<NSObject <LivingThing>*>*players;
     SKView *view;
     SKScene *scene;
     NSMutableArray<SKSpriteNode *> *sceneItems;
@@ -25,14 +28,29 @@
 
 -(void)setView:(SKView *) skView{
     view = skView;
-
+}
+- (SKScene *)getScene
+{
+    return scene;
 }
 
 -(void)update{
-    NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
-    [self clearFoundItems: foundItems];
-
+    if(scene == nil){
+        scene =view.scene;
+    }
+    for (NSObject<LivingThing>* player in players){
+        NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
+        [self clearFoundItems: foundItems];
+    }
+    
+    for (NSObject<LivingThing>* shopKeeper in shopKeepers){
+        NSMutableArray<NSObject<LivingThing>*> *livingThings = [shopKeeper scanLivingThingsInRange:shopKeeper.defaultSprite.size.width livingThingsToScan:players];
+       
+        NSMutableArray<SKSpriteNode*> *foundItems = [shopKeeper scanItemsInRange: (shopKeeper.defaultSprite.size.width) itemsToScan: sceneItems];
+        [self clearFoundItems: foundItems];
+    }
 }
+
 - (void)clearFoundItems: (NSMutableArray<SKSpriteNode*> *)foundItems{
     if([foundItems count] > 0 ){
         [scene removeChildrenInArray:foundItems];
@@ -80,6 +98,7 @@
 }
 
 - (void)setUpScene: (int) index scene:(GameScene *) scene viewSize:(CGSize) viewSize{
+    players = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     sceneItems = [[NSMutableArray<SKSpriteNode *> alloc]init];
     shopKeepers = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
@@ -96,9 +115,8 @@
     
     [scene addChild:tileNodeStones];
     
-    player = [self buildPlayer:scene];
-    
-    [scene addChild:[player getDefaultSprite]];
+    [players addObject:[self buildPlayer:scene]];
+    [scene addChild:[players[0] getDefaultSprite]];
     [self generateShopKeepers:scene];
     [self generatePickableMoney:scene];
 }
@@ -111,12 +129,11 @@
 
 - (NSObject <LivingThing> *)buildShopKeeper:(SKScene *)sceneIn shopKeeperName: (NSString*) shopKeeperName size: (float) shopKeeperSize {
     
-    NSArray<SKTexture*> *shopKeeperAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"ShopKeeper"] prefix: @"IAP_Shop_Keeper_" endFix:shopKeeperName];
+    NSArray<SKTexture*> *shopKeeperAnimFrames = [IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"ShopKeeper"] prefix: @"IAP_Shop_Keeper_" endFix:shopKeeperName];
     
     NSObject <LivingThing> *newShopKeeper = [[IAPSalesCreature alloc] init];
     SKTexture *firstFrameTexture = shopKeeperAnimFrames[0];
     SKSpriteNode *newShopKeeperTexture = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
-
 
     [newShopKeeper setDefaultSprite:newShopKeeperTexture];
     SKAction *animAction = [SKAction repeatActionForever:
@@ -128,87 +145,57 @@
     newShopKeeper.defaultSprite.size= CGSizeMake(shopKeeperSize, shopKeeperSize);
   
     [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2);
-    
-     
-     [sceneIn addChild:newShopKeeper.defaultSprite];
-    
+    [sceneIn addChild:newShopKeeper.defaultSprite];
+    [newShopKeeper setManager:self];
     return newShopKeeper;
 }
 
 - (void)generatePickableMoney:(GameScene *)sceneIn {
     int coinSize = 64;
-    NSArray<SKTexture*> *coinAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Coin"] prefix: @"coin_0" endFix:@""];
+    NSArray<SKTexture*> *coinAnimFrames = [IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Coin"] prefix: @"coin_0" endFix:@""];
     SKTexture *firstFrameTexture = coinAnimFrames[0];
     
     for(int i = 0; i < 10; i++){
-        SKSpriteNode *newCoin = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
-        newCoin.size = CGSizeMake(coinSize, coinSize);
-        newCoin.position = CGPointMake(0, 1 * -180 +180*i);
-        SKAction *animAction = [SKAction repeatActionForever:
-                [SKAction animateWithTextures:coinAnimFrames
-                                 timePerFrame:0.1
-                                       resize:false
-                                      restore:true]];
-        [newCoin runAction: animAction];
+        SKSpriteNode * newCoin = [IapManUtilities ProduceCoinWithSize: coinSize position:CGPointMake(0, 1 * -180 +180*i)];
         [sceneItems addObject:newCoin];
        
         [sceneIn addChild:newCoin];
-
     }
-}
-
-static bool ContainsTextureName(int i, SKTextureAtlas *playerAnimatedAtlas, NSString *playerTextureName) {
-    return [playerAnimatedAtlas.textureNames[i-1] rangeOfString: playerTextureName].location != NSNotFound;
-}
-
-- (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix {
-
-    NSMutableArray<SKTexture *> *animFrames = [[NSMutableArray<SKTexture *> alloc] init];
-    int numImages = (int) playerAnimatedAtlas.textureNames.count;
-    int j = 1;
-    for (int i = 1;  i <= numImages; i++) {
-        NSString *playerTextureName = [preFix stringByAppendingString:endFix];
-        
-        if(ContainsTextureName(i, playerAnimatedAtlas, playerTextureName) ){
-            playerTextureName = [playerTextureName stringByAppendingString:@(j).stringValue];
-            [animFrames addObject:[playerAnimatedAtlas textureNamed:playerTextureName]];
-            j+=1;
-        }
-    }
-    return animFrames;
 }
 
 - (NSObject <LivingThing> *)buildPlayer:(GameScene *)sceneIn {
     
     NSObject <LivingThing> *livingThing = [[IAPPlayer alloc] init];
-    [livingThing setMoveUpWaysFrames:[self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Up"] prefix: @"Player_" endFix:@"Up_0"]];
+    [livingThing setMoveUpWaysFrames:[IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Up"] prefix: @"Player_" endFix:@"Up_0"]];
 
-    [livingThing setMoveDownWaysFrames:[self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Down"] prefix: @"Player_" endFix:@"Down_0"]];
+    [livingThing setMoveDownWaysFrames:[IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Down"] prefix: @"Player_" endFix:@"Down_0"]];
 
-    NSMutableArray<SKTexture *> *walkFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Sideways"] prefix: @"Player_" endFix:@"right_0"];
+    NSMutableArray<SKTexture *> *walkFrames = [IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Player_Walk_Sideways"] prefix: @"Player_" endFix:@"right_0"];
     [livingThing setMoveSideWaysFrames:walkFrames];
 
     SKTexture *firstFrameTexture = walkFrames[0];
-    SKSpriteNode *newPlayer = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+    SKSpriteNode *newPlayerDefaultSprite = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
 
-    newPlayer.size = CGSizeMake(newPlayer.size.width * 3, newPlayer.size.height * 3);
-    newPlayer.position = CGPointMake(20, 20);
-    [livingThing setDefaultSprite:newPlayer];
-
+    newPlayerDefaultSprite.size = CGSizeMake(newPlayerDefaultSprite.size.width * 3, newPlayerDefaultSprite.size.height * 3);
+    newPlayerDefaultSprite.position = CGPointMake(20, 20);
+    [livingThing setDefaultSprite:newPlayerDefaultSprite];
+    [livingThing setManager:self];
     return livingThing;
 }
 
-- (void)updatePlayerPosition: (CGPoint) touchLocation {
-    CGFloat selfHeight = view.bounds.size.height;
-    CGFloat selfWidth = view.bounds.size.width;
-    int middlePointX = selfWidth / 2;
-    int middlePointY = selfHeight / 2;
+- (void)updatePlayer: (CGPoint) touchLocation {
+    CGFloat viewHeight = view.bounds.size.height;
+    CGFloat viewWidth = view.bounds.size.width;
+    int middlePointX = viewWidth / 2;
+    int middlePointY = viewHeight / 2;
 
-    float yFromCenter = touchLocation.y - middlePointY;
-    float xFromCenter = touchLocation.x - middlePointX;
-    [player.defaultSprite removeAllActions];
+    float yTouchFromCenter = touchLocation.y - middlePointY;
+    float xTouchFromCenter = touchLocation.x - middlePointX;
+    [players[0].defaultSprite removeAllActions];
 
-    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yFromCenter xFromCenter:xFromCenter];
+    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
+    [self HandlePlayerCoinThrow:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
+    
 }
 
 - (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter
@@ -232,9 +219,18 @@ static bool ContainsTextureName(int i, SKTextureAtlas *playerAnimatedAtlas, NSSt
     }
 }
 
+- (void)HandlePlayerCoinThrow:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yTouchFromCenter
+                 xFromCenter:(float)xTouchFromCenter
+{
+    if (fabs(yTouchFromCenter) < 64 && fabs(xTouchFromCenter) < 64) {
+        SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
+        [sceneItems addObject:thrownItem];
+    }
+}
+
 - (void)movePlayer:(simd_float4)direction speed:(CGFloat)speed {
-    [player lookAt:direction];
-    [player moveForward:speed];
+    [players[0] lookAt:direction];
+    [players[0] moveForward:speed];
 }
 
 
