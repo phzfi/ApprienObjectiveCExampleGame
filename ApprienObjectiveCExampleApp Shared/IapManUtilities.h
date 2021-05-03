@@ -15,5 +15,7 @@
 
 + (SKSpriteNode *)ProduceCoinWithSize:(int)coinSize position:(CGPoint) position;
 + (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix;
++ (SKSpriteNode *)ProduceDialogWithSize:(CGSize)dialogSize position:(CGPoint) position text: (NSString *) text;
++ (NSMutableArray<SKSpriteNode*> *)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position;
 #endif /* IapManUtilities_h */
 @end

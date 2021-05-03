@@ -24,13 +24,25 @@ SKSpriteNode *defSprite;
 @synthesize defaultSprite;
 @synthesize gameManager;
 GameManager *gameManager2;
+simd_float4 lookDirection;
+@synthesize currentDialog;
+SKSpriteNode *_currentPlayersDialog;
+
+-(void)setCurrentDialog:(SKSpriteNode *)currentPlayersDialog{
+    currentDialog = currentPlayersDialog;
+    _currentPlayersDialog = currentPlayersDialog;
+}
+
+-(SKSpriteNode *)getCurrentDialog{
+    return currentDialog;
+}
 
 -(void)setManager: (GameManager *) newGameManager{
     gameManager2 = newGameManager;
     gameManager = newGameManager;
 }
 
-simd_float4 lookDirection;
+
 
 - (void)moveForward:(CGFloat)speed{
     
@@ -85,7 +97,7 @@ simd_float4 lookDirection;
     return newItems;
 }
 
-- (NSMutableArray<NSObject <LivingThing> *> *)scanLivingThingsInRange:(CGFloat)range livingThingsToScan:(NSMutableArray<NSObject <LivingThing> *> *)livingThingsToScan {
+- (NSMutableArray<NSObject <LivingThing> *> *)ScanLivingThingsInRange:(CGFloat)range livingThingsToScan:(NSMutableArray<NSObject <LivingThing> *> *)livingThingsToScan {
     return nil;
 }
 

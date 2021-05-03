@@ -13,7 +13,8 @@
 #import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
 #import "GameScene.h"
-#import <Apprien.h>
+//#import <Apprien.h>
+
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
@@ -34,19 +35,38 @@
     return scene;
 }
 
+
 -(void)update{
     if(scene == nil){
         scene =view.scene;
     }
+    [self HandlePlayers];
+    
+    [self HandleShopKeepers];
+}
+
+
+- (void)HandleShopKeepers {
+    for (NSObject<LivingThing>* shopKeeper in shopKeepers){
+        NSMutableArray<NSObject<LivingThing>*> *livingThings = [shopKeeper ScanLivingThingsInRange:shopKeeper.defaultSprite.size.width livingThingsToScan:players];
+        
+        NSMutableArray<SKSpriteNode*> *foundItems = [shopKeeper scanItemsInRange: (shopKeeper.defaultSprite.size.width) itemsToScan: sceneItems];
+        [self clearFoundItems: foundItems];
+        
+        SKSpriteNode* dialog = [IapManUtilities OpenDialogForClosePlayers:livingThings position:CGPointMake(shopKeeper.defaultSprite.position.x, shopKeeper.defaultSprite.position.y +shopKeeper.defaultSprite.size.height)];
+        if(dialog){
+            if([shopKeeper getCurrentDialog] == nil){
+                [shopKeeper setCurrentDialog:dialog];
+                [scene addChild:[shopKeeper getCurrentDialog]];
+            }
+        
+        }
+    }
+}
+
+- (void)HandlePlayers {
     for (NSObject<LivingThing>* player in players){
         NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
-        [self clearFoundItems: foundItems];
-    }
-    
-    for (NSObject<LivingThing>* shopKeeper in shopKeepers){
-        NSMutableArray<NSObject<LivingThing>*> *livingThings = [shopKeeper scanLivingThingsInRange:shopKeeper.defaultSprite.size.width livingThingsToScan:players];
-       
-        NSMutableArray<SKSpriteNode*> *foundItems = [shopKeeper scanItemsInRange: (shopKeeper.defaultSprite.size.width) itemsToScan: sceneItems];
         [self clearFoundItems: foundItems];
     }
 }
@@ -122,7 +142,7 @@
 }
 
 - (void)generateShopKeepers:(GameScene *)sceneIn {
-    int shopKeeperSize = 64;
+    int shopKeeperSize = 128;
     NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize];
     [shopKeepers addObject:newShopKeeper];
 }
@@ -144,7 +164,7 @@
     [newShopKeeperTexture runAction: animAction];
     newShopKeeper.defaultSprite.size= CGSizeMake(shopKeeperSize, shopKeeperSize);
   
-    [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2);
+    [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2.5);
     [sceneIn addChild:newShopKeeper.defaultSprite];
     [newShopKeeper setManager:self];
     return newShopKeeper;
