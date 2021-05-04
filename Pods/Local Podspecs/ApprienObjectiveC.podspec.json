@@ -12,7 +12,7 @@
     "MikaelKorpinen": "53366205+MikaelKorpinen@users.noreply.github.com"
   },
   "platforms": {
-    "ios": "9.3"
+    "ios": "6.0"
   },
   "source": {
     "git": "https://github.com/phzfi/ApprienObjectiveC.git",
@@ -25,5 +25,6 @@
   "exclude_files": "Classes/Exclude",
   "pod_target_xcconfig": {
     "HEADER_SEARCH_PATHS": "$(inherited) \"${PODS_ROOT}\""
-  }
+  },
+  "libraries": "c++"
 }

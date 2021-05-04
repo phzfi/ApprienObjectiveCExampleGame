@@ -28,12 +28,12 @@ simd_float4 lookDirection;
 @synthesize currentDialog;
 SKSpriteNode *_currentPlayersDialog;
 
--(void)setCurrentDialog:(SKSpriteNode *)currentPlayersDialog{
+-(void)setCurrentDialog:(NSMutableArray *)currentPlayersDialog{
     currentDialog = currentPlayersDialog;
     _currentPlayersDialog = currentPlayersDialog;
 }
 
--(SKSpriteNode *)getCurrentDialog{
+-(NSMutableArray *)getCurrentDialog{
     return currentDialog;
 }
 

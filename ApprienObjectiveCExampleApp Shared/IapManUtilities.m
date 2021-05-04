@@ -49,6 +49,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     SKSpriteNode *newDialog = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
     newDialog.size = dialogSize;
     newDialog.position = position;
+    newDialog.zPosition = 0.9;
     SKAction *animAction = [SKAction animateWithTextures:dialogAnimFrames
                                             timePerFrame:0.1
                                                   resize:false
@@ -78,20 +79,36 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     return [playerAnimatedAtlas.textureNames[i-1] rangeOfString: playerTextureName].location != NSNotFound;
 }
 
-+ (NSMutableArray<SKSpriteNode*> *)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position{
-    NSMutableArray<SKSpriteNode*> *dialogueContents;
++ (NSMutableArray*)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position text:(NSString*) text priceText: (NSString*) priceText {
+    NSMutableArray *dialogueContents = [[NSMutableArray alloc] init];
     if([foundPlayers count] > 0 ){
-        SKSpriteNode* dialog = [IapManUtilities ProduceDialogWithSize: CGSizeMake(256*1.5, 64*1.5) position:CGPointMake(position.x, position.y) text:@"heart"];
+        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 64*2) position:CGPointMake(position.x, position.y) text:@"heart"];
         
-        SKLabelNode * _text = (SKLabelNode *)[SKLabelNode labelNodeWithText:@"Press to continue"];
-        _text.fontName =@"Helvetica Neue UltraLight";
-        _text.alpha = 1;
-        _text.position = CGPointMake(position.x, position.y);
-        [dialogueContents addObject:_text];
+        SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y+20) text: @"You will need more strength to "];
+        [dialogueContents addObject:salesText];
+        
+        SKLabelNode * buyText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y-10) text: @"climb the hill behind me."];
+        [dialogueContents addObject:buyText];
+         
+        SKLabelNode * priceLabel = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y - 40) text: priceText];
+        [dialogueContents addObject:priceLabel];
+        
         [dialogueContents addObject:dialog];
     
-        return dialog;
+        return dialogueContents;
     }
     return nil;
+}
+
++ (SKLabelNode *)ProduceTextWithSize:(int) size position:(CGPoint)position text: (NSString *) text{
+    SKLabelNode * label = (SKLabelNode *)[SKLabelNode labelNodeWithText:text];
+    label.fontName =@"Helvetica Neue UltraLight";
+    label.alpha = 1;
+    
+    label.fontColor = [UIColor blackColor];
+    label.fontSize = size;
+    label.position = position;
+    label.zPosition = 1;
+    return label;
 }
 @end

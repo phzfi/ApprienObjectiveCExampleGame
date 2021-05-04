@@ -28,7 +28,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 @property(nonatomic, assign, getter = getMoveDownWaysFrames, setter=setMoveDownWaysFrames:) NSMutableArray<SKTexture*> *moveDownWaysFrames;
 @property(nonatomic, assign, getter = getIdleFrames, setter=setIdleFrames:) NSMutableArray<SKTexture*> *idleFrames;
 @property(nonatomic, assign, setter=setManager:) GameManager *gameManager;
-@property(nonatomic, assign, getter=getCurrentDialog, setter=setCurrentDialog:) SKSpriteNode *currentDialog;
+@property(nonatomic, assign, getter=getCurrentDialog, setter=setCurrentDialog:) NSMutableArray *currentDialog;
 
 - (void)moveForward:(CGFloat)speed;
 - (void)lookAt: (simd_float4) direction;
