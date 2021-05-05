@@ -86,6 +86,7 @@
         [shopKeeper setCurrentDialog:nil];
     }
 }
+
 - (GameScene *)loadGameScene{
     return  [GameScene newGameScene];
 }

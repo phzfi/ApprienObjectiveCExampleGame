@@ -41,7 +41,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     return newCoin;
 }
 
-+ (SKSpriteNode *)ProduceDialogWithSize:(CGSize)dialogSize position:(CGPoint) position text: (NSString *) text {
++ (SKSpriteNode *)ProduceDialogWithSize:(CGSize)dialogSize position:(CGPoint) position{
     
     NSArray<SKTexture*> *dialogAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Dialogs"] prefix: @"Dialogue_0" endFix:@""];
     SKTexture *firstFrameTexture = dialogAnimFrames[0];
@@ -56,6 +56,23 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
                                                  restore:true];
     [newDialog runAction: animAction];
     return newDialog;
+}
+
++ (SKSpriteNode *)ProducePickupWithSize:(CGSize)iconSize position:(CGPoint) position iconName:(NSString*) iconName{
+    
+    NSArray<SKTexture*> *iconAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"PickUps"] prefix: iconName endFix:@""];
+    SKTexture *firstFrameTexture = iconAnimFrames[0];
+    
+    SKSpriteNode *newIcon = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+    newIcon.size = iconSize;
+    newIcon.position = position;
+    newIcon.zPosition = 0.9;
+    SKAction *animAction = [SKAction animateWithTextures:iconAnimFrames
+                                            timePerFrame:0.1
+                                                  resize:false
+                                                 restore:true];
+    [newIcon runAction: animAction];
+    return newIcon;
 }
 
 + (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix {
@@ -82,7 +99,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 + (NSMutableArray*)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position text:(NSString*) text priceText: (NSString*) priceText {
     NSMutableArray *dialogueContents = [[NSMutableArray alloc] init];
     if([foundPlayers count] > 0 ){
-        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 64*2) position:CGPointMake(position.x, position.y) text:@"heart"];
+        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 64*2) position:CGPointMake(position.x, position.y)];
         
         SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y+20) text: @"You will need more strength to "];
         [dialogueContents addObject:salesText];
@@ -92,7 +109,6 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
          
         SKLabelNode * priceLabel = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y - 40) text: priceText];
         [dialogueContents addObject:priceLabel];
-        
         [dialogueContents addObject:dialog];
     
         return dialogueContents;

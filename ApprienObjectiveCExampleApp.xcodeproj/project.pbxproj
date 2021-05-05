@@ -18,6 +18,7 @@
 		8B0680022603984700301F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FBA2603984700301F81 /* Assets.xcassets */; };
 		8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0680232603A26F00301F81 /* cocos2d.framework */; };
 		8B4CE3BD263818690034FCA6 /* IapManUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CE3BC263818690034FCA6 /* IapManUtilities.m */; };
+		8B5CA8362642DFEA00DC94C7 /* Pickups.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CA8352642DFEA00DC94C7 /* Pickups.atlas */; };
 		8B5CC55E260884D100B856AA /* SimplePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CC55D260884D100B856AA /* SimplePlayerController.m */; };
 		8B5CCBC4261469A500B856AA /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC3261469A500B856AA /* InputController.m */; };
 		8B5CCBCA2614711000B856AA /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CCBC92614711000B856AA /* GameManager.m */; };
@@ -72,6 +73,7 @@
 		8B4CE3B62632D62E0034FCA6 /* IAPSalesCreature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPSalesCreature.h; sourceTree = "<group>"; };
 		8B4CE3BB263818500034FCA6 /* IapManUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IapManUtilities.h; sourceTree = "<group>"; };
 		8B4CE3BC263818690034FCA6 /* IapManUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IapManUtilities.m; sourceTree = "<group>"; };
+		8B5CA8352642DFEA00DC94C7 /* Pickups.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Pickups.atlas; path = Assets/Pickups.atlas; sourceTree = SOURCE_ROOT; };
 		8B5CC55B260882F700B856AA /* SimplePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerController.h; sourceTree = "<group>"; };
 		8B5CC55D260884D100B856AA /* SimplePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerController.m; sourceTree = "<group>"; };
 		8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprienObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 		8B067FB52603984300301F81 /* ApprienObjectiveCExampleApp Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8B5CA8352642DFEA00DC94C7 /* Pickups.atlas */,
 				8B9A31F726402A53005DED55 /* Dialogs.atlas */,
 				8B5CCC012620526300B856AA /* ShopKeeper.atlas */,
 				8B5CCBFE2620525500B856AA /* Coin.atlas */,
@@ -295,6 +298,7 @@
 				8B067FFC2603984700301F81 /* GameScene.sks in Resources */,
 				8B067FCA2603984700301F81 /* Main.storyboard in Resources */,
 				8B5CCC072620561A00B856AA /* Assets.xcassets in Resources */,
+				8B5CA8362642DFEA00DC94C7 /* Pickups.atlas in Resources */,
 				8B067FF92603984700301F81 /* Actions.sks in Resources */,
 				8B5CCC022620526300B856AA /* ShopKeeper.atlas in Resources */,
 				8B9A31F826402A53005DED55 /* Dialogs.atlas in Resources */,
