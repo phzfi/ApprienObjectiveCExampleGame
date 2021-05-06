@@ -44,9 +44,9 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 + (SKSpriteNode *)ProduceDialogWithSize:(CGSize)dialogSize position:(CGPoint) position{
     
     NSArray<SKTexture*> *dialogAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Dialogs"] prefix: @"Dialogue_0" endFix:@""];
-    SKTexture *firstFrameTexture = dialogAnimFrames[0];
+    SKTexture *fullDialogFrameTexture = dialogAnimFrames[[dialogAnimFrames count]-1];
     
-    SKSpriteNode *newDialog = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+    SKSpriteNode *newDialog = [SKSpriteNode spriteNodeWithTexture:fullDialogFrameTexture];
     newDialog.size = dialogSize;
     newDialog.position = position;
     newDialog.zPosition = 0.9;
@@ -80,6 +80,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     NSMutableArray<SKTexture *> *animFrames = [[NSMutableArray<SKTexture *> alloc] init];
     int numImages = (int) playerAnimatedAtlas.textureNames.count;
     int j = 1;
+
     for (int i = 1;  i <= numImages; i++) {
         NSString *playerTextureName = [preFix stringByAppendingString:endFix];
         
@@ -99,15 +100,18 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 + (NSMutableArray*)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position text:(NSString*) text priceText: (NSString*) priceText {
     NSMutableArray *dialogueContents = [[NSMutableArray alloc] init];
     if([foundPlayers count] > 0 ){
-        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 64*2) position:CGPointMake(position.x, position.y)];
-        
-        SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y+20) text: @"You will need more strength to "];
+        int offset = 30;
+        int additionalTextOffset =-7;
+        int textSeparateAmount = 30;
+        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 128*2) position:CGPointMake(position.x, position.y -offset)];
+        offset = offset + additionalTextOffset;
+        SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset + textSeparateAmount) text: @"You will need more strength to "];
         [dialogueContents addObject:salesText];
         
-        SKLabelNode * buyText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y-10) text: @"climb the hill behind me."];
+        SKLabelNode * buyText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset) text: @"climb the hill behind me."];
         [dialogueContents addObject:buyText];
          
-        SKLabelNode * priceLabel = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y - 40) text: priceText];
+        SKLabelNode * priceLabel = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset - textSeparateAmount) text: priceText];
         [dialogueContents addObject:priceLabel];
         [dialogueContents addObject:dialog];
     

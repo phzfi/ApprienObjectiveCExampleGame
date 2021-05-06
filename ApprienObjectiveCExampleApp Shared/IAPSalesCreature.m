@@ -37,8 +37,6 @@ SKSpriteNode *_currentDialog;
     gameManager = newGameManager;
 }
 
-
-
 - (void)moveForward:(CGFloat)speed {
 
 }
