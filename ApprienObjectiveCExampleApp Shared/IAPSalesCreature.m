@@ -58,7 +58,6 @@ SKSpriteNode *_currentDialog;
         if([IapManUtilities distanceBetweenPlayerAndNodesSquared: item secondNode: defaultSprite] < range){
             [self setGold:[self getGold] +1];
             [newItems addObject:item];
-            NSLog(@"received item");
         }
     }
     return newItems;

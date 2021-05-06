@@ -69,7 +69,6 @@ GameManager *gameManager;
             currentLevel = 1;
         }
         [gameManager updatePlayer:[touch locationInView:self.view]];
-        
     }
 }
 

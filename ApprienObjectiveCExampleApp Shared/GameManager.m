@@ -66,8 +66,12 @@
 
 - (void)HandleShopKeeperDialog:(NSMutableArray<NSObject<LivingThing> *> *)livingThings shopKeeper:(NSObject<LivingThing> *)shopKeeper {
     CGPoint position =CGPointMake(shopKeeper.defaultSprite.position.x, shopKeeper.defaultSprite.position.y + shopKeeper.defaultSprite.size.height);
+    
+    NSString *firstLine =[NSString stringWithFormat:@"You will need more strength to "];
+    NSString *secondLine =[NSString stringWithFormat:@"climb the hill behind me."];
     NSString *priceText = [NSString stringWithFormat:@"Buy strength potion? Coins:%@", @50];
-    NSMutableArray *dialogs = [IapManUtilities OpenDialogForClosePlayers:livingThings position: position text: @"" priceText: priceText];
+    NSArray<NSString*> *dialogueTextContent = [[NSArray alloc]initWithObjects:firstLine, secondLine, priceText, nil];
+    NSMutableArray *dialogs = [IapManUtilities OpenThreeLineDialogForClosePlayers:livingThings position: position textArray:dialogueTextContent];
     
     [self HandleDialogVisibility:dialogs shopKeeper:shopKeeper];
 }
@@ -250,9 +254,9 @@
 - (void)HandlePlayerCoinThrow:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yTouchFromCenter
                  xFromCenter:(float)xTouchFromCenter
 {
-    if (fabs(yTouchFromCenter) < 64 && fabs(xTouchFromCenter) < 64) {
+    if (fabs(yTouchFromCenter) < 128 && fabs(xTouchFromCenter) < 128) {
         SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
-        [sceneItems addObject:thrownItem];
+      //TODO: clean up it wont pick up it instantly after thrown  [sceneItems addObject:thrownItem];
     }
 }
 
@@ -268,7 +272,7 @@
 
 - (SKScene *)getScene
 {
-    return scene;
+    return view.scene;
 }
 
 @end

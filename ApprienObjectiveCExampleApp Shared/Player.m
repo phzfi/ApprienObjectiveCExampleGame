@@ -65,9 +65,10 @@ SKSpriteNode *_currentPlayersDialog;
 
 - (SKSpriteNode *)throwItem: (ItemType)itemType amount:(int)amount {
     if(itemType == Gold){
-        SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defaultSprite.position];
+    
+        SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defSprite.position];
         simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };
-        CGFloat speed = 10;
+        CGFloat speed = 1;
        // SKAction *animAction = ;
         SKAction *moveAction = [SKAction moveBy:CGVectorMake(-speed*10*direction[0], -speed*10*direction[1]) duration:0.1];
         moveAction = [SKAction repeatActionForever:moveAction];

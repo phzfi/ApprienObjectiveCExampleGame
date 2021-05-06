@@ -97,22 +97,38 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     return [playerAnimatedAtlas.textureNames[i-1] rangeOfString: playerTextureName].location != NSNotFound;
 }
 
-+ (NSMutableArray*)OpenDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position text:(NSString*) text priceText: (NSString*) priceText {
++ (void)ProduceLabel:(NSMutableArray *)dialogueContents fadeIn:(SKAction *)fadeIn offset:(int)offset position:(const CGPoint *)position text:(NSString *)text {
+    SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position->x, position->y + offset ) text: text];
+    salesText.alpha = 0;
+    [salesText runAction:fadeIn];
+    [dialogueContents addObject:salesText];
+}
+
++ (int)ProduceThreeLinesOfTextForDialog:(NSMutableArray *)dialogueContents position:(const CGPoint *)position textArray:(NSArray<NSString *> *)textArray {
+    int offset = 30;
+    int additionalTextOffset =-8;
+    int textSeparateAmount = 30;
+    offset = offset + additionalTextOffset;
+    
+    SKAction *fadeIn = [SKAction fadeInWithDuration:1];
+    [self ProduceLabel:dialogueContents fadeIn:fadeIn offset:offset+ textSeparateAmount position:position text:textArray[0]];
+    [self ProduceLabel:dialogueContents fadeIn:fadeIn offset:offset position:position text:textArray[1]];
+    [self ProduceLabel:dialogueContents fadeIn:fadeIn offset:offset - textSeparateAmount position:position text:textArray[2]];
+    return offset;
+}
+
++ (NSMutableArray*)OpenThreeLineDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position textArray: (NSArray<NSString *>*) textArray{
+    
+    if([textArray count] != 3){
+        NSLog(@"Due to fixed size of the asset this producer function only supports dialog/array with 3 lines/elements");
+    }
+    
     NSMutableArray *dialogueContents = [[NSMutableArray alloc] init];
     if([foundPlayers count] > 0 ){
-        int offset = 30;
-        int additionalTextOffset =-7;
-        int textSeparateAmount = 30;
-        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 128*2) position:CGPointMake(position.x, position.y -offset)];
-        offset = offset + additionalTextOffset;
-        SKLabelNode * salesText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset + textSeparateAmount) text: @"You will need more strength to "];
-        [dialogueContents addObject:salesText];
         
-        SKLabelNode * buyText = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset) text: @"climb the hill behind me."];
-        [dialogueContents addObject:buyText];
-         
-        SKLabelNode * priceLabel = [self ProduceTextWithSize: 30 position:CGPointMake(position.x, position.y + offset - textSeparateAmount) text: priceText];
-        [dialogueContents addObject:priceLabel];
+        int offset = [self ProduceThreeLinesOfTextForDialog:dialogueContents position:&position textArray:textArray];
+        
+        SKSpriteNode* dialog = [self ProduceDialogWithSize: CGSizeMake(256*1.8, 128*2) position:CGPointMake(position.x, position.y -offset)];
         [dialogueContents addObject:dialog];
     
         return dialogueContents;
