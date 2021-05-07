@@ -75,6 +75,23 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     return newIcon;
 }
 
++ (SKSpriteNode *)ProduceButtonWithSize:(CGSize)iconSize screenPosition:(CGPoint) position buttonName:(NSString *) name{
+    
+    NSArray<SKTexture*> *iconAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Buttons"] prefix: name endFix:@""];
+    SKTexture *firstFrameTexture = iconAnimFrames[0];
+    
+    SKSpriteNode *newIcon = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
+    newIcon.size = iconSize;
+    newIcon.position = position;
+    newIcon.zPosition = 0.9;
+    SKAction *animAction = [SKAction animateWithTextures:iconAnimFrames
+                                            timePerFrame:0.1
+                                                  resize:false
+                                                 restore:true];
+    [newIcon runAction: animAction];
+    return newIcon;
+}
+
 + (NSMutableArray<SKTexture *> *)BuildAnimationFrames:(SKTextureAtlas *)playerAnimatedAtlas prefix: (NSString *)preFix endFix:(NSString *)endFix {
 
     NSMutableArray<SKTexture *> *animFrames = [[NSMutableArray<SKTexture *> alloc] init];

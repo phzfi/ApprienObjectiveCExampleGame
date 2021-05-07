@@ -25,7 +25,7 @@ GameManager *gameManager;
         gameManager = [[GameManager alloc]init];
     }
 
-    scene = [gameManager loadGameScene];
+    scene = (GameScene *)[gameManager loadGameScene];
     [scene SetGameManager:gameManager];
     // Present the scene
     SKView *skView = (SKView *) self.view;

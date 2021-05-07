@@ -68,7 +68,7 @@ SKSpriteNode *_currentPlayersDialog;
     
         SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defSprite.position];
         simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };
-        CGFloat speed = 1;
+        CGFloat speed = 6;
        // SKAction *animAction = ;
         SKAction *moveAction = [SKAction moveBy:CGVectorMake(-speed*10*direction[0], -speed*10*direction[1]) duration:0.1];
         moveAction = [SKAction repeatActionForever:moveAction];
@@ -84,7 +84,6 @@ SKSpriteNode *_currentPlayersDialog;
 - (void)receiveItem:( ItemType)itemType amount:(int)amount {
     
 }
-
 
 - (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items {
     

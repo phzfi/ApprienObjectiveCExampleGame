@@ -135,20 +135,39 @@
     [scene addChild:[players[0] getDefaultSprite]];
     [self generateShopKeepers:scene];
     [self generatePickableMoney:scene];
+    [self SetUpControlsUI: scene];
+}
+
+- (void)SetUpControlsUI:(GameScene *)sceneIn {
+    CGFloat dimension = 128;
+    CGPoint middlePointForMovementControls = CGPointMake(view.bounds.size.width / 2 - dimension, view.bounds.size.height / 2 - dimension);
+    
+    SKSpriteNode *buttonLeft =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: middlePointForMovementControls buttonName: @"GoldButtonMove_0"];
+    [scene addChild:buttonLeft];
+    
+    middlePointForMovementControls = CGPointMake(view.bounds.size.width / 2 - dimension, view.bounds.size.height  - dimension);
+    SKSpriteNode *buttonUp =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: middlePointForMovementControls buttonName: @"GoldButtonMove_0"];
+    [scene addChild:buttonUp];
+    
+    SKSpriteNode *buttonRight =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: middlePointForMovementControls buttonName: @"GoldButtonMove_0"];
+    [scene addChild:buttonRight];
+    
+    SKSpriteNode *buttonDown =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: middlePointForMovementControls buttonName: @"GoldButtonMove_0"];
+    [scene addChild:buttonDown];
 }
 
 - (void)SetUpEnvironment:(GameScene *)scene viewSize:(const CGSize *)viewSize {
     SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
     
     NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
-    CGSize tileSice;
-    tileSice.width =128;
-    tileSice.height = 128;
-    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:viewSize->width/128 rows:viewSize->height tileSize:tileSice fillWithTileGroup:levelTiles[0]];
+    CGSize tileSize;
+    tileSize.width =128;
+    tileSize.height = 128;
+    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:viewSize->width/128 rows:viewSize->height tileSize:tileSize fillWithTileGroup:levelTiles[0]];
     
     [scene addChild:tileNode];
     
-    SKTileMapNode *tileNodeStones =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:1 rows:viewSize->height tileSize:tileSice fillWithTileGroup:levelTiles[2]];
+    SKTileMapNode *tileNodeStones =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:1 rows:viewSize->height tileSize:tileSize fillWithTileGroup:levelTiles[2]];
     
     [scene addChild:tileNodeStones];
 }
@@ -216,23 +235,28 @@
     return livingThing;
 }
 
-- (void)updatePlayer: (CGPoint) touchLocation {
-    CGFloat viewHeight = view.bounds.size.height;
-    CGFloat viewWidth = view.bounds.size.width;
-    int middlePointX = viewWidth / 2;
-    int middlePointY = viewHeight / 2;
+- (CGPoint)GetMovementControlsCenterInScreenSpace:(CGPoint) middlePointScreenOffset touchLocation:(CGPoint)touchLocation {
 
-    float yTouchFromCenter = touchLocation.y - middlePointY;
-    float xTouchFromCenter = touchLocation.x - middlePointX;
-    [players[0].defaultSprite removeAllActions];
-
-    [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
-    [self HandlePlayerCoinThrow:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
+    float yTouchFromCenter = touchLocation.y - middlePointScreenOffset.y;
+    float xTouchFromCenter = touchLocation.x - middlePointScreenOffset.x;
+    return CGPointMake(xTouchFromCenter, yTouchFromCenter);
 }
 
-- (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter
-                 xFromCenter:(float)xFromCenter
+- (void)updatePlayer: (CGPoint) touchLocation {
+    CGPoint middlePointForMovementControls = CGPointMake(view.bounds.size.width / 2, view.bounds.size.height / 2);
+
+    CGPoint moveControlsCenter = [self GetMovementControlsCenterInScreenSpace: middlePointForMovementControls touchLocation: touchLocation];
+    [players[0].defaultSprite removeAllActions];
+
+    [self HandlePlayerMovement:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: moveControlsCenter];
+    [self HandlePlayerCoinThrow:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: moveControlsCenter];
+}
+
+- (void)HandlePlayerMovement:(CGPoint)location middlePoint:(CGPoint)middlePoint moveControlsCenter: (CGPoint) moveControlsCenter
 {
+    float xFromCenter =moveControlsCenter.x;
+    float yFromCenter =moveControlsCenter.y;
+    
     //up
     if (fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter > 0) {
         [self movePlayer:(simd_float4) {0.0f, 1.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
@@ -251,12 +275,12 @@
     }
 }
 
-- (void)HandlePlayerCoinThrow:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yTouchFromCenter
-                 xFromCenter:(float)xTouchFromCenter
+- (void)HandlePlayerCoinThrow:(CGPoint)location middlePoint:(CGPoint)middlePoint  moveControlsCenter: (CGPoint) moveControlsCenter
 {
-    if (fabs(yTouchFromCenter) < 128 && fabs(xTouchFromCenter) < 128) {
+    if (fabs(moveControlsCenter.y) < 128 && fabs(moveControlsCenter.x) < 128) {
         SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
-      //TODO: clean up it wont pick up it instantly after thrown  [sceneItems addObject:thrownItem];
+      //TODO: clean up it wont pick up it instantly after thrown
+      //[sceneItems addObject:thrownItem];
     }
 }
 
@@ -264,7 +288,6 @@
     [players[0] lookAt:direction];
     [players[0] moveForward:speed];
 }
-
 
 -(void)setView:(SKView *) skView{
     view = skView;
