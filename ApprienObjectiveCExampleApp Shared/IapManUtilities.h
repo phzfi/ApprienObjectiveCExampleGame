@@ -21,9 +21,9 @@
 
 + (SKSpriteNode *)ProducePickupWithSize:(CGSize)iconSize position:(CGPoint) position iconName:(NSString*) iconName;
 
-+ (SKSpriteNode *)ProduceButtonWithSize:(CGSize)iconSize screenPosition:(CGPoint) position buttonName:(NSString *) name;
++ (SKSpriteNode *)ProduceButtonWithSize:(CGSize)iconSize screenPosition:(CGPoint) position rotation: (CGFloat)rotation buttonName:(NSString *) name;
 
 + (NSMutableArray*)OpenThreeLineDialogForClosePlayers: (NSMutableArray<NSObject<LivingThing>*> *)foundPlayers position: (CGPoint)position textArray: (NSArray<NSString *>*) text;
-
++ (CGPoint)GetMovementControlOffset: (SKView*) view;
 #endif /* IapManUtilities_h */
 @end

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ApprienObjectiveCExampleApp.xcodeproj">
+      location = "group:/Users/phz/workspace/github/ApprienObjectiveCExampleGame/com.apprien.iapman.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

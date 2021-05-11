@@ -75,7 +75,7 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     return newIcon;
 }
 
-+ (SKSpriteNode *)ProduceButtonWithSize:(CGSize)iconSize screenPosition:(CGPoint) position buttonName:(NSString *) name{
++ (SKSpriteNode *)ProduceButtonWithSize:(CGSize)iconSize screenPosition:(CGPoint) position rotation: (CGFloat)rotation buttonName:(NSString *) name{
     
     NSArray<SKTexture*> *iconAnimFrames = [self BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"Buttons"] prefix: name endFix:@""];
     SKTexture *firstFrameTexture = iconAnimFrames[0];
@@ -83,7 +83,9 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     SKSpriteNode *newIcon = [SKSpriteNode spriteNodeWithTexture:firstFrameTexture];
     newIcon.size = iconSize;
     newIcon.position = position;
-    newIcon.zPosition = 0.9;
+    
+    newIcon.zPosition = 1;
+    newIcon.zRotation = rotation;
     SKAction *animAction = [SKAction animateWithTextures:iconAnimFrames
                                             timePerFrame:0.1
                                                   resize:false
@@ -163,5 +165,10 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
     label.position = position;
     label.zPosition = 1;
     return label;
+}
+
++ (CGPoint)GetMovementControlOffset: (SKView*) view{
+    
+    return CGPointMake(- view.bounds.size.width / 2 + 32, - view.bounds.size.height / 2);
 }
 @end

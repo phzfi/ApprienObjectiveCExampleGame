@@ -42,6 +42,14 @@ GameManager *gameManager;
     return YES;
 }
 
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationLandscapeLeft;
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscape;
+}
+
 #if TARGET_OS_IOS || TARGET_OS_TV
 // Touch-based event handling
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -80,15 +88,8 @@ GameManager *gameManager;
 
 #endif
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
-}
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
 @end
