@@ -15,13 +15,17 @@
 @implementation IapManUtilities : NSObject
 typedef float __attribute__((ext_vector_type(4))) simd_float4;
 
-+ (float) distanceBetweenPlayerAndNodesSquared: (SKSpriteNode*) firstNode secondNode: (SKSpriteNode*) secondNode{
-    return sqrt([self distanceBetweenPlayerAndNodesUnSquared: firstNode secondNode:secondNode]);
++ (float) distanceBetweenTwoPoints: (CGPoint) firstPoint secondPoint: (CGPoint) secondPoint{
+    return sqrt([self distanceBetweenTwoPointsUnsquared: firstPoint secondPoint:secondPoint]);
 }
 
-+ (float) distanceBetweenPlayerAndNodesUnSquared: (SKSpriteNode*) firstNode secondNode: (SKSpriteNode*) secondNode{
-    return ((firstNode.position.x - secondNode.position.x) * (firstNode.position.x - secondNode.position.x))
-    + ((firstNode.position.y -  secondNode.position.y) * (firstNode.position.y -  secondNode.position.y));
++ (float) distanceBetweenPlayerAndNodesSquared: (SKSpriteNode*) firstNode secondNode: (SKSpriteNode*) secondNode{
+    return sqrt([self distanceBetweenTwoPointsUnsquared: firstNode.position secondPoint:secondNode.position]);
+}
+
++ (float) distanceBetweenTwoPointsUnsquared: (CGPoint) firstPoint secondPoint: (CGPoint) secondPoint{
+    return ((firstPoint.x - secondPoint.x) * (firstPoint.x - secondPoint.x))
+    + ((firstPoint.y -  secondPoint.y) * (firstPoint.y -  secondPoint.y));
 }
 
 + (SKSpriteNode *)ProduceCoinWithSize:(int)coinSize position:(CGPoint) position {
@@ -169,6 +173,6 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 
 + (CGPoint)GetMovementControlOffset: (SKView*) view{
     
-    return CGPointMake(- view.bounds.size.width / 2 + 32, - view.bounds.size.height / 2);
+    return CGPointMake(- view.bounds.size.width / 4 , - view.bounds.size.height / 4);
 }
 @end

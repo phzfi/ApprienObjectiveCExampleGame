@@ -9,9 +9,12 @@
 #define IapManUtilities_h
 
 @interface IapManUtilities: NSObject
+
++ (float) distanceBetweenTwoPoints: (CGPoint) firstPoint secondPoint: (CGPoint) secondPoint;
+
 + (float) distanceBetweenPlayerAndNodesSquared: (SKSpriteNode*) firstNode secondNode: (SKSpriteNode*) secondNode;
 
-+ (float) distanceBetweenPlayerAndNodesUnSquared: (SKSpriteNode*) firstNode secondNode: (SKSpriteNode*) secondNode;
++ (float) distanceBetweenTwoPointsUnsquared: (CGPoint) firstPoint secondPoint: (CGPoint) secondPoint;
 
 + (SKSpriteNode *)ProduceCoinWithSize:(int)coinSize position:(CGPoint) position;
 

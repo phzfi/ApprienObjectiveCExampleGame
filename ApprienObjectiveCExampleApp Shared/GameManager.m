@@ -25,7 +25,9 @@
     SKScene *scene;
     NSMutableArray<SKSpriteNode *> *sceneItems;
     NSMutableArray<NSObject<LivingThing>*> *shopKeepers;
+    
 }
+CGFloat moveButtonSize = 68;
 
 -(void)update{
     if(scene == nil){
@@ -218,7 +220,7 @@
     return livingThing;
 }
 
-- (CGPoint)GetMovementControlsCenterInScreenSpace:(CGPoint) middlePointScreenOffset touchLocation:(CGPoint)touchLocation {
+- (CGPoint)getTouchLocationRelativeToScreenCenter:(CGPoint) middlePointScreenOffset touchLocation:(CGPoint)touchLocation {
 
     float yTouchFromCenter = touchLocation.y - middlePointScreenOffset.y;
     float xTouchFromCenter = touchLocation.x - middlePointScreenOffset.x;
@@ -227,55 +229,82 @@
 
 - (void)updatePlayer: (CGPoint) touchLocation {
     CGPoint offset =[IapManUtilities GetMovementControlOffset:view];
-    CGPoint middlePointForMovementControls = CGPointMake(view.bounds.size.width / 2 + offset.x/2, view.bounds.size.height / 2 - offset.y/2);
+   
+    CGPoint middlePointForMovementControls = CGPointMake(offset.x + view.bounds.size.width / 2  - moveButtonSize,  view.bounds.size.height / 2 - offset.y );
    // NSLog(middlePointForMovementControls.x);
-    CGPoint moveControlsCenter = [self GetMovementControlsCenterInScreenSpace: middlePointForMovementControls touchLocation: touchLocation];
+    CGPoint touchLocationRelativeToScreenCenter = [self getTouchLocationRelativeToScreenCenter: middlePointForMovementControls touchLocation: touchLocation];
     [players[0].defaultSprite removeAllActions];
 
-    [self HandlePlayerMovement:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: moveControlsCenter];
-    [self HandlePlayerCoinThrow:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: moveControlsCenter];
+    [self HandlePlayerMovement:touchLocation middlePoint:middlePointForMovementControls touchLocationRelativeToScreenCenter: touchLocationRelativeToScreenCenter touchLocation:touchLocation];
+    [self HandlePlayerCoinThrow:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: touchLocationRelativeToScreenCenter];
 }
 
 - (void)SetUpControlsUI:(GameScene *)sceneIn {
-    CGFloat dimension = 68;
-    CGFloat xOffset = [IapManUtilities GetMovementControlOffset:view].x / +dimension;
+    CGFloat xOffset = [IapManUtilities GetMovementControlOffset:view].x  + moveButtonSize;
     CGFloat yOffset = [IapManUtilities GetMovementControlOffset:view].y;
     
-    CGPoint newPos  = CGPointMake(0- view.bounds.size.width / 2 - dimension + xOffset,  0 + yOffset);
+    CGPoint newPos  = CGPointMake(  xOffset - moveButtonSize ,  0 + yOffset);
     SKSpriteNode *buttonLeft =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:M_PI / 2 buttonName: @"GoldButtonMove_0"];
     [scene addChild:buttonLeft];
     
-     newPos = CGPointMake(0- view.bounds.size.width / 2 + xOffset,  0 + dimension + yOffset);
+     newPos = CGPointMake( xOffset ,  0 + moveButtonSize + yOffset);
     SKSpriteNode *buttonUp =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:0 buttonName: @"GoldButtonMove_0"];
     [scene addChild:buttonUp];
     
-    newPos = CGPointMake(0 - view.bounds.size.width / 2 +dimension + xOffset,  0  + yOffset);
+    newPos = CGPointMake( xOffset +moveButtonSize ,  0  + yOffset);
     SKSpriteNode *buttonRight =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI / 2 buttonName: @"GoldButtonMove_0"];
     [scene addChild:buttonRight];
     
-    newPos = CGPointMake(0- view.bounds.size.width / 2 + xOffset,  0 - dimension + yOffset);
+    newPos = CGPointMake( xOffset ,  0 - moveButtonSize + yOffset);
     SKSpriteNode *buttonDown =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI buttonName: @"GoldButtonMove_0"];
     [scene addChild:buttonDown];
 }
-- (void)HandlePlayerMovement:(CGPoint)location middlePoint:(CGPoint)middlePoint moveControlsCenter: (CGPoint) moveControlsCenter
+
+- (bool)ClickedUpSideOfTheUI:(float)xFromCenter touchYFromCenter:(float)yFromCenter {
+    return fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter > 0;
+}
+
+- (bool)ClickedDownSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
+    return fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter < 0;
+}
+
+- (bool)ClickedLeftSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
+    return fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter < 0;
+}
+
+- (bool)ClickedRightSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
+    return fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter > 0;
+}
+
+- (bool)InSideMaxRange:(CGPoint)middlePoint range:(float)range touchLocation:(CGPoint)touchLocation {
+    return [IapManUtilities distanceBetweenTwoPoints:middlePoint secondPoint:touchLocation] < range;
+}
+
+- (void)HandlePlayerMovement:(CGPoint)location middlePoint:(CGPoint)middlePoint touchLocationRelativeToScreenCenter: (CGPoint) touchLocationRelativeToScreenCenter touchLocation: (CGPoint) touchLocation
 {
-    float xFromCenter =moveControlsCenter.x;
-    float yFromCenter =moveControlsCenter.y;
+    float touchXFromCenter = touchLocationRelativeToScreenCenter.x;
+    float touchYFromCenter = touchLocationRelativeToScreenCenter.y;
+    
+    if ([self InSideMaxRange:middlePoint range:moveButtonSize /1.5 touchLocation:touchLocation] == FALSE
+        || [self InSideMaxRange:middlePoint range:moveButtonSize /5 touchLocation:touchLocation] == TRUE) {
+        return;
+    }
     
     //up
-    if (fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter > 0) {
+    if ([self ClickedUpSideOfTheUI:touchXFromCenter touchYFromCenter:touchYFromCenter]
+        ) {
         [self movePlayer:(simd_float4) {0.0f, 1.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
     //down
-    else if (fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter < 0) {
+    else if ([self ClickedDownSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
         [self movePlayer:(simd_float4) {0.0f, -1.0, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
     //left
-    else if (fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter < 0) {
+    else if ([self ClickedLeftSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
         [self movePlayer:(simd_float4) {-1.0f, 0.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
     //right
-    else if (fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter > 0) {
+    else if ([self ClickedRightSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
         [self movePlayer:(simd_float4) {1.0f, 0.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
 }
