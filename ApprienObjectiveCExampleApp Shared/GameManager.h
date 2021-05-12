@@ -42,7 +42,7 @@
  @param skView  Spreitekits view object
 */
 - (void)setView:(SKView *) skView;
-- (void)updatePlayer:(CGPoint) touchLocation;
+- (void)updatePlayer:(NSString *) clickedButtonName;
 
 /*!
  @abstract Updates game spevific elemets such as players and shop keepers

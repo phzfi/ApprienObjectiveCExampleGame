@@ -227,16 +227,13 @@ CGFloat moveButtonSize = 68;
     return CGPointMake(xTouchFromCenter, yTouchFromCenter);
 }
 
-- (void)updatePlayer: (CGPoint) touchLocation {
+- (void)updatePlayer: (NSString *) clickedButtonName {
     CGPoint offset =[IapManUtilities GetMovementControlOffset:view];
    
-    CGPoint middlePointForMovementControls = CGPointMake(offset.x + view.bounds.size.width / 2  - moveButtonSize,  view.bounds.size.height / 2 - offset.y );
-   // NSLog(middlePointForMovementControls.x);
-    CGPoint touchLocationRelativeToScreenCenter = [self getTouchLocationRelativeToScreenCenter: middlePointForMovementControls touchLocation: touchLocation];
     [players[0].defaultSprite removeAllActions];
 
-    [self HandlePlayerMovement:touchLocation middlePoint:middlePointForMovementControls touchLocationRelativeToScreenCenter: touchLocationRelativeToScreenCenter touchLocation:touchLocation];
-    [self HandlePlayerCoinThrow:touchLocation middlePoint:middlePointForMovementControls moveControlsCenter: touchLocationRelativeToScreenCenter];
+    [self HandlePlayerMovement:clickedButtonName];
+    [self HandlePlayerCoinThrow:clickedButtonName];
 }
 
 - (void)SetUpControlsUI:(GameScene *)sceneIn {
@@ -245,73 +242,54 @@ CGFloat moveButtonSize = 68;
     
     CGPoint newPos  = CGPointMake(  xOffset - moveButtonSize ,  0 + yOffset);
     SKSpriteNode *buttonLeft =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:M_PI / 2 buttonName: @"GoldButtonMove_0"];
+    buttonLeft.name = @"button_left";
     [scene addChild:buttonLeft];
     
      newPos = CGPointMake( xOffset ,  0 + moveButtonSize + yOffset);
     SKSpriteNode *buttonUp =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:0 buttonName: @"GoldButtonMove_0"];
+    buttonUp.name = @"button_up";
     [scene addChild:buttonUp];
     
     newPos = CGPointMake( xOffset +moveButtonSize ,  0  + yOffset);
     SKSpriteNode *buttonRight =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI / 2 buttonName: @"GoldButtonMove_0"];
+    buttonRight.name = @"button_right";
     [scene addChild:buttonRight];
     
     newPos = CGPointMake( xOffset ,  0 - moveButtonSize + yOffset);
     SKSpriteNode *buttonDown =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI buttonName: @"GoldButtonMove_0"];
+    buttonDown.name = @"button_down";
     [scene addChild:buttonDown];
+    
+    newPos = CGPointMake( -xOffset ,  0 - moveButtonSize + yOffset);
+    SKSpriteNode *coinThrow =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI buttonName: @"GoldButtonShootGoldCoin_01"];
+    coinThrow.name = @"coin_throw";
+    [scene addChild:coinThrow];
 }
 
-- (bool)ClickedUpSideOfTheUI:(float)xFromCenter touchYFromCenter:(float)yFromCenter {
-    return fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter > 0;
-}
-
-- (bool)ClickedDownSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
-    return fabs(yFromCenter) > fabs(xFromCenter) && yFromCenter < 0;
-}
-
-- (bool)ClickedLeftSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
-    return fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter < 0;
-}
-
-- (bool)ClickedRightSideOfTheUI:(float)xFromCenter yFromCenter:(float)yFromCenter {
-    return fabs(xFromCenter) > fabs(yFromCenter) && xFromCenter > 0;
-}
 
 - (bool)InSideMaxRange:(CGPoint)middlePoint range:(float)range touchLocation:(CGPoint)touchLocation {
     return [IapManUtilities distanceBetweenTwoPoints:middlePoint secondPoint:touchLocation] < range;
 }
 
-- (void)HandlePlayerMovement:(CGPoint)location middlePoint:(CGPoint)middlePoint touchLocationRelativeToScreenCenter: (CGPoint) touchLocationRelativeToScreenCenter touchLocation: (CGPoint) touchLocation
+- (void)HandlePlayerMovement:(NSString*) clickedButtonName
 {
-    float touchXFromCenter = touchLocationRelativeToScreenCenter.x;
-    float touchYFromCenter = touchLocationRelativeToScreenCenter.y;
-    
-    if ([self InSideMaxRange:middlePoint range:moveButtonSize /1.5 touchLocation:touchLocation] == FALSE
-        || [self InSideMaxRange:middlePoint range:moveButtonSize /5 touchLocation:touchLocation] == TRUE) {
-        return;
-    }
-    
-    //up
-    if ([self ClickedUpSideOfTheUI:touchXFromCenter touchYFromCenter:touchYFromCenter]
-        ) {
+    if ([clickedButtonName isEqual:@"button_down"]) {
         [self movePlayer:(simd_float4) {0.0f, 1.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
-    //down
-    else if ([self ClickedDownSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
+    else if ([clickedButtonName isEqual:@"button_up"]) {
         [self movePlayer:(simd_float4) {0.0f, -1.0, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
-    //left
-    else if ([self ClickedLeftSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
+    else if ([clickedButtonName isEqual:@"button_left"]) {
         [self movePlayer:(simd_float4) {-1.0f, 0.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
-    //right
-    else if ([self ClickedRightSideOfTheUI:touchXFromCenter yFromCenter:touchYFromCenter]) {
+    else if ([clickedButtonName isEqual:@"button_right"]) {
         [self movePlayer:(simd_float4) {1.0f, 0.0f, 0.0f, 0.0f} speed:(CGFloat) 1];
     }
 }
 
-- (void)HandlePlayerCoinThrow:(CGPoint)location middlePoint:(CGPoint)middlePoint  moveControlsCenter: (CGPoint) moveControlsCenter
+- (void)HandlePlayerCoinThrow:(NSString*) clickedButtonName
 {
-    if (fabs(moveControlsCenter.y) < 128 && fabs(moveControlsCenter.x) < 128) {
+    if (clickedButtonName == @"coin_throw") {
         SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
       //TODO: clean up it wont pick up it instantly after thrown
       //[sceneItems addObject:thrownItem];

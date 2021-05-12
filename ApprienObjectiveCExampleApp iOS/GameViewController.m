@@ -76,7 +76,16 @@ GameManager *gameManager;
             [skView presentScene:scene];
             currentLevel = 1;
         }
-        [gameManager updatePlayer:[touch locationInView:self.view]];
+        
+        UITouch *touch2 = touches.anyObject;
+   
+        CGPoint positionInScene = [touch locationInNode: scene];
+        SKNode *touchedNode = [scene nodeAtPoint: positionInScene];
+
+           if (touchedNode.name)
+           {
+               [gameManager updatePlayer:touchedNode.name];
+           }
     }
 }
 
