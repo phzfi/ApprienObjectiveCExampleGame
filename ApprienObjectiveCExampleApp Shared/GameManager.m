@@ -261,7 +261,7 @@ CGFloat moveButtonSize = 68;
     [scene addChild:buttonDown];
     
     newPos = CGPointMake( -xOffset ,  0 - moveButtonSize + yOffset);
-    SKSpriteNode *coinThrow =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI buttonName: @"GoldButtonShootGoldCoin_01"];
+    SKSpriteNode *coinThrow =[IapManUtilities ProduceButtonWithSize: CGSizeMake(64, 64) screenPosition: newPos rotation:-M_PI buttonName: @"GoldButtonShootGoldCoin_0"];
     coinThrow.name = @"coin_throw";
     [scene addChild:coinThrow];
 }
