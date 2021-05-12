@@ -159,7 +159,7 @@ CGFloat moveButtonSize = 68;
 
 - (void)generateShopKeepers:(GameScene *)sceneIn {
     int shopKeeperSize = 128;
-    NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize position:CGPointMake(0, view.bounds.size.height - shopKeeperSize*2.5)];
+    NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize position:CGPointMake(0,  view.bounds.size.height /4)];
     [shopKeepers addObject:newShopKeeper];
 }
 
