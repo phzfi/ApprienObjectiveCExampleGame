@@ -28,13 +28,14 @@ typedef float __attribute__((ext_vector_type(4))) simd_float4;
 @property(nonatomic, assign, getter = getMoveDownWaysFrames, setter=setMoveDownWaysFrames:) NSMutableArray<SKTexture*> *moveDownWaysFrames;
 @property(nonatomic, assign, getter = getIdleFrames, setter=setIdleFrames:) NSMutableArray<SKTexture*> *idleFrames;
 @property(nonatomic, assign, setter=setManager:) GameManager *gameManager;
+@property(nonatomic, assign, getter=getCurrentDialog, setter=setCurrentDialog:) NSMutableArray *currentDialog;
 
 - (void)moveForward:(CGFloat)speed;
 - (void)lookAt: (simd_float4) direction;
 - (SKSpriteNode *)throwItem: (ItemType) itemType amount: (int) amount;
 - (void)receiveItem: (ItemType)itemType amount: (int) amount;
 - (NSMutableArray<SKSpriteNode *>*)scanItemsInRange: (CGFloat)range itemsToScan: (NSMutableArray<SKSpriteNode *>*) items;
-- (NSMutableArray<NSObject<LivingThing>*> *)scanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan;
+- (NSMutableArray<NSObject<LivingThing>*> *)ScanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan;
 @end
 
 #endif /* LivingThing_h */

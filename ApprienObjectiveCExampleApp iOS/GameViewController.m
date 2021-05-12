@@ -10,7 +10,7 @@
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import "GameManager.h"
-#import <Apprien.h>
+//#import <Apprien.h>
 #import <string.h>
 @implementation GameViewController
 GameScene *scene;
@@ -69,7 +69,6 @@ GameManager *gameManager;
             currentLevel = 1;
         }
         [gameManager updatePlayer:[touch locationInView:self.view]];
-        
     }
 }
 

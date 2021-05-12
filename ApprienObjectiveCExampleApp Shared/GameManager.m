@@ -13,7 +13,8 @@
 #import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
 #import "GameScene.h"
-#import <Apprien.h>
+//#import <ApprienObjectiveC/Apprien.h>
+
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
@@ -26,27 +27,29 @@
     NSMutableArray<NSObject<LivingThing>*> *shopKeepers;
 }
 
--(void)setView:(SKView *) skView{
-    view = skView;
-}
-- (SKScene *)getScene
-{
-    return scene;
-}
-
 -(void)update{
     if(scene == nil){
         scene =view.scene;
     }
+    [self HandlePlayers];
+    
+    [self HandleShopKeepers];
+}
+
+- (void)HandleShopKeepers {
+    for (NSObject<LivingThing>* shopKeeper in shopKeepers){
+        NSMutableArray<NSObject<LivingThing>*> *livingThings = [shopKeeper ScanLivingThingsInRange:shopKeeper.defaultSprite.size.width livingThingsToScan:players];
+        
+        NSMutableArray<SKSpriteNode*> *foundItems = [shopKeeper scanItemsInRange: (shopKeeper.defaultSprite.size.width) itemsToScan: sceneItems];
+        [self clearFoundItems: foundItems];
+        
+        [self HandleShopKeeperDialog:livingThings shopKeeper:shopKeeper];
+    }
+}
+
+- (void)HandlePlayers {
     for (NSObject<LivingThing>* player in players){
         NSMutableArray<SKSpriteNode*> *foundItems =[player scanItemsInRange: (player.defaultSprite.size.width) itemsToScan: sceneItems];
-        [self clearFoundItems: foundItems];
-    }
-    
-    for (NSObject<LivingThing>* shopKeeper in shopKeepers){
-        NSMutableArray<NSObject<LivingThing>*> *livingThings = [shopKeeper scanLivingThingsInRange:shopKeeper.defaultSprite.size.width livingThingsToScan:players];
-       
-        NSMutableArray<SKSpriteNode*> *foundItems = [shopKeeper scanItemsInRange: (shopKeeper.defaultSprite.size.width) itemsToScan: sceneItems];
         [self clearFoundItems: foundItems];
     }
 }
@@ -58,6 +61,33 @@
             [item removeAllActions];
             [item removeFromParent];
         }
+    }
+}
+
+- (void)HandleShopKeeperDialog:(NSMutableArray<NSObject<LivingThing> *> *)livingThings shopKeeper:(NSObject<LivingThing> *)shopKeeper {
+    CGPoint position =CGPointMake(shopKeeper.defaultSprite.position.x, shopKeeper.defaultSprite.position.y + shopKeeper.defaultSprite.size.height);
+    
+    NSString *firstLine =[NSString stringWithFormat:@"You will need more strength to "];
+    NSString *secondLine =[NSString stringWithFormat:@"climb the hill behind me."];
+    NSString *priceText = [NSString stringWithFormat:@"Buy strength potion? Coins:%@", @50];
+    NSArray<NSString*> *dialogueTextContent = [[NSArray alloc]initWithObjects:firstLine, secondLine, priceText, nil];
+    NSMutableArray *dialogs = [IapManUtilities OpenThreeLineDialogForClosePlayers:livingThings position: position textArray:dialogueTextContent];
+    
+    [self HandleDialogVisibility:dialogs shopKeeper:shopKeeper];
+}
+
+- (void)HandleDialogVisibility:(NSMutableArray *)dialogs shopKeeper:(NSObject<LivingThing> *)shopKeeper {
+    if(dialogs){
+        if([shopKeeper getCurrentDialog] == nil){
+            [shopKeeper setCurrentDialog:dialogs];
+            for(int i = 0; i< [dialogs count]; i++){
+                [scene addChild:[shopKeeper getCurrentDialog][i]];
+            }
+        }
+    }
+    else if (dialogs == nil && [shopKeeper getCurrentDialog] != nil){
+        [scene removeChildrenInArray:[shopKeeper getCurrentDialog]];
+        [shopKeeper setCurrentDialog:nil];
     }
 }
 
@@ -81,15 +111,13 @@
     _label.fontSize = 144;
     _label.alpha = 1;
     _label.position = CGPointMake(20, 100);
-   // [_label runAction:[SKAction fadeInWithDuration:2.0]];
     [scene addChild: _label];
     _labelContinue = (SKLabelNode *)[SKLabelNode labelNodeWithText:@"Press to continue"];
     _labelContinue.fontName =@"Helvetica Neue UltraLight";
     _labelContinue.alpha = 1;
     _labelContinue.position = CGPointMake(20, -100);
     [scene addChild: _labelContinue];
-   // [_labelContinue runAction:[SKAction fadeInWithDuration:2.0]];
-    
+
     SKSpriteNode *titleImage = [SKSpriteNode spriteNodeWithImageNamed:@"Player"];
 
     titleImage.size = CGSizeMake(titleImage.size.width*6, titleImage.size.height*6);
@@ -101,19 +129,7 @@
     players = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
     sceneItems = [[NSMutableArray<SKSpriteNode *> alloc]init];
     shopKeepers = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
-    SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
-    
-    NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
-    CGSize tileSice;
-    tileSice.width =128;
-    tileSice.height = 128;
-    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:viewSize.width/128 rows:viewSize.height tileSize:tileSice fillWithTileGroup:levelTiles[0]];
-    
-    [scene addChild:tileNode];
-    
-    SKTileMapNode *tileNodeStones =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:1 rows:viewSize.height tileSize:tileSice fillWithTileGroup:levelTiles[2]];
-    
-    [scene addChild:tileNodeStones];
+    [self SetUpEnvironment:scene viewSize:&viewSize];
     
     [players addObject:[self buildPlayer:scene]];
     [scene addChild:[players[0] getDefaultSprite]];
@@ -121,13 +137,29 @@
     [self generatePickableMoney:scene];
 }
 
+- (void)SetUpEnvironment:(GameScene *)scene viewSize:(const CGSize *)viewSize {
+    SKTileSet *enviro = [SKTileSet tileSetNamed:@"Environment"];
+    
+    NSArray<SKTileGroup*> *levelTiles = enviro.tileGroups;
+    CGSize tileSice;
+    tileSice.width =128;
+    tileSice.height = 128;
+    SKTileMapNode *tileNode =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:viewSize->width/128 rows:viewSize->height tileSize:tileSice fillWithTileGroup:levelTiles[0]];
+    
+    [scene addChild:tileNode];
+    
+    SKTileMapNode *tileNodeStones =[SKTileMapNode tileMapNodeWithTileSet:enviro columns:1 rows:viewSize->height tileSize:tileSice fillWithTileGroup:levelTiles[2]];
+    
+    [scene addChild:tileNodeStones];
+}
+
 - (void)generateShopKeepers:(GameScene *)sceneIn {
-    int shopKeeperSize = 64;
-    NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize];
+    int shopKeeperSize = 128;
+    NSObject<LivingThing> *newShopKeeper = [self buildShopKeeper:sceneIn shopKeeperName:@"Demon_0" size:shopKeeperSize position:CGPointMake(0, view.bounds.size.height - shopKeeperSize*2.5)];
     [shopKeepers addObject:newShopKeeper];
 }
 
-- (NSObject <LivingThing> *)buildShopKeeper:(SKScene *)sceneIn shopKeeperName: (NSString*) shopKeeperName size: (float) shopKeeperSize {
+- (NSObject <LivingThing> *)buildShopKeeper:(SKScene *)sceneIn shopKeeperName: (NSString*) shopKeeperName size: (float) shopKeeperSize position:(CGPoint) position{
     
     NSArray<SKTexture*> *shopKeeperAnimFrames = [IapManUtilities BuildAnimationFrames:[SKTextureAtlas atlasNamed:@"ShopKeeper"] prefix: @"IAP_Shop_Keeper_" endFix:shopKeeperName];
     
@@ -141,10 +173,11 @@
                              timePerFrame:0.1
                                    resize:false
                                   restore:true]];
+    
     [newShopKeeperTexture runAction: animAction];
     newShopKeeper.defaultSprite.size= CGSizeMake(shopKeeperSize, shopKeeperSize);
   
-    [newShopKeeper getDefaultSprite].position = CGPointMake(0, view.bounds.size.height - shopKeeperSize*2);
+    [newShopKeeper getDefaultSprite].position = position;
     [sceneIn addChild:newShopKeeper.defaultSprite];
     [newShopKeeper setManager:self];
     return newShopKeeper;
@@ -195,7 +228,6 @@
 
     [self HandlePlayerMovement:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
     [self HandlePlayerCoinThrow:&touchLocation middlePointX:middlePointX middlePointY:middlePointY yFromCenter:yTouchFromCenter xFromCenter:xTouchFromCenter];
-    
 }
 
 - (void)HandlePlayerMovement:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yFromCenter
@@ -222,9 +254,9 @@
 - (void)HandlePlayerCoinThrow:(const CGPoint *)location middlePointX:(int)middlePointX middlePointY:(int)middlePointY yFromCenter:(float)yTouchFromCenter
                  xFromCenter:(float)xTouchFromCenter
 {
-    if (fabs(yTouchFromCenter) < 64 && fabs(xTouchFromCenter) < 64) {
+    if (fabs(yTouchFromCenter) < 128 && fabs(xTouchFromCenter) < 128) {
         SKSpriteNode *thrownItem = [players[0] throwItem:Gold amount:1];
-        [sceneItems addObject:thrownItem];
+      //TODO: clean up it wont pick up it instantly after thrown  [sceneItems addObject:thrownItem];
     }
 }
 
@@ -233,5 +265,14 @@
     [players[0] moveForward:speed];
 }
 
+
+-(void)setView:(SKView *) skView{
+    view = skView;
+}
+
+- (SKScene *)getScene
+{
+    return view.scene;
+}
 
 @end

@@ -24,13 +24,25 @@ SKSpriteNode *defSprite;
 @synthesize defaultSprite;
 @synthesize gameManager;
 GameManager *gameManager2;
+simd_float4 lookDirection;
+@synthesize currentDialog;
+SKSpriteNode *_currentPlayersDialog;
+
+-(void)setCurrentDialog:(NSMutableArray *)currentPlayersDialog{
+    currentDialog = currentPlayersDialog;
+    _currentPlayersDialog = currentPlayersDialog;
+}
+
+-(NSMutableArray *)getCurrentDialog{
+    return currentDialog;
+}
 
 -(void)setManager: (GameManager *) newGameManager{
     gameManager2 = newGameManager;
     gameManager = newGameManager;
 }
 
-simd_float4 lookDirection;
+
 
 - (void)moveForward:(CGFloat)speed{
     
@@ -53,9 +65,10 @@ simd_float4 lookDirection;
 
 - (SKSpriteNode *)throwItem: (ItemType)itemType amount:(int)amount {
     if(itemType == Gold){
-        SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defaultSprite.position];
+    
+        SKSpriteNode *coin = [IapManUtilities ProduceCoinWithSize: 64 position:defSprite.position];
         simd_float4 direction =  (simd_float4){ -lookDirection[0],     lookDirection[1],   0.0f,  0.0f };
-        CGFloat speed = 10;
+        CGFloat speed = 1;
        // SKAction *animAction = ;
         SKAction *moveAction = [SKAction moveBy:CGVectorMake(-speed*10*direction[0], -speed*10*direction[1]) duration:0.1];
         moveAction = [SKAction repeatActionForever:moveAction];
@@ -85,7 +98,7 @@ simd_float4 lookDirection;
     return newItems;
 }
 
-- (NSMutableArray<NSObject <LivingThing> *> *)scanLivingThingsInRange:(CGFloat)range livingThingsToScan:(NSMutableArray<NSObject <LivingThing> *> *)livingThingsToScan {
+- (NSMutableArray<NSObject <LivingThing> *> *)ScanLivingThingsInRange:(CGFloat)range livingThingsToScan:(NSMutableArray<NSObject <LivingThing> *> *)livingThingsToScan {
     return nil;
 }
 

@@ -21,12 +21,21 @@
 SKSpriteNode *defSprite2;
 @synthesize gameManager;
 GameManager *gameManagerRef;
+@synthesize currentDialog;
+SKSpriteNode *_currentDialog;
+
+-(void)setCurrentDialog:(SKSpriteNode *)currentDialog{
+    currentDialog = currentDialog;
+    _currentDialog = currentDialog;
+}
+-(SKSpriteNode *)getCurrentDialog{
+    return _currentDialog;
+}
 
 -(void)setManager: (GameManager *) newGameManager{
     gameManagerRef = newGameManager;
     gameManager = newGameManager;
 }
-
 
 - (void)moveForward:(CGFloat)speed {
 
@@ -49,7 +58,6 @@ GameManager *gameManagerRef;
         if([IapManUtilities distanceBetweenPlayerAndNodesSquared: item secondNode: defaultSprite] < range){
             [self setGold:[self getGold] +1];
             [newItems addObject:item];
-            NSLog(@"received item");
         }
     }
     return newItems;
@@ -68,17 +76,15 @@ GameManager *gameManagerRef;
     return defaultSprite;
 }
 
-- (NSMutableArray<NSObject<LivingThing>*> *)scanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan{
+- (NSMutableArray<NSObject<LivingThing>*> *)ScanLivingThingsInRange: (CGFloat)range livingThingsToScan: (NSMutableArray<NSObject<LivingThing>*>*) livingThingsToScan{
     
     NSMutableArray<NSObject<LivingThing>*> *foundThings = [[NSMutableArray<NSObject<LivingThing>*> alloc]init];
 
-    for (NSObject<LivingThing> *thing in livingThingsToScan){
-        if([IapManUtilities distanceBetweenPlayerAndNodesSquared: thing.defaultSprite secondNode: defaultSprite] < range){
-            [self setGold:[self getGold] +1];
-            [foundThings addObject:thing];
+    for (NSObject<LivingThing> *scannedThing in livingThingsToScan){
+        if([IapManUtilities distanceBetweenPlayerAndNodesSquared: scannedThing.defaultSprite secondNode: defaultSprite] < range){
+            [foundThings addObject:scannedThing];
         }
     }
     return foundThings;
 }
-
 @end
