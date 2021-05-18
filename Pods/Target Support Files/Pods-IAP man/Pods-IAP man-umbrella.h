@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ApprienObjectiveCExampleApp_iOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ApprienObjectiveCExampleApp_iOSVersionString[];
+FOUNDATION_EXPORT double Pods_IAP_manVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IAP_manVersionString[];
 

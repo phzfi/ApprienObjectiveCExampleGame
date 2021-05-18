@@ -1,6 +1,0 @@
-framework module Pods_ApprienObjectiveCExampleApp_iOS {
-  umbrella header "Pods-ApprienObjectiveCExampleApp iOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

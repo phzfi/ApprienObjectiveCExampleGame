@@ -13,7 +13,7 @@
 #import "IapManUtilities.h"
 #import <GameplayKit/GameplayKit.h>
 #import "GameScene.h"
-//#import <ApprienObjectiveC/Apprien.h>
+#import <ApprienSdk.h>
 
 @implementation GameManager {
     SKShapeNode *_spinnyNode;
@@ -27,7 +27,16 @@
     NSMutableArray<NSObject<LivingThing>*> *shopKeepers;
     
 }
+
 CGFloat moveButtonSize = 68;
+ApprienSdk *apprien;
+
+-(id)init {
+     if (self = [super init])  {
+         apprien = [[ApprienSdk alloc] init];
+     }
+     return self;
+}
 
 -(void)update{
     if(scene == nil){
@@ -68,10 +77,24 @@ CGFloat moveButtonSize = 68;
 
 - (void)HandleShopKeeperDialog:(NSMutableArray<NSObject<LivingThing> *> *)livingThings shopKeeper:(NSObject<LivingThing> *)shopKeeper {
     CGPoint position =CGPointMake(shopKeeper.defaultSprite.position.x, shopKeeper.defaultSprite.position.y + shopKeeper.defaultSprite.size.height);
+    NSArray* iapManIapProductIds = [[NSArray alloc] init];
+    
+    
+    iapManIapProductIds = @[@"IAPman_coin_bag_50_sku",
+                   @"IAPman_coin_bag_10_sku",
+                   @"IAPman_health_potion_sku",
+                   @"IAPman_strenght_potion_sku",
+                   @"IAPman_speed_potion_sku",];
+    
+    [apprien FetchApprienPrices:iapManIapProductIds callback:^(NSArray *productsWithPrices) {
+        productsOut = productsWithPrices;
+        fetchPricesFinished = TRUE;
+    }];
+    
     
     NSString *firstLine =[NSString stringWithFormat:@"You will need more strength to "];
     NSString *secondLine =[NSString stringWithFormat:@"climb the hill behind me."];
-    NSString *priceText = [NSString stringWithFormat:@"Buy strength potion? Coins:%@", @50];
+    NSString *priceText = [NSString stringWithFormat:@"Buy strength potion? Coins:%@", @productPrice];
     NSArray<NSString*> *dialogueTextContent = [[NSArray alloc]initWithObjects:firstLine, secondLine, priceText, nil];
     NSMutableArray *dialogs = [IapManUtilities OpenThreeLineDialogForClosePlayers:livingThings position: position textArray:dialogueTextContent];
     
