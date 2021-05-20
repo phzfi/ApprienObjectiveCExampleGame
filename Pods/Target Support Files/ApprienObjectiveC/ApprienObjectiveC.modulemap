@@ -1,0 +1,6 @@
+framework module ApprienObjectiveC {
+  umbrella header "ApprienObjectiveC-umbrella.h"
+
+  export *
+  module * { export * }
+}

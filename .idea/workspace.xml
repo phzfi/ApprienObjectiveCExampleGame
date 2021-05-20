@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="813e9a80-39d4-4159-a62c-9e3b510c48de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/GameManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.m" beforeDir="false" afterPath="$PROJECT_DIR$/ApprienObjectiveCExampleApp Shared/IapManUtilities.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_4CFB51A9-516D-4611-BE58-0FD53BF16A46" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="macos_iosmac_x86_64" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -29,7 +32,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration name="ApprienObjectiveCExampleApp iOS" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ApprienObjectiveCExampleApp" TARGET_NAME="ApprienObjectiveCExampleApp iOS" CONFIG_NAME="Debug" SCHEME_NAME="ApprienObjectiveCExampleApp iOS" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="ApprienObjectiveCExampleApp" RUN_TARGET_NAME="ApprienObjectiveCExampleApp iOS" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+    <configuration name="cocos2d" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="cocos2d" CONFIG_NAME="Debug" SCHEME_NAME="cocos2d" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
@@ -50,6 +53,7 @@
       <workItem from="1616406242422" duration="43000" />
       <workItem from="1617259821086" duration="9012000" />
       <workItem from="1619763511571" duration="489000" />
+      <workItem from="1620727838281" duration="238000" />
     </task>
     <servers />
   </component>

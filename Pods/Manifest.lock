@@ -1,18 +1,25 @@
 PODS:
+  - ApprienObjectiveC (0.0.1)
   - cocos2d (2.1):
     - cocos2d/CocosDenshion (= 2.1)
   - cocos2d/CocosDenshion (2.1)
 
 DEPENDENCIES:
+  - ApprienObjectiveC (from `~/workspace/github/ApprienObjectiveC/`)
   - cocos2d
 
 SPEC REPOS:
   trunk:
     - cocos2d
 
+EXTERNAL SOURCES:
+  ApprienObjectiveC:
+    :path: "~/workspace/github/ApprienObjectiveC/"
+
 SPEC CHECKSUMS:
+  ApprienObjectiveC: 54808283c4a07311ac1c9ad9e12842b3037a66a8
   cocos2d: 445b568e7ce37c6a2c9f6c0fa3cb23f6348f19fb
 
-PODFILE CHECKSUM: c6ebc3353b70f84620dfcaf0d68baa76fed2227d
+PODFILE CHECKSUM: 18262ceb13da5ce19471714c6cd0f2c460b52d1c
 
 COCOAPODS: 1.10.1

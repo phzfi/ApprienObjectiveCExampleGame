@@ -12,7 +12,10 @@
     "MikaelKorpinen": "53366205+MikaelKorpinen@users.noreply.github.com"
   },
   "platforms": {
-    "ios": "6.0"
+    "ios": "6.0",
+    "osx": "10.7",
+    "watchos": "2.0",
+    "tvos": "9.0"
   },
   "source": {
     "git": "https://github.com/phzfi/ApprienObjectiveC.git",

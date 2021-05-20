@@ -1,0 +1,6 @@
+framework module Pods_IAP_man {
+  umbrella header "Pods-IAP man-umbrella.h"
+
+  export *
+  module * { export * }
+}
