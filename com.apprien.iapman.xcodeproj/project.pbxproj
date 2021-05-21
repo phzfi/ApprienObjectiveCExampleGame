@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C0DA50A8D34E17E22AEAEEE /* Pods_IAP_man.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BE56DCC1284D5307F30630 /* Pods_IAP_man.framework */; };
 		8B067FC42603984700301F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC32603984700301F81 /* AppDelegate.m */; };
 		8B067FC72603984700301F81 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B067FC62603984700301F81 /* GameViewController.m */; };
 		8B067FCA2603984700301F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067FC82603984700301F81 /* Main.storyboard */; };
@@ -67,10 +66,12 @@
 		8B5CCC062620561A00B856AA /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCC042620561A00B856AA /* MyTileSet.sks */; };
 		8B5CCC072620561A00B856AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B5CCC052620561A00B856AA /* Assets.xcassets */; };
 		8B9A31F826402A53005DED55 /* Dialogs.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8B9A31F726402A53005DED55 /* Dialogs.atlas */; };
+		E82F330A0D2ADF843B2F15B2 /* Pods_IAP_man.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA588C2051FF0719183CCA04 /* Pods_IAP_man.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		46BE56DCC1284D5307F30630 /* Pods_IAP_man.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAP_man.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E95308498074F7A9288138D /* Pods-IAP man.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAP man.debug.xcconfig"; path = "Target Support Files/Pods-IAP man/Pods-IAP man.debug.xcconfig"; sourceTree = "<group>"; };
+		74F85C3AEFCAECA5B3452D0E /* Pods-IAP man.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAP man.release.xcconfig"; path = "Target Support Files/Pods-IAP man/Pods-IAP man.release.xcconfig"; sourceTree = "<group>"; };
 		8B067FB62603984300301F81 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8B067FB72603984300301F81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8B067FB82603984300301F81 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
@@ -161,10 +162,7 @@
 		8B5CCC042620561A00B856AA /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		8B5CCC052620561A00B856AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B9A31F726402A53005DED55 /* Dialogs.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Dialogs.atlas; path = Assets/Dialogs.atlas; sourceTree = SOURCE_ROOT; };
-		9D67D6AE76C291D39D3AC8BD /* Pods-IAP man.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAP man.debug.xcconfig"; path = "Target Support Files/Pods-IAP man/Pods-IAP man.debug.xcconfig"; sourceTree = "<group>"; };
-		C4FFE5501D4B22DA0BAF081F /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		EB7BBCC62F5B1D12C341D854 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F2F195DC40D1A5C37B3609BB /* Pods-IAP man.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAP man.release.xcconfig"; path = "Target Support Files/Pods-IAP man/Pods-IAP man.release.xcconfig"; sourceTree = "<group>"; };
+		FA588C2051FF0719183CCA04 /* Pods_IAP_man.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAP_man.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0680242603A26F00301F81 /* cocos2d.framework in Frameworks */,
-				1C0DA50A8D34E17E22AEAEEE /* Pods_IAP_man.framework in Frameworks */,
+				E82F330A0D2ADF843B2F15B2 /* Pods_IAP_man.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +184,7 @@
 				8B5CC6432608DF0300B856AA /* ApprienObjectiveC.framework */,
 				8B0680232603A26F00301F81 /* cocos2d.framework */,
 				8B0680252603A26F00301F81 /* cocos2d.framework */,
-				46BE56DCC1284D5307F30630 /* Pods_IAP_man.framework */,
+				FA588C2051FF0719183CCA04 /* Pods_IAP_man.framework */,
 			);
 			name = Frameworks;
 			path = ../../../../../../../../workspace/github/ApprienObjectiveCExampleGame;
@@ -339,10 +337,8 @@
 		DBC07E00E41368219C9E512B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C4FFE5501D4B22DA0BAF081F /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */,
-				EB7BBCC62F5B1D12C341D854 /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */,
-				9D67D6AE76C291D39D3AC8BD /* Pods-IAP man.debug.xcconfig */,
-				F2F195DC40D1A5C37B3609BB /* Pods-IAP man.release.xcconfig */,
+				2E95308498074F7A9288138D /* Pods-IAP man.debug.xcconfig */,
+				74F85C3AEFCAECA5B3452D0E /* Pods-IAP man.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -354,11 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B0680072603984700301F81 /* Build configuration list for PBXNativeTarget "IAP man" */;
 			buildPhases = (
-				4BF731A9117A1466899EB07A /* [CP] Check Pods Manifest.lock */,
+				465A1C43BEC5F811228AA78F /* [CP] Check Pods Manifest.lock */,
 				8B067FBB2603984700301F81 /* Sources */,
 				8B067FBC2603984700301F81 /* Frameworks */,
 				8B067FBD2603984700301F81 /* Resources */,
-				E7BEC128EDD5D4047EF58855 /* [CP] Embed Pods Frameworks */,
+				EF55916160B7B7DDB87EA315 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -459,7 +455,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BF731A9117A1466899EB07A /* [CP] Check Pods Manifest.lock */ = {
+		465A1C43BEC5F811228AA78F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,7 +477,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7BEC128EDD5D4047EF58855 /* [CP] Embed Pods Frameworks */ = {
+		EF55916160B7B7DDB87EA315 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -682,7 +678,7 @@
 		};
 		8B0680082603984700301F81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D67D6AE76C291D39D3AC8BD /* Pods-IAP man.debug.xcconfig */;
+			baseConfigurationReference = 2E95308498074F7A9288138D /* Pods-IAP man.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -713,7 +709,7 @@
 		};
 		8B0680092603984700301F81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F195DC40D1A5C37B3609BB /* Pods-IAP man.release.xcconfig */;
+			baseConfigurationReference = 74F85C3AEFCAECA5B3452D0E /* Pods-IAP man.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,6 +6,6 @@ target 'IAP man' do
  use_frameworks!
  
    pod 'cocos2d'
-   pod 'ApprienObjectiveC', :path => '~/workspace/github/ApprienObjectiveC/'
+#   pod 'ApprienObjectiveC', :path => '~/workspace/github/ApprienObjectiveC/'
 
 end
