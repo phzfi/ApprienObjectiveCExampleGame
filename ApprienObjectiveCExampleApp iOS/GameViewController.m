@@ -10,7 +10,6 @@
 #import "LivingThing.h"
 #import "IAPPlayer.h"
 #import "GameManager.h"
-//#import <Apprien.h>
 #import <string.h>
 @implementation GameViewController
 GameScene *scene;
@@ -25,7 +24,7 @@ GameManager *gameManager;
         gameManager = [[GameManager alloc]init];
     }
 
-    scene = [gameManager loadGameScene];
+    scene = (GameScene *)[gameManager loadGameScene];
     [scene SetGameManager:gameManager];
     // Present the scene
     SKView *skView = (SKView *) self.view;
@@ -40,6 +39,14 @@ GameManager *gameManager;
 
 - (BOOL)shouldAutorotate {
     return YES;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationLandscapeLeft;
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 #if TARGET_OS_IOS || TARGET_OS_TV
@@ -68,7 +75,16 @@ GameManager *gameManager;
             [skView presentScene:scene];
             currentLevel = 1;
         }
-        [gameManager updatePlayer:[touch locationInView:self.view]];
+        
+        UITouch *touch2 = touches.anyObject;
+
+        CGPoint positionInScene = [touch locationInNode: scene];
+        SKNode *touchedNode = [scene nodeAtPoint: positionInScene];
+
+        if (touchedNode.name)
+        {
+            [gameManager updatePlayer:touchedNode.name];
+        }
     }
 }
 
@@ -80,15 +96,8 @@ GameManager *gameManager;
 
 #endif
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
-}
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
 @end

@@ -14,7 +14,6 @@
 		061CE12E7B447DEF86A1E2E0F4F74C74 /* CCParticleSystemQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E45EC288CF364C012A220CBDE2D428 /* CCParticleSystemQuad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		072B4CDF1F4BDC7D25E2A067304FF03D /* cocos2d.m in Sources */ = {isa = PBXBuildFile; fileRef = 649F0ED0EB467003069092BC6E1214E1 /* cocos2d.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09D52950998639EC01FF69836AE90626 /* ccTypes.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 426A4E921ACD7B93A65A9C4611FD75D8 /* ccTypes.h */; };
-		0BB04CE47F515F6C1E3C1F0BAFA2337A /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C5944643BEC3AC2FDF0914148EE8CF7 /* CCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 81698246A37F4BA23CBDFF5D9BA5C5FA /* CCAnimation.h */; };
 		0D93830089ED4BE397C6ACA4C8FC3B8D /* CCESRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C643AB54977E6B9A88F74108EF2310B /* CCESRenderer.h */; };
 		0DBAA728AA6249BBB4485A53BB4442F7 /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = E5279B5E4CB4B62E8B03D737AB84D149 /* aabb.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -172,7 +171,6 @@
 		62AEB082C638C80C62E3D6DC810D2002 /* CCActionManager.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1F4B051B627D721BD5985386CAE39E94 /* CCActionManager.h */; };
 		62C0DD87DECBCF406327236CC6EEA48B /* CCDrawNode.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0B4709DE13C4C4DEF2E92C8180E9B6C5 /* CCDrawNode.h */; };
 		63585649E13DDA07BF85A80572617494 /* CCEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF1994F800956840FB745228AD3DD8 /* CCEventDispatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		64144B39B08BAE4F6E18A36E75F3E48D /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C850B0430F14D92E637E998D7D9D88 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m */; };
 		64555EB0D17A9B3AEFE8F1DA6D46BB33 /* CCTMXTiledMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6979E66BCC8E842A37B9754778681604 /* CCTMXTiledMap.h */; };
 		65927EBBCA642F7B3B6B87EF5E5D5899 /* ccShader_PositionTextureColorAlphaTest_frag.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 7245CEC0540B82D906EE05C0AD249485 /* ccShader_PositionTextureColorAlphaTest_frag.h */; };
 		66C31B8C27FFE3DA1CB12E2F9FD84491 /* mat4stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC21008FA43AA2DC62E308B3241C42 /* mat4stack.h */; };
@@ -220,6 +218,7 @@
 		846BF0061F4FC28D9E49B08E70F77FBC /* CCCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA0E0F3EDA8A439CDD495981D1C7694 /* CCCamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84BD61F294A93F75D91B6F4EA1247941 /* TGAlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 248A33F385926BE66563005FE47A99C3 /* TGAlib.h */; };
 		84E3B35885B2FB786EA91FB01B1A59B9 /* ccShader_PositionTextureA8Color_vert.h in Headers */ = {isa = PBXBuildFile; fileRef = 95267D7981FCA13D86C621CEB99588DC /* ccShader_PositionTextureA8Color_vert.h */; };
+		84E797A429F0AF41E0B81C87442806EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		851018CC19ADDB9F0D0E1D133A850C02 /* CCVertex.h in Copy Support Public Headers */ = {isa = PBXBuildFile; fileRef = F1D5DF0DE7313466EF4E6F1AB1CA877C /* CCVertex.h */; };
 		85696D8132128ABDB54D1395126A580E /* ccShader_PositionTextureColor_frag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0418327555E10FBB85EFCABE39BB6329 /* ccShader_PositionTextureColor_frag.h */; };
 		85B43AAFC2068DDAB682797A1F3C7DB4 /* CCLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CE98DD4BAF0C37783A0B658B41599 /* CCLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -343,6 +342,7 @@
 		CD3A00E7EF0AAD2A7E5500176F9973F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		CD78600941E6E8FD76599AD2A07B79A5 /* CCLabelAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = F806BF38E3F2F5AA5EB25E6135067A5A /* CCLabelAtlas.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE0080380979589DB64728C74B264A93 /* ccShader_PositionTextureColor_vert.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 9F24D1983F7B8D75ADA8DAF16BD43DDD /* ccShader_PositionTextureColor_vert.h */; };
+		CE3078D28DCE96BABD52FBB76C3CA1B4 /* Pods-IAP man-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19926E190945665306A89AAF817B88BA /* Pods-IAP man-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEFC2507139D2FEA6DA909C21E60DBA9 /* CCNode+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8144C3155E08D2D044D0093D68130339 /* CCNode+Debug.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFA0C6A78484C29B1E5454C43963FC93 /* CCTouchHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA6B4BAB6526DA880603A4996BC5FA0 /* CCTouchHandler.h */; };
 		CFE37A8C3C71FA5EEA7EBC447AFBB018 /* pngmem.c in Sources */ = {isa = PBXBuildFile; fileRef = DE9F73BE488360FF25CE86B2FC2C1B9F /* pngmem.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -351,6 +351,7 @@
 		D25E07373C880E5AB21621AE1F7E8FA7 /* CCAnimationCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AC49B1A27E78C440B97807174112A8DE /* CCAnimationCache.h */; };
 		D2AF3558A46ADBB130C6B2A9FF264531 /* CCLabelTTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 60491023719CECB46878199FF77D48F7 /* CCLabelTTF.h */; };
 		D33AB9421FB6D8B3B33727C257A00F80 /* CCDirectorMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E6EFFF2729E3C24FA8143A38892775C /* CCDirectorMac.h */; };
+		D45BA9666191813D33110C8F3963C2F4 /* Pods-IAP man-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DB4794A1333D06ED7FB3F836DFB2A /* Pods-IAP man-dummy.m */; };
 		D5777701FDB8AA8F5A8542CA49DC3069 /* CCLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9B41BC196282F2457CC0433419068E /* CCLayer.h */; };
 		D5E117CC1065C512C38B1501A2ADF1D4 /* ccShader_PositionTexture_frag.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1614FDF6C8B99E3F522DA7D708ED12D0 /* ccShader_PositionTexture_frag.h */; };
 		D75CB896475550C3A1133386FF561905 /* CCMenuItem.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 24C9E1A924B7354FD6B87B4D6673A683 /* CCMenuItem.h */; };
@@ -363,7 +364,6 @@
 		DADF0249F1893735A9AD376928BC8932 /* CocosDenshion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A336A30BC63D67C324E40322A906A1D /* CocosDenshion.h */; };
 		DB7ABFF469D87CC08E55389BEE04923B /* vec2.h in Copy ../external/kazmath/include/kazmath Public Headers */ = {isa = PBXBuildFile; fileRef = CB71826B0DF25CACCB93277CCF5C5410 /* vec2.h */; };
 		DCBCC1BC3A4C3C5758E668B70684A404 /* CCNode+Debug.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 6AF342741F3AB4FF5C683A9CFA6CD7C0 /* CCNode+Debug.h */; };
-		DCEB2E74460F1853EF52CDCB7DA65B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */; };
 		DD9A382E2D905CC9FFDD3ACD5BC7FC16 /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D41ECEBBE85914CAC87E537DAD28632 /* neon_matrix_impl.h */; };
 		DE2443F4E8C2CAAADD17680A1E2DC3BD /* CCPhysicsSprite.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FF444F3C876123E55123DFBB05075459 /* CCPhysicsSprite.h */; };
 		DEFCFE4782A05B97237AFA64F7D95B5C /* CDXPropertyModifierAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 970F97E2A1C6389E08A202F54C702681 /* CDXPropertyModifierAction.h */; };
@@ -424,7 +424,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		529822146603CF6002AA3D5086997314 /* PBXContainerItemProxy */ = {
+		4C8B2EC9DFB17AF37C408DBD365382DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -665,11 +665,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00321F9310AE459A8445A2C124DCFA04 /* Pods-IAP man-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IAP man-frameworks.sh"; sourceTree = "<group>"; };
 		0063C3F67151944CD42394DA3DF169F1 /* CCProfiling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCProfiling.h; path = cocos2d/Support/CCProfiling.h; sourceTree = "<group>"; };
 		01CC8602D902D39B96F5B5F41B10552B /* CCProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCProgressTimer.h; path = cocos2d/CCProgressTimer.h; sourceTree = "<group>"; };
 		0205333B2913EAF4F051737B96F62859 /* CCActionCatmullRom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionCatmullRom.h; path = cocos2d/CCActionCatmullRom.h; sourceTree = "<group>"; };
 		022D2662AF249007B4A3BF4EE11A6940 /* vec3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec3.h; path = external/kazmath/include/kazmath/vec3.h; sourceTree = "<group>"; };
-		02349B1EFE8820DD6F76A4B7C48CAD65 /* Pods-ApprienObjectiveCExampleApp iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ApprienObjectiveCExampleApp iOS-Info.plist"; sourceTree = "<group>"; };
 		02D7FDF2CE597C8E58993DA413170365 /* CCGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCGLProgram.m; path = cocos2d/CCGLProgram.m; sourceTree = "<group>"; };
 		02F7562CB2FC58A62C47A121A4C90F92 /* CCActionGrid.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionGrid.m; path = cocos2d/CCActionGrid.m; sourceTree = "<group>"; };
 		0404EA286607412E76BDAB0E952E7A2E /* CCActionGrid3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionGrid3D.m; path = cocos2d/CCActionGrid3D.m; sourceTree = "<group>"; };
@@ -688,8 +688,9 @@
 		13423EADD74592CA6ED745C3067E748B /* ccShader_PositionTextureA8Color_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTextureA8Color_frag.h; path = cocos2d/ccShader_PositionTextureA8Color_frag.h; sourceTree = "<group>"; };
 		15B76353839EC94BE43F366D4E54C99F /* utility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utility.h; path = external/kazmath/include/kazmath/utility.h; sourceTree = "<group>"; };
 		1614FDF6C8B99E3F522DA7D708ED12D0 /* ccShader_PositionTexture_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTexture_frag.h; path = cocos2d/ccShader_PositionTexture_frag.h; sourceTree = "<group>"; };
-		17B44859E4FCBFFDA964098173AE5FF8 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ApprienObjectiveCExampleApp_iOS.framework; path = "Pods-ApprienObjectiveCExampleApp iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19926E190945665306A89AAF817B88BA /* Pods-IAP man-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IAP man-umbrella.h"; sourceTree = "<group>"; };
 		199C2F177B83720950936B8B7F144732 /* cocos2d.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = cocos2d.modulemap; sourceTree = "<group>"; };
+		1C3DB4794A1333D06ED7FB3F836DFB2A /* Pods-IAP man-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IAP man-dummy.m"; sourceTree = "<group>"; };
 		1CBA5526E9EE01CA6D64375D60327A7C /* ccShader_Position_uColor_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_Position_uColor_vert.h; path = cocos2d/ccShader_Position_uColor_vert.h; sourceTree = "<group>"; };
 		1D9B41BC196282F2457CC0433419068E /* CCLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCLayer.h; path = cocos2d/CCLayer.h; sourceTree = "<group>"; };
 		1E8555894D38C54D952EC01B49AC84B7 /* CCLabelBMFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCLabelBMFont.m; path = cocos2d/CCLabelBMFont.m; sourceTree = "<group>"; };
@@ -712,6 +713,7 @@
 		2D2703F45DCA28884E0AB330630D9350 /* pngset.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngset.c; path = external/libpng/pngset.c; sourceTree = "<group>"; };
 		2D654D9C8A7A842FDB68E6778CC588E1 /* CCTileMapAtlas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTileMapAtlas.h; path = cocos2d/CCTileMapAtlas.h; sourceTree = "<group>"; };
 		2DA6B8905992F6A8AD046570A75DF115 /* CCActionPageTurn3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionPageTurn3D.m; path = cocos2d/CCActionPageTurn3D.m; sourceTree = "<group>"; };
+		2F7EA51A1BED515365513FEED36ACC9D /* Pods-IAP man.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IAP man.modulemap"; sourceTree = "<group>"; };
 		2F892DCB1CB9355A7940A5ED5947DBEF /* CDAudioManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDAudioManager.h; path = CocosDenshion/CDAudioManager.h; sourceTree = "<group>"; };
 		2FC072678FA640F831D5EF3C759B2FF8 /* vec2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vec2.c; path = external/kazmath/src/vec2.c; sourceTree = "<group>"; };
 		30D64061B5D729D6F5380310E3BBCB6D /* mat3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mat3.c; path = external/kazmath/src/mat3.c; sourceTree = "<group>"; };
@@ -746,7 +748,6 @@
 		4A8987C27F849ADE746FA14348A4F89F /* ccShader_PositionColorLengthTexture_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionColorLengthTexture_frag.h; path = cocos2d/ccShader_PositionColorLengthTexture_frag.h; sourceTree = "<group>"; };
 		4BDE3ED2E9097080700F51C641547515 /* CCMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMenu.h; path = cocos2d/CCMenu.h; sourceTree = "<group>"; };
 		4CDC240904ADE728EC1212C2CA3CE14F /* CCTransitionPageTurn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTransitionPageTurn.h; path = cocos2d/CCTransitionPageTurn.h; sourceTree = "<group>"; };
-		4D692CDD18B392883DB5BC948619EFBC /* Pods-ApprienObjectiveCExampleApp iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ApprienObjectiveCExampleApp iOS.modulemap"; sourceTree = "<group>"; };
 		4D8D7089EEC8DBD00AC9C9562B7D622C /* CCActionInstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionInstant.h; path = cocos2d/CCActionInstant.h; sourceTree = "<group>"; };
 		4DCD952940A6FDCF9B25479C8C33DC7B /* TransformUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TransformUtils.m; path = cocos2d/Support/TransformUtils.m; sourceTree = "<group>"; };
 		4E166E09545017F7DB5B8867E28A9D8A /* ccShader_PositionTexture_uColor_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTexture_uColor_vert.h; path = cocos2d/ccShader_PositionTexture_uColor_vert.h; sourceTree = "<group>"; };
@@ -806,11 +807,12 @@
 		6FF6CC422C7983DC100925570136ACA8 /* CCTexture2D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTexture2D.h; path = cocos2d/CCTexture2D.h; sourceTree = "<group>"; };
 		718AD0802753E03B2FBD2BE80793FCEA /* CCClippingNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCClippingNode.m; path = cocos2d/CCClippingNode.m; sourceTree = "<group>"; };
 		7245CEC0540B82D906EE05C0AD249485 /* ccShader_PositionTextureColorAlphaTest_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTextureColorAlphaTest_frag.h; path = cocos2d/ccShader_PositionTextureColorAlphaTest_frag.h; sourceTree = "<group>"; };
+		726092E3805A8D776E873509893B6257 /* Pods-IAP man-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAP man-Info.plist"; sourceTree = "<group>"; };
+		72D13348DEF10330C7C2257CE315B6D9 /* Pods-IAP man-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IAP man-acknowledgements.markdown"; sourceTree = "<group>"; };
 		734D23BFDF5BCC4F6B84C44E40C52815 /* CCSpriteBatchNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCSpriteBatchNode.h; path = cocos2d/CCSpriteBatchNode.h; sourceTree = "<group>"; };
 		739EB1212E71B2917E798DDC8242D7B9 /* CDXPropertyModifierAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDXPropertyModifierAction.m; path = CocosDenshion/CDXPropertyModifierAction.m; sourceTree = "<group>"; };
 		73EFE4CF78D15E2A1DBB5A7B33F80822 /* CCTexturePVR.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTexturePVR.m; path = cocos2d/CCTexturePVR.m; sourceTree = "<group>"; };
 		73F98816314FC849A22D730CDE92D27B /* base64.c */ = {isa = PBXFileReference; includeInIndex = 1; name = base64.c; path = cocos2d/Support/base64.c; sourceTree = "<group>"; };
-		75085C4F16C9B2409326FE05E77840CE /* Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		752B2319075E4693594B582D829A4BF8 /* CCWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCWindow.h; path = cocos2d/Platforms/Mac/CCWindow.h; sourceTree = "<group>"; };
 		7832C25D9358CDE5F65E6BE72D42122A /* CCTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTransition.m; path = cocos2d/CCTransition.m; sourceTree = "<group>"; };
 		7891A9872E13AABDE2799A50DB4D2904 /* CCGLView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCGLView.h; path = cocos2d/Platforms/iOS/CCGLView.h; sourceTree = "<group>"; };
@@ -844,9 +846,9 @@
 		8DFB540E61701B04B9EAB970105D53DD /* NSThread+performBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSThread+performBlock.h"; path = "cocos2d/Support/NSThread+performBlock.h"; sourceTree = "<group>"; };
 		8E361748A39ECE8D28886B6FFA4241D1 /* CCTexturePVR.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTexturePVR.h; path = cocos2d/CCTexturePVR.h; sourceTree = "<group>"; };
 		8EFA0F28151970A5808DD91CA424769A /* CCActionPageTurn3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionPageTurn3D.h; path = cocos2d/CCActionPageTurn3D.h; sourceTree = "<group>"; };
-		9066FC08E60AF99816E77FCB0D9D9789 /* Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh"; sourceTree = "<group>"; };
 		90EF2D5BBFB32ABC66EC9C481A8C86EC /* ccShaders.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ccShaders.m; path = cocos2d/ccShaders.m; sourceTree = "<group>"; };
 		9252C4DFE0D1808E95BA0DEE04F58869 /* CGPointExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGPointExtension.m; path = cocos2d/Support/CGPointExtension.m; sourceTree = "<group>"; };
+		928AE1212AB8073116D341BD134923D4 /* Pods_IAP_man.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IAP_man.framework; path = "Pods-IAP man.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		938B1F5FC33B6B1DD61A5930E285A916 /* pnggccrd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pnggccrd.c; path = external/libpng/pnggccrd.c; sourceTree = "<group>"; };
 		9422B743A6D35E161619E25D547E51A2 /* CCLabelAtlas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCLabelAtlas.h; path = cocos2d/CCLabelAtlas.h; sourceTree = "<group>"; };
 		95267D7981FCA13D86C621CEB99588DC /* ccShader_PositionTextureA8Color_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTextureA8Color_vert.h; path = cocos2d/ccShader_PositionTextureA8Color_vert.h; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 		A179C2A5F59E6A5F27CB6AC4FEF2D2E2 /* CCTileMapAtlas.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTileMapAtlas.m; path = cocos2d/CCTileMapAtlas.m; sourceTree = "<group>"; };
 		A346B0A2D3089E7AEBCC65D3C08586B7 /* CCES2Renderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCES2Renderer.m; path = cocos2d/Platforms/iOS/CCES2Renderer.m; sourceTree = "<group>"; };
 		A3A6DFB4C6905FCA55E9F0DA0547FC53 /* CCActionTween.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionTween.m; path = cocos2d/CCActionTween.m; sourceTree = "<group>"; };
+		A3B855F921A2F649B72BBBB6E7BACA7B /* Pods-IAP man-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAP man-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3F5C024FA98D83045D1955810093595 /* CCTouchDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTouchDispatcher.m; path = cocos2d/Platforms/iOS/CCTouchDispatcher.m; sourceTree = "<group>"; };
 		A413554E01EE22E8E9622C7D0944C12D /* CCActionCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionCamera.m; path = cocos2d/CCActionCamera.m; sourceTree = "<group>"; };
 		A4CE5C4A2D6BC28886A3E3528E378E3C /* pngwrite.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwrite.c; path = external/libpng/pngwrite.c; sourceTree = "<group>"; };
@@ -877,7 +880,6 @@
 		ACFA19C5FB6967FC765DD40C08C0B56D /* CCTransitionProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTransitionProgress.h; path = cocos2d/CCTransitionProgress.h; sourceTree = "<group>"; };
 		AFD09A66930CF27C2C928A8F086E49B7 /* CCFileUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCFileUtils.h; path = cocos2d/Support/CCFileUtils.h; sourceTree = "<group>"; };
 		B04C787B57CEC893C4EA0E6B4D644627 /* CCTMXObjectGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTMXObjectGroup.h; path = cocos2d/CCTMXObjectGroup.h; sourceTree = "<group>"; };
-		B1A5D97CEB85FFB4C822E4A09CD0D829 /* Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		B30799CDCD6B19EB39DE9F740FBC01C8 /* CCArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCArray.m; path = cocos2d/Support/CCArray.m; sourceTree = "<group>"; };
 		B311C8E743B93AB49CF53E8606BA5B49 /* CDXMacOSXSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDXMacOSXSupport.h; path = CocosDenshion/CDXMacOSXSupport.h; sourceTree = "<group>"; };
 		B33918883001A628F863998FCD8251DB /* CCActionInterval.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionInterval.h; path = cocos2d/CCActionInterval.h; sourceTree = "<group>"; };
@@ -910,8 +912,6 @@
 		CA1497EADABC1304FB4244B4C2F11F15 /* pngget.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngget.c; path = external/libpng/pngget.c; sourceTree = "<group>"; };
 		CA697C77DBEBD48BB1C93B9CF0FD227A /* cocos2d-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cocos2d-prefix.pch"; sourceTree = "<group>"; };
 		CB71826B0DF25CACCB93277CCF5C5410 /* vec2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec2.h; path = external/kazmath/include/kazmath/vec2.h; sourceTree = "<group>"; };
-		CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig"; sourceTree = "<group>"; };
-		CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF73432175D0AFC60C4E60570051725 /* TGAlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAlib.m; path = cocos2d/Support/TGAlib.m; sourceTree = "<group>"; };
 		D02FE4B6A23E4BECE4450347F575CC43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D3BAD0165464C8C529FA23F593FE9AB3 /* CCTextureCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCTextureCache.h; path = cocos2d/CCTextureCache.h; sourceTree = "<group>"; };
@@ -921,7 +921,6 @@
 		D63694F108225D22825E4D118994D309 /* cocos2d.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = cocos2d.release.xcconfig; sourceTree = "<group>"; };
 		D63C311876D7910D7CE07CB66AB8CC34 /* CCPhysicsDebugNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCPhysicsDebugNode.m; path = cocos2d/CCPhysicsDebugNode.m; sourceTree = "<group>"; };
 		D87D70280B0C5F15140BBF31D40077BE /* CCPhysicsSprite.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = CCPhysicsSprite.mm; path = cocos2d/CCPhysicsSprite.mm; sourceTree = "<group>"; };
-		D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ApprienObjectiveCExampleApp iOS-umbrella.h"; sourceTree = "<group>"; };
 		DA49E488E43F1E22657F19DCBF52DCF3 /* CCTMXXMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCTMXXMLParser.m; path = cocos2d/CCTMXXMLParser.m; sourceTree = "<group>"; };
 		DAD0F4CA45B876104515B325453D6043 /* CDXMacOSXSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDXMacOSXSupport.m; path = CocosDenshion/CDXMacOSXSupport.m; sourceTree = "<group>"; };
 		DB51DE181C8CD760FD79AEF9FB924488 /* CCFontDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCFontDefinition.m; path = cocos2d/CCFontDefinition.m; sourceTree = "<group>"; };
@@ -929,17 +928,18 @@
 		DE9F73BE488360FF25CE86B2FC2C1B9F /* pngmem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngmem.c; path = external/libpng/pngmem.c; sourceTree = "<group>"; };
 		DF0BF5375750D99AA9EB3965FAC8DCAB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		DF5C69F9720AA8ABA3A9E5FD0400ACA9 /* CCParticleSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCParticleSystem.h; path = cocos2d/CCParticleSystem.h; sourceTree = "<group>"; };
+		DFCA2941B41475F64AD4A1993C7FF626 /* Pods-IAP man.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IAP man.debug.xcconfig"; sourceTree = "<group>"; };
 		E08C42B5FBCD3CEBAC2ACF233757F1CF /* ccShader_Position_uColor_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_Position_uColor_frag.h; path = cocos2d/ccShader_Position_uColor_frag.h; sourceTree = "<group>"; };
 		E08DF136A6A26FDFFEDE0755FEFF7A6F /* CCGL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCGL.h; path = cocos2d/Platforms/CCGL.h; sourceTree = "<group>"; };
 		E51C399FEE136B2C8E1FBB0ADF192E9A /* CCGLView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCGLView.m; path = cocos2d/Platforms/Mac/CCGLView.m; sourceTree = "<group>"; };
 		E5279B5E4CB4B62E8B03D737AB84D149 /* aabb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aabb.c; path = external/kazmath/src/aabb.c; sourceTree = "<group>"; };
 		E66A190C0939F0B529E9F5336D550BC2 /* pngrtran.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngrtran.c; path = external/libpng/pngrtran.c; sourceTree = "<group>"; };
-		E7C850B0430F14D92E637E998D7D9D88 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ApprienObjectiveCExampleApp iOS-dummy.m"; sourceTree = "<group>"; };
 		E8FF508D58A67BE02EA89DB169E2D9AD /* CCAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCAnimation.m; path = cocos2d/CCAnimation.m; sourceTree = "<group>"; };
 		EA37BDC1D7CC053BB785FCFE50000E32 /* ZipUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipUtils.h; path = cocos2d/Support/ZipUtils.h; sourceTree = "<group>"; };
 		EDEF1994F800956840FB745228AD3DD8 /* CCEventDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCEventDispatcher.m; path = cocos2d/Platforms/Mac/CCEventDispatcher.m; sourceTree = "<group>"; };
 		EE1AF7924834EA72547AD3A0A975E750 /* ccShader_PositionTexture_vert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccShader_PositionTexture_vert.h; path = cocos2d/ccShader_PositionTexture_vert.h; sourceTree = "<group>"; };
 		EF4AAC7CBE4C8598F030BBBA31E328B9 /* CCAtlasNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCAtlasNode.m; path = cocos2d/CCAtlasNode.m; sourceTree = "<group>"; };
+		EFA476004842070B8D924A819B0FA102 /* Pods-IAP man.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IAP man.release.xcconfig"; sourceTree = "<group>"; };
 		F15E87E4E9E2A00B7F811B55C5679BA6 /* CCActionTween.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionTween.h; path = cocos2d/CCActionTween.h; sourceTree = "<group>"; };
 		F1D5DF0DE7313466EF4E6F1AB1CA877C /* CCVertex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCVertex.h; path = cocos2d/Support/CCVertex.h; sourceTree = "<group>"; };
 		F5E299F02980419BD5E4C9279B59F758 /* CCNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCNode.h; path = cocos2d/CCNode.h; sourceTree = "<group>"; };
@@ -958,14 +958,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BC5A103124823059341FD3E4ECC048A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCEB2E74460F1853EF52CDCB7DA65B4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		69F01894C39495023AF29675E58A5E9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -978,6 +970,14 @@
 				52945562B64EFAF491D9592F60671B04 /* OpenAL.framework in Frameworks */,
 				33917E8715D9092F27DCDD96CC2D5874 /* OpenGLES.framework in Frameworks */,
 				F97018E1A41846A0280506015B91ECF4 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCAE95C74F385E7E3EFFA6769F87166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E797A429F0AF41E0B81C87442806EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1244,23 @@
 			path = cocos2d;
 			sourceTree = "<group>";
 		};
+		508012F3C98BDC508996EFFF5CD6581E /* Pods-IAP man */ = {
+			isa = PBXGroup;
+			children = (
+				2F7EA51A1BED515365513FEED36ACC9D /* Pods-IAP man.modulemap */,
+				72D13348DEF10330C7C2257CE315B6D9 /* Pods-IAP man-acknowledgements.markdown */,
+				A3B855F921A2F649B72BBBB6E7BACA7B /* Pods-IAP man-acknowledgements.plist */,
+				1C3DB4794A1333D06ED7FB3F836DFB2A /* Pods-IAP man-dummy.m */,
+				00321F9310AE459A8445A2C124DCFA04 /* Pods-IAP man-frameworks.sh */,
+				726092E3805A8D776E873509893B6257 /* Pods-IAP man-Info.plist */,
+				19926E190945665306A89AAF817B88BA /* Pods-IAP man-umbrella.h */,
+				DFCA2941B41475F64AD4A1993C7FF626 /* Pods-IAP man.debug.xcconfig */,
+				EFA476004842070B8D924A819B0FA102 /* Pods-IAP man.release.xcconfig */,
+			);
+			name = "Pods-IAP man";
+			path = "Target Support Files/Pods-IAP man";
+			sourceTree = "<group>";
+		};
 		74E4BB503FE37FCDC8FB8BA223512F5C /* CocosDenshion */ = {
 			isa = PBXGroup;
 			children = (
@@ -1264,23 +1281,6 @@
 			name = CocosDenshion;
 			sourceTree = "<group>";
 		};
-		955FF1853AE5AB0763EB1AE39C6E47C7 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E85E7919FB351178E057B117D417ACF8 /* Pods-ApprienObjectiveCExampleApp iOS */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D3D31880E21E3979D9F7BFAE5CDF682F /* cocos2d.framework */,
-				17B44859E4FCBFFDA964098173AE5FF8 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A7EB900D76BDEFF68B768E109F71B11A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1296,32 +1296,32 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C8A8967FA28E76171E1F350AAD1D7253 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				508012F3C98BDC508996EFFF5CD6581E /* Pods-IAP man */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				F119B4A0ABE017AECEE69836596133B2 /* Frameworks */,
 				FEC545690CC0339CFF89B1490D82D99B /* Pods */,
-				985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */,
-				955FF1853AE5AB0763EB1AE39C6E47C7 /* Targets Support Files */,
+				E0CF886FF988FF2F03BDD4125E962765 /* Products */,
+				C8A8967FA28E76171E1F350AAD1D7253 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E85E7919FB351178E057B117D417ACF8 /* Pods-ApprienObjectiveCExampleApp iOS */ = {
+		E0CF886FF988FF2F03BDD4125E962765 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D692CDD18B392883DB5BC948619EFBC /* Pods-ApprienObjectiveCExampleApp iOS.modulemap */,
-				75085C4F16C9B2409326FE05E77840CE /* Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.markdown */,
-				B1A5D97CEB85FFB4C822E4A09CD0D829 /* Pods-ApprienObjectiveCExampleApp iOS-acknowledgements.plist */,
-				E7C850B0430F14D92E637E998D7D9D88 /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m */,
-				9066FC08E60AF99816E77FCB0D9D9789 /* Pods-ApprienObjectiveCExampleApp iOS-frameworks.sh */,
-				02349B1EFE8820DD6F76A4B7C48CAD65 /* Pods-ApprienObjectiveCExampleApp iOS-Info.plist */,
-				D8F62FDCB1F2B8A52752260EEDF80BBE /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h */,
-				CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */,
-				CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */,
+				D3D31880E21E3979D9F7BFAE5CDF682F /* cocos2d.framework */,
+				928AE1212AB8073116D341BD134923D4 /* Pods_IAP_man.framework */,
 			);
-			name = "Pods-ApprienObjectiveCExampleApp iOS";
-			path = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F089E46E957B4CF59E4D282D1B0FDBCD /* Support Files */ = {
@@ -1358,6 +1358,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0F9D01883159D8988D6235AEEA6D80B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3078D28DCE96BABD52FBB76C3CA1B4 /* Pods-IAP man-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40348AFB03D48F32ED7F03DF0923F923 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1504,36 +1512,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A4125C50AFEE4AD74BE6E7A1BB7DD6C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BB04CE47F515F6C1E3C1F0BAFA2337A /* Pods-ApprienObjectiveCExampleApp iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		08F9C228BB0A15431956555715EE1A0F /* Pods-ApprienObjectiveCExampleApp iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 108417EA75B73CEE43A742CB95EE0107 /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */;
-			buildPhases = (
-				5A4125C50AFEE4AD74BE6E7A1BB7DD6C /* Headers */,
-				AB4BD022BE22B7F03563331465047952 /* Sources */,
-				0BC5A103124823059341FD3E4ECC048A /* Frameworks */,
-				FE199828202ADB1E0A4B191F882D7B6D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB82F464D78C757303DB38CA2119BD4E /* PBXTargetDependency */,
-			);
-			name = "Pods-ApprienObjectiveCExampleApp iOS";
-			productName = "Pods-ApprienObjectiveCExampleApp iOS";
-			productReference = 17B44859E4FCBFFDA964098173AE5FF8 /* Pods_ApprienObjectiveCExampleApp_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9A53C01FB886628EDB98B692FF6E0B66 /* cocos2d */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79EB551BA32F092348E2E291A532CC44 /* Build configuration list for PBXNativeTarget "cocos2d" */;
@@ -1561,6 +1542,25 @@
 			productReference = D3D31880E21E3979D9F7BFAE5CDF682F /* cocos2d.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D22D9C2C380B0B59E7B47D8C2FDCE2C7 /* Pods-IAP man */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37C159A0C173E67370C4EA0F5D946498 /* Build configuration list for PBXNativeTarget "Pods-IAP man" */;
+			buildPhases = (
+				0F9D01883159D8988D6235AEEA6D80B5 /* Headers */,
+				D288F8471E41BB526300EBA26E2995E8 /* Sources */,
+				7DCAE95C74F385E7E3EFFA6769F87166 /* Frameworks */,
+				669C86E5578EABC0E3FA715F597CFA16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6006783C5BD1338FFC61CA271E772720 /* PBXTargetDependency */,
+			);
+			name = "Pods-IAP man";
+			productName = "Pods-IAP man";
+			productReference = 928AE1212AB8073116D341BD134923D4 /* Pods_IAP_man.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1579,25 +1579,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 985FF9F3D121BAE5EEFAEF775DB62C75 /* Products */;
+			productRefGroup = E0CF886FF988FF2F03BDD4125E962765 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9A53C01FB886628EDB98B692FF6E0B66 /* cocos2d */,
-				08F9C228BB0A15431956555715EE1A0F /* Pods-ApprienObjectiveCExampleApp iOS */,
+				D22D9C2C380B0B59E7B47D8C2FDCE2C7 /* Pods-IAP man */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C14F745ED99D381CEC2E09C1E801DAC4 /* Resources */ = {
+		669C86E5578EABC0E3FA715F597CFA16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE199828202ADB1E0A4B191F882D7B6D /* Resources */ = {
+		C14F745ED99D381CEC2E09C1E801DAC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1740,29 +1740,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB4BD022BE22B7F03563331465047952 /* Sources */ = {
+		D288F8471E41BB526300EBA26E2995E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64144B39B08BAE4F6E18A36E75F3E48D /* Pods-ApprienObjectiveCExampleApp iOS-dummy.m in Sources */,
+				D45BA9666191813D33110C8F3963C2F4 /* Pods-IAP man-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB82F464D78C757303DB38CA2119BD4E /* PBXTargetDependency */ = {
+		6006783C5BD1338FFC61CA271E772720 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = cocos2d;
 			target = 9A53C01FB886628EDB98B692FF6E0B66 /* cocos2d */;
-			targetProxy = 529822146603CF6002AA3D5086997314 /* PBXContainerItemProxy */;
+			targetProxy = 4C8B2EC9DFB17AF37C408DBD365382DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		39DE960888D61142AE8E11A2FA556AF9 /* Release */ = {
+		2230F8134EA325ABE1F2A40D3041B024 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCB729E773272573AD78D3CE4B6F7F6A /* Pods-ApprienObjectiveCExampleApp iOS.release.xcconfig */;
+			baseConfigurationReference = EFA476004842070B8D924A819B0FA102 /* Pods-IAP man.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1773,7 +1773,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-IAP man/Pods-IAP man-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1782,7 +1782,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-IAP man/Pods-IAP man.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1797,9 +1797,9 @@
 			};
 			name = Release;
 		};
-		3A6A8ADE32FD9D33858FFC8EEC05CB0C /* Debug */ = {
+		3438A10AD0C8E92FD9C883EA8C55C31B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD97B7868F67BB39AD45D5C5F599D3FB /* Pods-ApprienObjectiveCExampleApp iOS.debug.xcconfig */;
+			baseConfigurationReference = DFCA2941B41475F64AD4A1993C7FF626 /* Pods-IAP man.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1810,7 +1810,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-IAP man/Pods-IAP man-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1819,7 +1819,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ApprienObjectiveCExampleApp iOS/Pods-ApprienObjectiveCExampleApp iOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-IAP man/Pods-IAP man.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2031,11 +2031,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		108417EA75B73CEE43A742CB95EE0107 /* Build configuration list for PBXNativeTarget "Pods-ApprienObjectiveCExampleApp iOS" */ = {
+		37C159A0C173E67370C4EA0F5D946498 /* Build configuration list for PBXNativeTarget "Pods-IAP man" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A6A8ADE32FD9D33858FFC8EEC05CB0C /* Debug */,
-				39DE960888D61142AE8E11A2FA556AF9 /* Release */,
+				3438A10AD0C8E92FD9C883EA8C55C31B /* Debug */,
+				2230F8134EA325ABE1F2A40D3041B024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
